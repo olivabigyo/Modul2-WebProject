@@ -46,7 +46,22 @@ nav ul li a:hover{
 
 
 /* === Header === */
-
+#home-page{
+    background-image: url(https://picsum.photos/id/109/2000/700);
+}
+.hero-img{
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header h1{
+    text-align: center;
+    font-size: 35px;
+}
 /* === Main Section === */
 
 /* Colors */
