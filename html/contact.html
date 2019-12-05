@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fox Project</title>
+    <title>Fox and friends</title>
     <!-- My Stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
-</head>
+    </head>
 <body>
 
     <!-- Navigation -->
     <!-- Logo or Company name left and Navigation bar right-->
-    <nav class="n-colour">
+    <nav class="n-green">
         <div>
             <ul><li><a href="../index.html">Little Fox & Friends</a></li></ul>
         </div>
         <ul>
-           <li><a href="team.html">Team</a></li>
-           <li><a href="about.html">About</a></li>
-           <li><a href="blog.html">Blog</a></li>
-           <li><a href="contact.html">Contact</a></li>
-           <li><a href="sign_up.html">Sign up</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sign-up.html">Sign up</a></li>
         </ul>
     </nav>
     
     <!-- Header -->
     <header>
+        <div class="hero-img" id="contact-page">
 
+        </div>
     </header>
 
     <!-- Main Sections -->
@@ -35,16 +37,52 @@
          <!-- light background-->
          <section class="plain">
                 <!-- Container for 1024px wide screen  -->
-                <div class="section-content A-section">
-                    <h2>Theme 1</h2>
-                    <h3>SMALL TITLE</h3>
+                <div class="section-content contact1-section">
+                    <h2>Contact Us</h2>
+                    <h3>VISIT OR DROP US A LINE</h3>
+                    <div class="form-container">
+                        <form action="">
+                            <label for="name">Your Name:</label>
+                            <input type="text" name="name" id="name">
+                            <label for="email">Your email address:</label>
+                            <input type="email" name="email" id="email">
+                            <label for="message">Your message:</label>
+                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                            <label for="checkbox">
+                                <input type="checkbox" name="checkbox" id="checkbox">
+                                I want to receive Newsletter from Little Fox!
+                        </label>
+                        <button type="submit">Send</button>
+                        <a href="#" id="submit-button">Send</a>
+                        </form>
+                    </div>
                 </div>
             </section>
         <!-- coloured background-->
-        <section class="coloured">
+        <section class="green coloured">
                 <!-- Container for 1024px wide screen  -->
                 <div class="section-content B-section">
-                    <h2>Theme 2</h2>
+                    <h2>Opening hours</h2>
+                    <h3>SOME SMALL</h3>
+                </div>
+            </section>
+            <!-- light background-->
+         <section class="plain">
+                <!-- Container for 1024px wide screen  -->
+                <div class="section-content A-section">
+                    <h2>Location</h2>
+                    <p>LITTLE FOX</p> 
+                    <p>Finsterrütistrasse 175</p>
+                    <p>8134 Zürich </p>
+                    <p>contact(at)littlefox.ch</p>
+                    <p>Phone: +41-44-234 9876</p>
+                </div>
+            </section>
+        <!-- coloured background-->
+        <section class="green coloured">
+                <!-- Container for 1024px wide screen  -->
+                <div class="section-content B-section">
+                    <h2>How to get there</h2>
                     <h3>SOME SMALL</h3>
                 </div>
             </section>
@@ -53,12 +91,11 @@
 
     <!-- Footer -->
 
-    <footer>
+    <footer class="n-green">
             <h2>Follow Us</h2>
             <div id="icon_container">
-              
             </div>
-
+            &copy Created by Olivabigyo 2019
     </footer>
     <script>
     </script>
