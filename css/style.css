@@ -42,6 +42,21 @@ nav ul li a:hover{
 #home-page{
     background-image: url(https://picsum.photos/id/109/2000/700);
 }
+#team-page{
+    background-image: url(../images/autumn-leaves.jpg);
+}
+#about-page{
+    background-image: url(../images/girl-on-swing.jpg);
+}
+#courses-page{
+    background-image: url(../images/girl-on-swing.jpg);
+}
+#contact-page{
+    background-image: url(../images/child-clay.jpg);
+}
+#sign-up-page{
+    background-image: url(../images/child-clay.jpg);
+}
 .hero-img{
     background-size: cover;
     height: 500px;
