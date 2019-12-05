@@ -7,7 +7,15 @@
     box-sizing: border-box;
 }
 
+
 /* === My Own Style=== */
+/* === Fonts === */
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+body h1, body h2{
+    font-family: 'Pacifico', cursive;
+}
 /* === Navigation === */
 /* Colors */
 /* Content */
@@ -39,6 +47,7 @@ nav ul li a:hover{
 
 
 /* === Header === */
+/* Images */
 #home-page{
     background-image: url(https://picsum.photos/id/109/2000/700);
 }
@@ -57,6 +66,7 @@ nav ul li a:hover{
 #sign-up-page{
     background-image: url(../images/child-clay.jpg);
 }
+/* Content */
 .hero-img{
     background-size: cover;
     height: 500px;
