@@ -96,14 +96,70 @@ main .section-content .card-container .card{
     justify-content: center;
     align-items: center;
 }
+main .section-content a{
+    padding: 1em;
+    margin: 1em;
+    text-decoration: none;
+}
+main .plain a:hover{
+    border: 2px solid black;
+    color: black;
+}
+main .coloured a:hover{
+    border: 2px solid black;
+    color: black;
+}
 
 
 /* === Main > Team Section === */
+main .team-section .card-container .card{
+    width: 15%;
+}
+main .team-section a img{
+    width: 100%;
+    border-radius: 150px;
+}
+main .team-section .card a{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+main .team-section .card a:hover img{
+    opacity: 60%;
+}
+
 /* === Main > About Section === */
 /* === Main > Courses Section === */
 /* === Main > Gallery Section === */
+main .gallery-section .card-container .card{
+    width: 33%; 
+}
+main .gallery-section .card-container .card img{
+    width: 100%;
+    padding: 5px;
+}
 /* === Main > Testimonials Section === */
 /* === Main > Membership Section === */
+
+main .memb-section .card-container .card{
+    width: 25%;
+}
+main .memb-section .card-container .card div{
+    width: 100%;
+    text-align: center;
+}
+main .memb-section .card div h3{
+    padding: 1em;
+    margin: 0;
+}
+main .memb-section .card div p{
+    padding: 1em;
+    border-bottom: 1px solid #707070 ;
+}
+main .memb-section .card div:last-of-type{
+    padding: 1.8em;
+}
+
 /* === Main > Contact Section === */
 
 
