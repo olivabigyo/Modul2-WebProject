@@ -180,9 +180,69 @@ footer h2{
 }
 
 /* ====== End of Home Page ====== */
+/* ====== Team Page ====== */
+main .A-section .card h3{
+    font-size: 1.5em;
+}
 
+main .C-section{
+    margin: 2em auto;
+}
+main .C-section .card{
+    width: 48%;
+}
+main .C-section .card img{
+    width: 100%;
+    border-radius: 150px;
+    border: 6px solid #a0a0a0;
+}
+/* Only on Team-page */
+main .A-section .card img{
+    width: 60%;
+    border-radius: 250px;
+}
 /* ====== About Page ====== */
+main .links-section .card-container .card{
+    width: 250px;
+    min-height: 250px;
+}
+main .links-section .card-container .card div{
+    width: 100%;
+    text-align: center;
+}
+main .links-section .card div h3{
+    padding: 1em;
+    margin: 0;
+}
+main .links-section .card div p{
+    padding: 1em;
+}
+
 /* ====== End of About Page ====== */
 
 /* ====== Contact Page ====== */
+main .contact1-section .form-container form{
+    display: flex;
+    flex-direction: column;
+}
+main .form-container label{
+    padding-top: 1em;
+}
+main .form-container input{
+    padding: 0.5em;
+}
+main .form-container button{
+    background-color: #5DA69F;
+    border: 1 px solid #5DA69F;
+}
+main .contact1-section .form-container form #submit-button{
+    margin: 1em auto;
+    color:  #FBF3E4;
+    background-color: #5DA69F;
+    border: 2px solid #5DA69F;
+}
+main .contact1-section .form-container form a:hover{
+    color:  black;
+    border: 2px solid black;
+}
 /* ====== End of Contact Page ====== */
