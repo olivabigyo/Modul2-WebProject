@@ -1,0 +1,74 @@
+/* === Small CSS Reset === */
+* {
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+/* === My Own Style=== */
+
+body{
+
+}
+
+
+
+/* === Navigation === */
+/* Colors */
+/* Content */
+nav{
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 1em;
+    position: fixed;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 1em 3em;
+}
+nav ul li a:hover{
+    background: white;
+    color: black;
+}
+
+
+
+/* === Header === */
+
+/* === Main Section === */
+
+/* Colors */
+/* Content */
+
+/* === Main > Team Section === */
+/* === Main > About Section === */
+/* === Main > Courses Section === */
+/* === Main > Gallery Section === */
+/* === Main > Testimonials Section === */
+/* === Main > Membership Section === */
+/* === Main > Contact Section === */
+
+
+/* === Footer === */
+/* Colors */
+/* Content */
+
+/* ====== End of Home Page ====== */
+
+/* ====== About Page ====== */
+/* ====== End of About Page ====== */
+
+/* ====== Contact Page ====== */
+/* ====== End of Contact Page ====== */
