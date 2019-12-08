@@ -1,4 +1,99 @@
+
+/* === Body === */
+
 body{
     color: #707070;
     background-color: #FBF3E4;
 }
+
+/* === Navigation === */
+
+nav.n-red{
+    background-color: #891213;
+}
+nav.n-yellow{
+    background-color: #F4C057;
+}
+nav.n-green{
+    background-color: #2D7E77;
+}
+nav.n-blue{
+    background-color: #4878A8;
+}
+nav.n-red .drop-menu{
+    background-color: #891213;
+}
+nav.n-yellow .drop-menu{
+    background-color: #F4C057;
+}
+nav.n-green .drop-menu{
+    background-color: #2D7E77;
+}
+nav.n-blue .drop-menu{
+    background-color: #4878A8;
+}
+/* This is yet in style.css too */
+nav ul a:hover{
+    background: white;
+    color: black;
+}
+
+
+/* === Header === */
+
+header h1 {
+    color: #C56566;
+}
+
+/* === Main Section === */
+
+main .red{
+    background-color: #C56566;
+    /* background-color: #891213; */
+}
+main .yellow{
+    background-color: #F0CD85;
+    /* background-color: #F4C057; */
+}
+main .green{
+    background-color: #5DA69F;
+    /* background-color: #2D7E77; */
+}
+main .blue{
+    background-color: #80A7CE;
+}
+main .plain h2{
+    color: #C56566;
+}
+main .coloured h2{
+    color: #FBF3E4;
+}
+    /* Ausnahme: yellow-theme h2 */
+main .yellow h2{
+    color: #C56566;
+}
+main .plain p{
+    color: #707070;
+}
+main .coloured p{
+    color: #FBF3E4;
+}
+main h3{
+    color: black;
+}
+
+/* === Footer === */
+
+footer.n-red{
+    background-color: #891213;
+}
+footer.n-yellow{
+    background-color: #F4C057;
+}
+footer.n-green{
+    background-color: #2D7E77;
+}
+footer.n-blue{
+    background-color: #4878A8;
+}
+
