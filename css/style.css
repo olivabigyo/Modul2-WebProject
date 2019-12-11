@@ -86,7 +86,7 @@ li.drop-trigger:hover .drop-menu{
 
 .hero-img{
     background-size: cover;
-    height: 500px;
+    height: 600px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -213,7 +213,7 @@ main .memb-section .card div h3{
     padding: 1em;
     margin: 0;
     color: #FBF3E4;
-    background-color: #2D7E77 ;
+    background-color: #4878A8;
 }
 main .memb-section .card div p{
     padding: 1em;
@@ -225,7 +225,7 @@ main .memb-section .card div:last-of-type{
 }
 main .memb-section .card div a{
     color: #FBF3E4;
-    background-color: #2D7E77
+    background-color: #4878A8;
 }
 
 /* === Main > Contact Section === */
@@ -296,7 +296,7 @@ main .links-section .card-container .card-hear{
 
 /* === Team Page > Main > Lehrern Section === */
 main .A-section{
-    margin: 2em auto;
+    margin-top: 2em;
 }
 main .A-section .card{
     width: 45%;
@@ -317,7 +317,7 @@ main .A-section .card h3{
 /* ====== Courses Page ====== */
 
 main .C-section{
-    margin: 2em auto;
+    margin-top: 2em;
 }
 main .C-section .card{
     width: 48%;
