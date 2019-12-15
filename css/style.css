@@ -356,13 +356,25 @@ main .form-container label{
 main .form-container input{
     padding: 0.5em;
 }
-main .form-container form #submit-button{
+main .form-container form #submit-button-contact{
     margin: 1em auto;
     color:  #FBF3E4;
     background-color: #5DA69F;
-    border: 2px solid #5DA69F;
+    border: none
 }
-main .contact1-section .form-container form a:hover{
-    color:  black;
-    border: 2px solid black;
+main .form-container form #submit-button-contact:hover{
+    /* color:  black; */
+    background-color: #2D7E77;
+    /* border: 2px solid black; */
+}
+main .form-container form #submit-button-index{
+    margin: 1em auto;
+    color:  #FBF3E4;
+    background-color: #C56566;
+    border: none
+}
+main .form-container form #submit-button-index:hover{
+    /* color:  black; */
+    background-color: #902122;
+    /* border: 2px solid black; */
 }
