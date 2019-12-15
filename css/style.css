@@ -2,7 +2,7 @@
 
 /* === My Own Style=== */
                 /* This is in colors.css too jet */
-body{
+body {
     color: #707070;
     background-color: #FBF3E4;
 }
@@ -12,7 +12,7 @@ body{
 /* === Navigation === */
 /* Colors in colors.css */
 /* Content */
-nav{
+nav {
     color: white;
     width: 100%;
     display: flex;
@@ -21,23 +21,22 @@ nav{
     padding: 1.3em;
     position: fixed;
 }
-
-nav ul{
+nav ul {
     display: flex;
     align-items: center;
     list-style: none;
 }
-nav ul a{
+nav ul a {
     text-decoration: none;
     color: white;
     padding: 1em 3em;
     margin: 0.2em;
 }
-nav ul a:hover{
+nav ul a:hover {
     background: white;
     color: black;
 }
-li.drop-trigger:hover .drop-menu{
+li.drop-trigger:hover .drop-menu {
     display: flex;
     animation: scale 0.4s;
 }
@@ -51,7 +50,7 @@ li.drop-trigger:hover .drop-menu{
 .drop-menu a {
     width: calc(100%-0.4em);
 }
-@keyframes scale{
+@keyframes scale {
     0% {
         transform: scaleX(0);
     }
@@ -62,30 +61,30 @@ li.drop-trigger:hover .drop-menu{
 
 
 /* === Header === */
-#home-page{
+#home-page {
     background-image: url(https://picsum.photos/id/109/2000/700);
     background-image: url(../images/meadow-tree.jpg);
 }
-#team-page{
+#team-page {
     background-image: url(../images/autumn-leaves.jpg);
 }
-#about-page{
+#about-page {
     background-image: url(../images/girl-on-swing.jpg);
 }
-#courses-page{
+#courses-page {
     background-image: url(../images/child-clay.jpg);
 }
-#contact-page{
+#contact-page {
     background-image: url(../images/yellow--flowers-meadow.jpg);
 }
-#sign-up-page{
+#sign-up-page {
     background-image: url(../images/child-clay.jpg);
 }
-#blog-page{
+#blog-page {
     background-image: url(../images/blog-phone-tee.jpg);
 }
 
-.hero-img{
+.hero-img {
     background-size: cover;
     height: 600px;
     width: 100%;
@@ -94,21 +93,21 @@ li.drop-trigger:hover .drop-menu{
     justify-content: center;
     align-items: center;
 }
-header h1{
+header h1 {
     text-align: center;
     font-size: 2.5em;
 }
 /* === Main Section === */
 /* Colors in colors.css*/
 
-main .coloured{
+main .coloured {
     width: 100%;
 }
 main .plain {
     width: 100%;
 }
 /* Content */
-main .section-content{
+main .section-content {
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
@@ -118,11 +117,11 @@ main .section-content{
     justify-content: center;
     align-items: center;
 }
-main h2{
+main h2 {
     text-align: center;
     font-size: 2.2em;
 }
-main h3{
+main h3 {
     text-align: center;
     font-size: 1rem;
     margin-bottom: 2em;
@@ -131,27 +130,27 @@ main h4 {
     color: black;
     font-size: 1rem;
 }
-main .plain a{
+main .plain a {
     border: 2px solid #C56566;
     color: #C56566;
 }
-main .coloured a{
+main .coloured a {
     border: 2px solid #FBF3E4;
     color: #FBF3E4;
 }
-main .plain a:hover{
+main .plain a:hover {
     border: 2px solid black;
     color: black;
 }
-main .coloured a:hover{
+main .coloured a:hover {
     border: 2px solid black;
     color: black;
 }
-main .section-content > p{
+main .section-content > p {
    width: 80%;
    margin: 1em auto;
 }
-main .section-content .card-container{
+main .section-content .card-container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -159,143 +158,85 @@ main .section-content .card-container{
     flex-wrap: wrap;
     margin: 2em auto;
 }
-main .section-content a{
+main .section-content a {
     padding: 1em;
     margin: 1em;
     text-decoration: none;
 }
-main .section-content .card-container .card{
+main .section-content .card-container .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-main .section-content .card-container .left{
+main .section-content .card-container .left {
     align-items: flex-start;
 }
 
 
 /* === Main > Team Section === */
 
-main .team-section .card-container .card{
+main .team-section .card-container .card {
     width: 15%;
 }
-main .team-section a img{
+main .team-section a img {
     width: 100%;
     border: 3px solid #a0a0a0;
     border-radius: 150px;
 }
-main .team-section .card a{
+main .team-section .card a {
     padding: 0;
     margin: 0;
     border: none;
 }
-main .team-section .card a:hover img{
+main .team-section .card a:hover img {
     opacity: 60%;
 }
 
-/* === Main > About Section === */
-/* === Main > Courses Section === */
-/* === Main > Gallery Section === */
-main .gallery-section .card-container .card{
-    width: 33%; 
+/* The A-Section means, it split to two cards, usually an image and a card with text content
+I use this in many page */
+main .A-section {
+    margin-top: 2em;
 }
-main .gallery-section .card-container .card img{
+main .A-section .card {
+    width: 40%;
+}
+main .A-section .card img {
     width: 100%;
-    padding: 5px;
+    border-radius: 150px;
+    border: 6px solid #a0a0a0;
 }
-
-/* === Main > Testimonials Section === */
-/* === Main > Membership Section === */
-main .memb-section .card-container .card{
-    width: 25%;
-}
-main .memb-section .card-container .card div{
-    width: 100%;
-    text-align: center;
-    background-color: #FBF3E4 ;
-}
-main .memb-section .card div h3{
-    padding: 1em;
-    margin: 0;
-    color: #FBF3E4;
-    background-color: #4878A8;
-}
-main .memb-section .card div p{
-    padding: 1em;
-    color: #707070;
-    border-bottom: 1px solid #707070 ;
-}
-main .memb-section .card div:last-of-type{
-    padding: 1.8em;
-}
-main .memb-section .card div a{
-    color: #FBF3E4;
-    background-color: #4878A8;
-}
-
-/* === Main > Contact Section === */
-
-
-
-/* === Footer === */
-/* Colors¨in colors.css */
-
-footer{
-    color: white;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-}
-footer h2{
-    font-size: 2em;
-}
-footer h3{
-    color: black;
-    font-size: 1em;
-    margin-bottom: 2em;
-}
-footer #icon-container {
-    margin: 1em;
+main .A-section .card h3 {
     font-size: 1.5em;
 }
-
-/* ====== End of Home Page ====== */
-
-
-
-/* ====== About Page ====== */
-
-/* === About Page > Main > Membership Section === */
-main .lernemehr-section .card-container .card{
+/* Team page: team member profilphotos */
+main .A-section .profil img {
+    width: 60%;
+}
+/* About page: squere cards */
+main .lernemehr-section .card-container .card {
     width: 250px;
     min-height: 250px;
 }
-main .lernemehr-section .card-container .card div{
+main .lernemehr-section .card-container .card div {
     width: 100%;
     text-align: center;
-    
 }
-main .lernemehr-section .card div h3{
+main .lernemehr-section .card div h3 {
     padding: 1em;
     margin: 0;
-   
 }
-main .lernemehr-section .card div p{
+main .lernemehr-section .card div p {
     padding: 1em;
     color: #FBF3E4;
-    
 }
-main .lernemehr-section .card-container .card-link{
+main .lernemehr-section .card-container .card-link {
     background-color: #C56566;
 }
-main .lernemehr-section .card-container .card-read{
+main .lernemehr-section .card-container .card-read {
     background-color: #F0CD85;
 }
-main .lernemehr-section .card-container .card-hear{
+main .lernemehr-section .card-container .card-hear {
     background-color: #5DA69F;
 }
 main .mehrlinks a {
@@ -306,75 +247,96 @@ main .mehrlinks a:hover {
     border: none;
 }
 
-
-
-/* ====== End of About Page ====== */
-/* ====== Team Page ====== */
-
-/* === Team Page > Main > Lehrern Section === */
-main .A-section{
-    margin-top: 2em;
+/* === Main > Gallery Section === */
+main .gallery-section .card-container .card {
+    width: 33%; 
 }
-main .A-section .card{
-    width: 40%;
-}
-main .A-section .card img{
+main .gallery-section .card-container .card img {
     width: 100%;
-    border-radius: 150px;
-    border: 6px solid #a0a0a0;
+    padding: 5px;
 }
-main .A-section .profil img{
-    width: 60%;
+/* === Main > Membership Section === */
+main .memb-section .card-container .card {
+    width: 25%;
 }
-main .A-section .card h3{
-    font-size: 1.5em;
-}
-
-/* ====== End of Team Page ====== */
-/* ====== Courses Page ====== */
-
-/* main .C-section{
-    margin-top: 2em;
-}
-main .C-section .card{
-    width: 45%;
-}
-main .C-section .card img{
+main .memb-section .card-container .card div {
     width: 100%;
-    border-radius: 150px;
-    border: 6px solid #a0a0a0;
-} */
-/* ====== End of Courses Page ====== */
-/* ====== Contact Page ====== */
-main .form-container form{
+    text-align: center;
+    background-color: #FBF3E4 ;
+}
+main .memb-section .card div h3 {
+    padding: 1em;
+    margin: 0;
+    color: #FBF3E4;
+    background-color: #4878A8;
+}
+main .memb-section .card div p {
+    padding: 1em;
+    color: #707070;
+    border-bottom: 1px solid #707070 ;
+}
+main .memb-section .card div:last-of-type {
+    padding: 1.8em;
+}
+main .memb-section .card div a {
+    color: #FBF3E4;
+    background-color: #4878A8;
+}
+
+/* Contact form on index page and contact page */
+main .form-container form {
     display: flex;
     flex-direction: column;
 }
-main .form-container label{
+main .form-container label {
     padding-top: 1em;
 }
-main .form-container input{
+main .form-container input {
     padding: 0.5em;
 }
-main .form-container form #submit-button-contact{
+/* Submit button color on contact page */
+main .form-container form #submit-button-contact {
     margin: 1em auto;
     color:  #FBF3E4;
     background-color: #5DA69F;
     border: none
 }
-main .form-container form #submit-button-contact:hover{
-    /* color:  black; */
+main .form-container form #submit-button-contact:hover {
     background-color: #2D7E77;
-    /* border: 2px solid black; */
 }
-main .form-container form #submit-button-index{
+/* Submit button color on index page */
+main .form-container form #submit-button-index {
     margin: 1em auto;
     color:  #FBF3E4;
     background-color: #C56566;
     border: none
 }
-main .form-container form #submit-button-index:hover{
-    /* color:  black; */
+main .form-container form #submit-button-index:hover {
     background-color: #902122;
-    /* border: 2px solid black; */
+    
+}
+
+/* === Footer === */
+/* Colors¨in colors.css */
+
+footer {
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+footer h2 {
+    font-size: 2em;
+}
+footer h3 {
+    color: black;
+    font-size: 1em;
+    margin-bottom: 2em;
+}
+footer #icon-container {
+    margin: 1em;
+    font-size: 1.5em;
 }
