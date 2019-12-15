@@ -1,7 +1,7 @@
 
 
 /* === My Own Style=== */
-                /* This is yet in colors.css too */
+                /* This is in colors.css too jet */
 body{
     color: #707070;
     background-color: #FBF3E4;
@@ -64,6 +64,7 @@ li.drop-trigger:hover .drop-menu{
 /* === Header === */
 #home-page{
     background-image: url(https://picsum.photos/id/109/2000/700);
+    background-image: url(../images/meadow-tree.jpg);
 }
 #team-page{
     background-image: url(../images/autumn-leaves.jpg);
@@ -72,16 +73,16 @@ li.drop-trigger:hover .drop-menu{
     background-image: url(../images/girl-on-swing.jpg);
 }
 #courses-page{
-    background-image: url(https://picsum.photos/id/109/2000/700);
+    background-image: url(../images/child-clay.jpg);
 }
 #contact-page{
-    background-image: url(https://picsum.photos/id/109/2000/700);
+    background-image: url(../images/yellow--flowers-meadow.jpg);
 }
 #sign-up-page{
     background-image: url(../images/child-clay.jpg);
 }
 #blog-page{
-    background-image: url(https://picsum.photos/id/109/2000/700);
+    background-image: url(../images/blog-phone-tee.jpg);
 }
 
 .hero-img{
@@ -95,7 +96,7 @@ li.drop-trigger:hover .drop-menu{
 }
 header h1{
     text-align: center;
-    font-size: 35px;
+    font-size: 2.5em;
 }
 /* === Main Section === */
 /* Colors in colors.css*/
@@ -119,12 +120,16 @@ main .section-content{
 }
 main h2{
     text-align: center;
-    font-size: 30px;
+    font-size: 2.2em;
 }
 main h3{
     text-align: center;
-    font-size: 14px;
+    font-size: 1rem;
     margin-bottom: 2em;
+}
+main h4 {
+    color: black;
+    font-size: 1rem;
 }
 main .plain a{
     border: 2px solid #C56566;
@@ -245,11 +250,11 @@ footer{
     padding: 1em;
 }
 footer h2{
-    font-size: 30px;
+    font-size: 2em;
 }
 footer h3{
     color: black;
-    font-size: 14px;
+    font-size: 1em;
     margin-bottom: 2em;
 }
 footer #icon-container {
@@ -258,37 +263,48 @@ footer #icon-container {
 }
 
 /* ====== End of Home Page ====== */
+
+
+
 /* ====== About Page ====== */
 
 /* === About Page > Main > Membership Section === */
-main .links-section .card-container .card{
+main .lernemehr-section .card-container .card{
     width: 250px;
     min-height: 250px;
 }
-main .links-section .card-container .card div{
+main .lernemehr-section .card-container .card div{
     width: 100%;
     text-align: center;
     
 }
-main .links-section .card div h3{
+main .lernemehr-section .card div h3{
     padding: 1em;
     margin: 0;
    
 }
-main .links-section .card div p{
+main .lernemehr-section .card div p{
     padding: 1em;
     color: #FBF3E4;
     
 }
-main .links-section .card-container .card-link{
+main .lernemehr-section .card-container .card-link{
     background-color: #C56566;
 }
-main .links-section .card-container .card-read{
+main .lernemehr-section .card-container .card-read{
     background-color: #F0CD85;
 }
-main .links-section .card-container .card-hear{
+main .lernemehr-section .card-container .card-hear{
     background-color: #5DA69F;
 }
+main .mehrlinks a {
+    border: none;
+    margin: 0;
+}
+main .mehrlinks a:hover {
+    border: none;
+}
+
 
 
 /* ====== End of About Page ====== */
@@ -299,15 +315,15 @@ main .A-section{
     margin-top: 2em;
 }
 main .A-section .card{
-    width: 45%;
+    width: 40%;
 }
 main .A-section .card img{
+    width: 100%;
     border-radius: 150px;
     border: 6px solid #a0a0a0;
 }
-main .A-section .card-container .bio{
-    border-radius: 30px;
-    padding: 1em; 
+main .A-section .profil img{
+    width: 60%;
 }
 main .A-section .card h3{
     font-size: 1.5em;
@@ -316,17 +332,17 @@ main .A-section .card h3{
 /* ====== End of Team Page ====== */
 /* ====== Courses Page ====== */
 
-main .C-section{
+/* main .C-section{
     margin-top: 2em;
 }
 main .C-section .card{
-    width: 48%;
+    width: 45%;
 }
 main .C-section .card img{
     width: 100%;
     border-radius: 150px;
     border: 6px solid #a0a0a0;
-}
+} */
 /* ====== End of Courses Page ====== */
 /* ====== Contact Page ====== */
 main .form-container form{
