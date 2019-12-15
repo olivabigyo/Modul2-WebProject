@@ -78,6 +78,9 @@ main .coloured p {
 main h3, h4 {
     color: black;
 }
+main .coloured label {
+    color: #FBF3E4;
+}
 
 
 /* === Footer === */

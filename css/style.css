@@ -294,27 +294,63 @@ main .form-container label {
 main .form-container input {
     padding: 0.5em;
 }
-/* Submit button color on contact page */
-main .form-container form #submit-button-contact {
+main .form-container form .submit-button {
     margin: 1em auto;
+    border: none;
+}
+/* Submit button color on contact page */
+main .form-container form #subm-contact-page {    
     color:  #FBF3E4;
     background-color: #5DA69F;
-    border: none
 }
-main .form-container form #submit-button-contact:hover {
+main .form-container form #subm-contact-page:hover {
     background-color: #2D7E77;
 }
 /* Submit button color on index page */
-main .form-container form #submit-button-index {
-    margin: 1em auto;
+main .form-container form #subm-index-page {
     color:  #FBF3E4;
     background-color: #C56566;
-    border: none
 }
-main .form-container form #submit-button-index:hover {
-    background-color: #902122;
-    
+main .form-container form #subm-index-page:hover {
+    background-color: #902122;  
 }
+/* Submit button color on sign-up page */
+main .form-container form #subm-sign-up-form {
+    color:  #FBF3E4;
+    background-color: #4878A8;
+    border: 2px solid #4878A8;
+}
+main .form-container form #subm-sign-up-form:hover {
+    border: 2px solid black;  
+}
+main .form-container form #subm-sign-in-form {
+    color:  #FBF3E4;
+    background-color: #4878A8;
+    border: 2px solid #4878A8;
+}
+main .form-container form #subm-sign-in-form:hover {
+    border: 2px solid black;  
+}
+/* Sign-in and Sign-up form on sign-up page */
+main .form-container .wide input {
+    min-width: 300px;
+}
+main .form-container .slim {
+    width: 70%;
+    margin: 0 auto;
+}
+main .form-container .inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+main .form-container .input-pairs {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* === Footer === */
 /* Colors¨in colors.css */
