@@ -18,7 +18,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    padding: 1.3em;
+    padding: 1.3rem;
     position: fixed;
 }
 nav ul {
@@ -29,8 +29,8 @@ nav ul {
 nav ul a {
     text-decoration: none;
     color: white;
-    padding: 1em 3em;
-    margin: 0.2em;
+    padding: 1rem 3rem;
+    margin: 0.2rem;
 }
 nav ul a:hover {
     background: white;
@@ -42,7 +42,7 @@ li.drop-trigger:hover .drop-menu {
 }
 .drop-menu {
     position: absolute;
-    margin-top: 1em;
+    margin-top: 1rem;
     flex-direction: column;
     display: none;
     scale: 0; 
@@ -111,7 +111,7 @@ main .section-content {
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
-    padding: 2em 0;
+    padding: 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,8 +159,8 @@ main .section-content .card-container {
     margin: 2em auto;
 }
 main .section-content a {
-    padding: 1em;
-    margin: 1em;
+    padding: 1rem;
+    margin: 1rem;
     text-decoration: none;
 }
 main .section-content .card-container .card {
@@ -200,7 +200,7 @@ main .team-section .card a:hover img {
 /* The A-Section means, it split to two cards, usually an image and a card with text content
 I use this in many page */
 main .A-section {
-    margin-top: 2em;
+    margin-top: 2rem;
 }
 main .A-section .card {
     width: 40%;
@@ -227,11 +227,11 @@ main .lernemehr-section .card-container .card div {
     text-align: center;
 }
 main .lernemehr-section .card div h3 {
-    padding: 1em;
+    padding: 1rem;
     margin: 0;
 }
 main .lernemehr-section .card div p {
-    padding: 1em;
+    padding: 1rem;
     color: #FBF3E4;
 }
 main .lernemehr-section .card-container .card-link {
@@ -269,13 +269,13 @@ main .memb-section .card-container .card div {
     background-color: #FBF3E4 ;
 }
 main .memb-section .card div h3 {
-    padding: 1em;
+    padding: 1rem;
     margin: 0;
     color: #FBF3E4;
     background-color: #4878A8;
 }
 main .memb-section .card div p {
-    padding: 1em;
+    padding: 1rem;
     color: #707070;
     border-bottom: 1px solid #707070 ;
 }
@@ -293,13 +293,13 @@ main .form-container form {
     flex-direction: column;
 }
 main .form-container label {
-    padding-top: 1em;
+    padding-top: 1rem;
 }
 main .form-container input {
-    padding: 0.5em;
+    padding: 0.5rem;
 }
 main .form-container form .submit-button {
-    margin: 1em auto;
+    margin: 1rem auto;
     border: none;
 }
 /* Submit button color on contact page */
@@ -355,13 +355,13 @@ main .form-container .input-pairs {
     flex-direction: column;
 }
 main .card-container .address p{
-    padding: 0.5em;
+    padding: 0.5rem;
 }
 main .card-container .address i{
-    padding: 0.5em;
+    padding: 0.5rem;
 }
 main .card-container .address h4{
-    padding: 1em 0;
+    padding: 1rem 0;
 }
 
 
@@ -375,17 +375,17 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1em;
+    padding: 1rem;
 }
 footer h2 {
-    font-size: 2em;
+    font-size: 2rem;
 }
 footer h3 {
     color: black;
-    font-size: 1em;
-    margin-bottom: 2em;
+    font-size: 1rem;
+    margin-bottom: 2rem;
 }
 footer #icon-container {
-    margin: 1em;
-    font-size: 1.5em;
+    margin: 1rem;
+    font-size: 1.5rem;
 }
