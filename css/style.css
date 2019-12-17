@@ -90,9 +90,12 @@ li.drop-trigger:hover .drop-menu {
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+#home-page {
     justify-content: center;
     align-items: center;
 }
+
 header h1 {
     text-align: center;
     font-size: 2.5rem;
@@ -218,6 +221,20 @@ main .A-section .profil img {
     width: 60%;
 }
 /* About page: squere cards */
+main .lernemehr-section .card-container a {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+main .lernemehr-section .card-container a:hover .card-link{
+    background-color: #902122;
+}
+main .lernemehr-section .card-container a:hover .card-read{
+    background-color: #F4C057;
+}
+main .lernemehr-section .card-container a:hover .card-listen{
+    background-color: #2D7E77;
+}
 main .lernemehr-section .card-container .card {
     width: 250px;
     min-height: 250px;
@@ -240,7 +257,7 @@ main .lernemehr-section .card-container .card-link {
 main .lernemehr-section .card-container .card-read {
     background-color: #F0CD85;
 }
-main .lernemehr-section .card-container .card-hear {
+main .lernemehr-section .card-container .card-listen {
     background-color: #5DA69F;
 }
 main .mehrlinks a {
