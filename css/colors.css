@@ -6,7 +6,7 @@ body {
     background-color: #FBF3E4;
 }
 
-/* === Navigation === */
+/* === Navigation Colors=== */
 
 nav.n-red {
     background-color: #902122;
@@ -69,14 +69,14 @@ main .coloured h2 {
 main .yellow h2 {
     color: #C56566;
 }
+main h3, h4 {
+    color: black;
+}
 main .plain p {
     color: #707070;
 }
 main .coloured p {
     color: #FBF3E4;
-}
-main h3, h4 {
-    color: black;
 }
 main .coloured label {
     color: #FBF3E4;

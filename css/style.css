@@ -61,26 +61,25 @@ li.drop-trigger:hover .drop-menu {
 
 
 /* === Header === */
-#home-page {
-    background-image: url(https://picsum.photos/id/109/2000/700);
+#head-home-page {
     background-image: url(../images/meadow-tree.jpg);
 }
-#team-page {
+#head-team-page {
     background-image: url(../images/autumn-leaves.jpg);
 }
-#about-page {
+#head-about-page {
     background-image: url(../images/girl-on-swing.jpg);
 }
-#courses-page {
+#head-courses-page {
     background-image: url(../images/child-clay.jpg);
 }
-#contact-page {
+#head-contact-page {
     background-image: url(../images/yellow--flowers-meadow.jpg);
 }
-#sign-up-page {
+#head-sign-up-page {
     background-image: url(../images/child-clay.jpg);
 }
-#blog-page {
+#head-blog-page {
     background-image: url(../images/blog-phone-tee.jpg);
 }
 
@@ -90,16 +89,13 @@ li.drop-trigger:hover .drop-menu {
     width: 100%;
     display: flex;
     flex-direction: column;
-}
-#home-page {
     justify-content: center;
     align-items: center;
 }
-
 header h1 {
-    text-align: center;
     font-size: 2.5rem;
 }
+
 /* === Main Section === */
 /* Colors in colors.css*/
 
@@ -120,18 +116,24 @@ main .section-content {
     justify-content: center;
     align-items: center;
 }
-main h2 {
+/* Heading */
+h2 {
     text-align: center;
     font-size: 2.2rem;
 }
-main h3 {
+h3 {
     text-align: center;
     font-size: 1rem;
     margin-bottom: 2rem;
 }
-main h4 {
-    color: black;
+h4 {
     font-size: 1rem;
+}
+/* Links */
+main .section-content a {
+    padding: 1rem;
+    margin: 1rem;
+    text-decoration: none;
 }
 main .plain a {
     border: 2px solid #C56566;
@@ -149,10 +151,12 @@ main .coloured a:hover {
     border: 2px solid black;
     color: black;
 }
+
 main .section-content > p {
    width: 80%;
    margin: 1em auto;
 }
+/* Cards */
 main .section-content .card-container {
     width: 100%;
     display: flex;
@@ -160,11 +164,6 @@ main .section-content .card-container {
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 2em auto;
-}
-main .section-content a {
-    padding: 1rem;
-    margin: 1rem;
-    text-decoration: none;
 }
 main .section-content .card-container .card {
     display: flex;
@@ -181,8 +180,8 @@ main .section-content .card-container .up {
 
 
 
-/* === Main > Team Section === */
-
+/* === Home: Team Section === */
+/* four small card with links */
 main .team-section .card-container .card {
     width: 15%;
 }
@@ -200,7 +199,7 @@ main .team-section .card a:hover img {
     opacity: 60%;
 }
 
-/* The A-Section means, it split to two cards, usually an image and a card with text content
+/* The A-Section means, it split to two cards, usually an image with border and a card with text content
 I use this in many page */
 main .A-section {
     margin-top: 2rem;
@@ -220,11 +219,20 @@ main .A-section .card h3 {
 main .A-section .profil img {
     width: 60%;
 }
-/* About page: squere cards */
+/* About page: squere internal link cards */
 main .lernemehr-section .card-container a {
     border: none;
     padding: 0;
     margin: 0;
+}
+main .lernemehr-section .card-container .card-link {
+    background-color: #C56566;
+}
+main .lernemehr-section .card-container .card-read {
+    background-color: #F0CD85;
+}
+main .lernemehr-section .card-container .card-listen {
+    background-color: #5DA69F;
 }
 main .lernemehr-section .card-container a:hover .card-link{
     background-color: #902122;
@@ -251,15 +259,7 @@ main .lernemehr-section .card div p {
     padding: 1rem;
     color: #FBF3E4;
 }
-main .lernemehr-section .card-container .card-link {
-    background-color: #C56566;
-}
-main .lernemehr-section .card-container .card-read {
-    background-color: #F0CD85;
-}
-main .lernemehr-section .card-container .card-listen {
-    background-color: #5DA69F;
-}
+
 main .mehrlinks a {
     border: none;
     margin: 0;
@@ -268,7 +268,7 @@ main .mehrlinks a:hover {
     border: none;
 }
 
-/* === Main > Gallery Section === */
+/* === Home: Gallery Section === */
 main .gallery-section .card-container .card {
     width: 33%; 
 }
@@ -276,7 +276,8 @@ main .gallery-section .card-container .card img {
     width: 100%;
     padding: 5px;
 }
-/* === Main > Membership Section === */
+/* === Home: Membership Section === */
+/* three medium card with links */
 main .memb-section .card-container .card {
     width: 25%;
 }
@@ -303,8 +304,8 @@ main .memb-section .card div a {
     color: #FBF3E4;
     background-color: #4878A8;
 }
-
-/* Contact form on index page and contact page */
+/* === Home: Contact Section === */
+/* Contact form on index page, contact page */
 main .form-container form {
     display: flex;
     flex-direction: column;
@@ -371,6 +372,7 @@ main .form-container .input-pairs {
     display: flex;
     flex-direction: column;
 }
+/* Address in contact section and contact page */
 main .card-container .address p{
     padding: 0.5rem;
 }
@@ -393,14 +395,6 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-}
-footer h2 {
-    font-size: 2rem;
-}
-footer h3 {
-    color: black;
-    font-size: 1rem;
-    margin-bottom: 2rem;
 }
 footer #icon-container {
     margin: 1rem;
