@@ -41,10 +41,9 @@ li.drop-trigger:hover .drop-menu {
     margin-top: 1rem;
     flex-direction: column;
     display: none;
-    scale: 0;
 }
 .drop-menu a {
-    width: calc(100%-0.4em);
+    width: calc(100% - 0.4em);
 }
 @keyframes scale {
     0% {
