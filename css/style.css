@@ -1,23 +1,19 @@
-
-
 /* === My Own Style=== */
-                /* This is in colors.css too jet */
+
 body {
     color: #707070;
     background-color: #FBF3E4;
 }
 
-
-
 /* === Navigation === */
 /* Colors in colors.css */
-/* Content */
+
 nav {
     color: white;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     padding: 1.3rem;
     position: fixed;
 }
@@ -45,8 +41,8 @@ li.drop-trigger:hover .drop-menu {
     margin-top: 1rem;
     flex-direction: column;
     display: none;
-    scale: 0; 
-} 
+    scale: 0;
+}
 .drop-menu a {
     width: calc(100%-0.4em);
 }
@@ -55,12 +51,12 @@ li.drop-trigger:hover .drop-menu {
         transform: scaleX(0);
     }
     100% {
-       transform: scaleX(1);
+        transform: scaleX(1);
     }
 }
 
-
 /* === Header === */
+
 #head-home-page {
     background-image: url(../images/meadow-tree.jpg);
 }
@@ -82,7 +78,6 @@ li.drop-trigger:hover .drop-menu {
 #head-blog-page {
     background-image: url(../images/blog-phone-tee.jpg);
 }
-
 .hero-img {
     background-size: cover;
     height: 600px;
@@ -97,7 +92,7 @@ header h1 {
 }
 
 /* === Main Section === */
-/* Colors in colors.css*/
+/* Colors in colors.css */
 
 main .coloured {
     width: 100%;
@@ -153,8 +148,8 @@ main .coloured a:hover {
 }
 
 main .section-content > p {
-   width: 80%;
-   margin: 1em auto;
+    width: 80%;
+    margin: 1em auto;
 }
 /* Cards */
 main .section-content .card-container {
@@ -178,9 +173,8 @@ main .section-content .card-container .up {
     justify-content: flex-start;
 }
 
-
-
 /* === Home: Team Section === */
+
 /* four small card with links */
 main .team-section .card-container .card {
     width: 15%;
@@ -234,13 +228,13 @@ main .lernemehr-section .card-container .card-read {
 main .lernemehr-section .card-container .card-listen {
     background-color: #5DA69F;
 }
-main .lernemehr-section .card-container a:hover .card-link{
+main .lernemehr-section .card-container a:hover .card-link {
     background-color: #902122;
 }
-main .lernemehr-section .card-container a:hover .card-read{
+main .lernemehr-section .card-container a:hover .card-read {
     background-color: #F4C057;
 }
-main .lernemehr-section .card-container a:hover .card-listen{
+main .lernemehr-section .card-container a:hover .card-listen {
     background-color: #2D7E77;
 }
 main .lernemehr-section .card-container .card {
@@ -269,14 +263,17 @@ main .mehrlinks a:hover {
 }
 
 /* === Home: Gallery Section === */
+
 main .gallery-section .card-container .card {
-    width: 33%; 
+    width: 33%;
 }
 main .gallery-section .card-container .card img {
     width: 100%;
     padding: 5px;
 }
+
 /* === Home: Membership Section === */
+
 /* three medium card with links */
 main .memb-section .card-container .card {
     width: 25%;
@@ -304,7 +301,9 @@ main .memb-section .card div a {
     color: #FBF3E4;
     background-color: #4878A8;
 }
+
 /* === Home: Contact Section === */
+
 /* Contact form on index page, contact page */
 main .form-container form {
     display: flex;
@@ -321,7 +320,7 @@ main .form-container form .submit-button {
     border: none;
 }
 /* Submit button color on contact page */
-main .form-container form #subm-contact-page {    
+main .form-container form #subm-contact-page {
     color:  #FBF3E4;
     background-color: #5DA69F;
 }
@@ -334,7 +333,7 @@ main .form-container form #subm-index-page {
     background-color: #C56566;
 }
 main .form-container form #subm-index-page:hover {
-    background-color: #902122;  
+    background-color: #902122;
 }
 /* Submit button color on sign-up page */
 main .form-container form #subm-sign-up-form {
@@ -343,7 +342,7 @@ main .form-container form #subm-sign-up-form {
     border: 2px solid #4878A8;
 }
 main .form-container form #subm-sign-up-form:hover {
-    border: 2px solid black;  
+    border: 2px solid black;
 }
 main .form-container form #subm-sign-in-form {
     color:  #FBF3E4;
@@ -351,7 +350,7 @@ main .form-container form #subm-sign-in-form {
     border: 2px solid #4878A8;
 }
 main .form-container form #subm-sign-in-form:hover {
-    border: 2px solid black;  
+    border: 2px solid black;
 }
 /* Sign-in and Sign-up form on sign-up page */
 main .form-container .wide input {
@@ -373,19 +372,18 @@ main .form-container .input-pairs {
     flex-direction: column;
 }
 /* Address in contact section and contact page */
-main .card-container .address p{
+main .card-container .address p {
     padding: 0.5rem;
 }
-main .card-container .address i{
+main .card-container .address i {
     padding: 0.5rem;
 }
-main .card-container .address h4{
+main .card-container .address h4 {
     padding: 1rem 0;
 }
 
-
 /* === Footer === */
-/* Colors¨in colors.css */
+/* Colors in colors.css */
 
 footer {
     color: white;

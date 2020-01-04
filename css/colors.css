@@ -48,7 +48,7 @@ header h1 {
 /* === Main Section === */
 
 main .red {
-    background-color: #C56566;   
+    background-color: #C56566;
 }
 main .yellow {
     background-color: #F0CD85;
@@ -65,7 +65,6 @@ main .plain h2 {
 main .coloured h2 {
     color: #FBF3E4;
 }
-    /* Ausnahme: yellow-theme h2 */
 main .yellow h2 {
     color: #C56566;
 }
@@ -97,4 +96,3 @@ footer.n-green {
 footer.n-blue {
     background-color: #4878A8;
 }
-
