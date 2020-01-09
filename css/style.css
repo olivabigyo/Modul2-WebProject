@@ -16,6 +16,7 @@ nav {
     align-items: center;
     padding: 1.3rem;
     position: fixed;
+    opacity: 90%;
 }
 nav ul {
     display: flex;
@@ -57,25 +58,32 @@ li.drop-trigger:hover .drop-menu {
 /* === Header === */
 
 #head-home-page {
-    background-image: url(../images/meadow-tree.jpg);
+    background: url(../images/meadow-tree.jpg) no-repeat center center;
+    background-size: cover;
 }
 #head-team-page {
-    background-image: url(../images/autumn-leaves.jpg);
+    background: url(../images/autumn-leaves.jpg) no-repeat center center;
+    background-size: cover;
 }
 #head-about-page {
-    background-image: url(../images/girl-on-swing.jpg);
+    background: url(../images/girl-on-swing.jpg) no-repeat center center;
+    background-size: cover;
 }
 #head-courses-page {
-    background-image: url(../images/child-clay.jpg);
+    background: url(../images/child-clay.jpg) no-repeat center center;
+    background-size: cover;
 }
 #head-contact-page {
-    background-image: url(../images/yellow--flowers-meadow.jpg);
+    background: url(../images/yellow--flowers-meadow.jpg) no-repeat center center;
+    background-size: cover;
 }
 #head-sign-up-page {
-    background-image: url(../images/child-clay.jpg);
+    background: url(../images/child-clay.jpg) no-repeat center center;
+    background-size: cover;
 }
 #head-blog-page {
-    background-image: url(../images/blog-phone-tee.jpg);
+    background: url(../images/blog-phone-tee.jpg) no-repeat center center;
+    background-size: cover;
 }
 .hero-img {
     background-size: cover;
@@ -150,6 +158,10 @@ main .section-content > p {
     width: 80%;
     margin: 1em auto;
 }
+main .section-content li {
+    width: 75%;
+    margin: 0 auto;
+}
 /* Cards */
 main .section-content .card-container {
     width: 100%;
@@ -181,7 +193,7 @@ main .team-section .card-container .card {
 main .team-section a img {
     width: 100%;
     border: 3px solid #a0a0a0;
-    border-radius: 150px;
+    border-radius: 50%;
 }
 main .team-section .card a {
     padding: 0;
@@ -211,6 +223,7 @@ main .A-section .card h3 {
 /* Team page: team member profilphotos */
 main .A-section .profil img {
     width: 60%;
+    border-radius: 50%;
 }
 /* About page: squere internal link cards */
 main .lernemehr-section .card-container a {
