@@ -284,6 +284,20 @@ main .gallery-section .card-container .card img {
     width: 100%;
     padding: 5px;
 }
+/* === Blog Page === */
+
+main .blog .card {
+    width: 50%;
+}
+main .blog .card img {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 0;
+}
+main .blog .wide {
+    width: 100%;
+}
 
 /* === Home: Membership Section === */
 
