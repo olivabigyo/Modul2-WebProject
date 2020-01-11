@@ -39,7 +39,7 @@ li.drop-trigger:hover .drop-menu {
 }
 .drop-menu {
     position: absolute;
-    margin-top: 1rem;
+    margin-top: 0.9rem;
     flex-direction: column;
     display: none;
 }
