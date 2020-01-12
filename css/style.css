@@ -1,12 +1,15 @@
 /* === My Own Style=== */
-
+/* This is  yet in colors.css too */
 body {
     color: #707070;
     background-color: #FBF3E4;
 }
 
+/* ================== */
 /* === Navigation === */
-/* Colors in colors.css */
+/* ================== */
+
+/* Nav colors in colors.css */
 
 nav {
     color: white;
@@ -33,10 +36,6 @@ nav ul a:hover {
     background: white;
     color: black;
 }
-li.drop-trigger:hover .drop-menu {
-    display: flex;
-    animation: scale 0.4s;
-}
 .drop-menu {
     position: absolute;
     margin-top: 0.9rem;
@@ -46,6 +45,10 @@ li.drop-trigger:hover .drop-menu {
 .drop-menu a {
     width: calc(100% - 0.4em);
 }
+li.drop-trigger:hover .drop-menu {
+    display: flex;
+    animation: scale 0.4s;
+}
 @keyframes scale {
     0% {
         transform: scaleX(0);
@@ -54,8 +57,9 @@ li.drop-trigger:hover .drop-menu {
         transform: scaleX(1);
     }
 }
-
+/* ============== */
 /* === Header === */
+/* ============== */
 
 #head-home-page {
     background: url(../images/meadow-tree.jpg) no-repeat center center;
@@ -86,7 +90,6 @@ li.drop-trigger:hover .drop-menu {
     background-size: cover;
 }
 .hero-img {
-    background-size: cover;
     height: 600px;
     width: 100%;
     display: flex;
@@ -97,8 +100,10 @@ li.drop-trigger:hover .drop-menu {
 header h1 {
     font-size: 2.5rem;
 }
-
+/* ==================== */
 /* === Main Section === */
+/* ==================== */
+
 /* Colors in colors.css */
 
 main .coloured {
@@ -131,7 +136,7 @@ h3 {
 h4 {
     font-size: 1rem;
 }
-/* Links */
+/* Link buttons */
 main .section-content a {
     padding: 1rem;
     margin: 1rem;
@@ -153,7 +158,7 @@ main .coloured a:hover {
     border: 2px solid black;
     color: black;
 }
-
+/* Text content */
 main .section-content > p {
     width: 80%;
     margin: 1em auto;
@@ -185,9 +190,10 @@ main .section-content .card-container .up {
     justify-content: flex-start;
 }
 
-/* === Home: Team Section === */
+/* === Index Page: Team Section === */
+/* -------------------------------- */
 
-/* four small card with links */
+/* four small card for team member photos with links */
 main .team-section .card-container .card {
     width: 15%;
 }
@@ -205,77 +211,9 @@ main .team-section .card a:hover img {
     opacity: 60%;
 }
 
-/* The A-Section means, it split to two cards, usually an image with border and a card with text content
-I use this in many page */
-main .A-section {
-    margin-top: 2rem;
-}
-main .A-section .card {
-    width: 40%;
-}
-main .A-section .card img {
-    width: 100%;
-    border-radius: 150px;
-    border: 6px solid #a0a0a0;
-}
-main .A-section .card h3 {
-    font-size: 1.5rem;
-}
-/* Team page: team member profilphotos */
-main .A-section .profil img {
-    width: 60%;
-    border-radius: 50%;
-}
-/* About page: squere internal link cards */
-main .lernemehr-section .card-container a {
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-main .lernemehr-section .card-container .card-link {
-    background-color: #C56566;
-}
-main .lernemehr-section .card-container .card-read {
-    background-color: #F0CD85;
-}
-main .lernemehr-section .card-container .card-listen {
-    background-color: #5DA69F;
-}
-main .lernemehr-section .card-container a:hover .card-link {
-    background-color: #902122;
-}
-main .lernemehr-section .card-container a:hover .card-read {
-    background-color: #F4C057;
-}
-main .lernemehr-section .card-container a:hover .card-listen {
-    background-color: #2D7E77;
-}
-main .lernemehr-section .card-container .card {
-    width: 250px;
-    min-height: 250px;
-}
-main .lernemehr-section .card-container .card div {
-    width: 100%;
-    text-align: center;
-}
-main .lernemehr-section .card div h3 {
-    padding: 1rem;
-    margin: 0;
-}
-main .lernemehr-section .card div p {
-    padding: 1rem;
-    color: #FBF3E4;
-}
-
-main .mehrlinks a {
-    border: none;
-    margin: 0;
-}
-main .mehrlinks a:hover {
-    border: none;
-}
-
-/* === Home: Gallery Section === */
+/* === Index Page: Gallery Section === */
+/* ----------------------------------- */
+/* images without border with hover effekt */
 
 main .gallery-section .card-container .card {
     width: 33%;
@@ -288,29 +226,32 @@ main .gallery-section .card-container .card img {
 main .gallery-section .card-container .card img:hover {
     transform: scale(1.15);
 }
-/* === Blog Page === */
+/* === Blog Page with similar images style === */
+/* images without border with hover effekt */
 
 main .blog .card {
+    width: 45%;
+}
+main .blog .small {
     width: 50%;
-}
-main .blog .card img {
-    width: 100%;
-    padding: 5px;
-    border: none;
-    border-radius: 0;
-    transition: transform 1s;
-}
-main .blog .card img:hover {
-    transform: scale(2.25);
 }
 main .blog .wide {
     width: 100%;
 }
-main .blog #line-through {
+main .blog img {
+    width: 100%;
+    padding: 5px;
+    transition: transform 0.4s;
+}
+main .blog .card img:hover {
+    transform: scale(2);
+}
+main .blog .line-through {
     text-decoration: line-through;
 }
 
-/* === Home: Membership Section === */
+/* === Index Page: Membership Section === */
+/* -------------------------------------- */
 
 /* three medium card with links */
 main .memb-section .card-container .card {
@@ -340,9 +281,9 @@ main .memb-section .card div a {
     background-color: #4878A8;
 }
 
-/* === Home: Contact Section === */
-
-/* Contact form on index page, contact page */
+/* === Contact Section === */
+/* ----------------------- */
+/* Contact form on Index Page, Contact Page and SignUp Page */
 main .form-container form {
     display: flex;
     flex-direction: column;
@@ -357,7 +298,7 @@ main .form-container form .submit-button {
     margin: 1rem auto;
     border: none;
 }
-/* Submit button color on contact page */
+/* Submit button color on Contact Page */
 main .form-container form #subm-contact-page {
     color:  #FBF3E4;
     background-color: #5DA69F;
@@ -365,7 +306,7 @@ main .form-container form #subm-contact-page {
 main .form-container form #subm-contact-page:hover {
     background-color: #2D7E77;
 }
-/* Submit button color on index page */
+/* Submit button color on Index Page */
 main .form-container form #subm-index-page {
     color:  #FBF3E4;
     background-color: #C56566;
@@ -373,7 +314,7 @@ main .form-container form #subm-index-page {
 main .form-container form #subm-index-page:hover {
     background-color: #902122;
 }
-/* Submit button color on sign-up page */
+/* Submit button color on Sign-up Page sign-up form*/
 main .form-container form #subm-sign-up-form {
     color:  #FBF3E4;
     background-color: #4878A8;
@@ -382,6 +323,7 @@ main .form-container form #subm-sign-up-form {
 main .form-container form #subm-sign-up-form:hover {
     border: 2px solid black;
 }
+/* Submit button color on Sign-up Page sign-in form*/
 main .form-container form #subm-sign-in-form {
     color:  #FBF3E4;
     background-color: #4878A8;
@@ -390,7 +332,7 @@ main .form-container form #subm-sign-in-form {
 main .form-container form #subm-sign-in-form:hover {
     border: 2px solid black;
 }
-/* Sign-in and Sign-up form on sign-up page */
+/* Sign-in and Sign-up form on Sign-up Page */
 main .form-container .wide input {
     min-width: 300px;
 }
@@ -409,7 +351,7 @@ main .form-container .input-pairs {
     display: flex;
     flex-direction: column;
 }
-/* Address in contact section and contact page */
+/* Address in Index Page:contact-section and Contact Page */
 main .card-container .address p {
     padding: 0.5rem;
 }
@@ -420,7 +362,85 @@ main .card-container .address h4 {
     padding: 1rem 0;
 }
 
+/* === All Pages: A-section === */
+/* ---------------------------- */
+
+/* The A-Section means, it splits the screen, usually an image with border and a card with text content
+I use this in every page */
+
+main .A-section {
+    margin-top: 2rem;
+}
+main .A-section .card {
+    width: 40%;
+}
+main .A-section .card img {
+    width: 100%;
+    border-radius: 150px;
+    border: 6px solid #a0a0a0;
+}
+main .A-section .card h3 {
+    font-size: 1.5rem;
+}
+/* Only Team page: team member profilphotos */
+main .A-section .profil img {
+    width: 60%;
+    border-radius: 50%;
+}
+/* Only About page: squere cards with internal link */
+main .learnmore .card-container a {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+/* Coloring the squere cards */
+main .learnmore .card-container .card-link {
+    background-color: #C56566;
+}
+main .learnmore .card-container .card-read {
+    background-color: #F0CD85;
+}
+main .learnmore .card-container .card-listen {
+    background-color: #5DA69F;
+}
+main .learnmore .card-container a:hover .card-link {
+    background-color: #902122;
+}
+main .learnmore .card-container a:hover .card-read {
+    background-color: #F4C057;
+}
+main .learnmore .card-container a:hover .card-listen {
+    background-color: #2D7E77;
+}
+/* Styling the squere cards*/
+main .learnmore .card-container .card {
+    width: 250px;
+    height: 250px;
+}
+main .learnmore .card-container .card div {
+    width: 100%;
+    text-align: center;
+}
+main .learnmore .card div h3 {
+    padding: 1rem;
+    margin: 0;
+}
+main .learnmore .card div p {
+    padding: 1rem;
+    color: #FBF3E4;
+}
+main .useful-links a {
+    border: none;
+    margin: 0;
+}
+main .useful-links a:hover {
+    border: none;
+}
+
+/* ============== */
 /* === Footer === */
+/* ============== */
+
 /* Colors in colors.css */
 
 footer {
