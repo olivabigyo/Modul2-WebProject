@@ -14,26 +14,16 @@ body {
 nav {
     color: white;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
     padding: 1.3rem;
     position: fixed;
     opacity: 90%;
 }
 nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     list-style: none;
 }
 nav ul a {
@@ -48,41 +38,23 @@ nav ul a:hover {
 }
 .drop-menu {
     position: absolute;
-    margin-top: 0.8rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    margin-top: 0.9rem;
+    flex-direction: column;
     display: none;
 }
 .drop-menu a {
     width: calc(100% - 0.4em);
 }
 li.drop-trigger:hover .drop-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-animation: scale 0.2s;
-            animation: scale 0.2s;
-}
-@-webkit-keyframes scale {
-    0% {
-        -webkit-transform: scaleX(0);
-                transform: scaleX(0);
-    }
-    100% {
-        -webkit-transform: scaleX(1);
-                transform: scaleX(1);
-    }
+    animation: scale 0.2s;
 }
 @keyframes scale {
     0% {
-        -webkit-transform: scaleX(0);
-                transform: scaleX(0);
+        transform: scaleX(0);
     }
     100% {
-        -webkit-transform: scaleX(1);
-                transform: scaleX(1);
+        transform: scaleX(1);
     }
 }
 /* ============== */
@@ -120,19 +92,10 @@ li.drop-trigger:hover .drop-menu {
 .hero-img {
     height: 600px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 header h1 {
     font-size: 2.5rem;
@@ -155,19 +118,10 @@ main .section-content {
     margin-left: auto;
     margin-right: auto;
     padding: 2rem 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 /* Heading */
 h2 {
@@ -217,43 +171,23 @@ main .section-content li {
 /* Cards */
 main .section-content .card-container {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin: 2em auto;
 }
 main .section-content .card-container .card {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 main .section-content .card-container .left {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
 }
 main .section-content .card-container .up {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
 }
 
 /* === Index Page: Team Section === */
@@ -287,14 +221,10 @@ main .gallery-section .card-container .card {
 main .gallery-section .card-container .card img {
     width: 100%;
     padding: 5px;
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s;
 }
 main .gallery-section .card-container .card img:hover {
-    -webkit-transform: scale(1.15);
-            transform: scale(1.15);
+    transform: scale(1.15);
 }
 /* === Blog Page with similar images style === */
 /* images without border with hover effekt */
@@ -311,14 +241,10 @@ main .blog .wide {
 main .blog img {
     width: 100%;
     padding: 5px;
-    -webkit-transition: -webkit-transform 0.4s;
-    transition: -webkit-transform 0.4s;
     transition: transform 0.4s;
-    transition: transform 0.4s, -webkit-transform 0.4s;
 }
 main .blog .card img:hover {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
 }
 main .blog .line-through {
     text-decoration: line-through;
@@ -359,13 +285,8 @@ main .memb-section .card div a {
 /* ----------------------- */
 /* Contact form on Index Page, Contact Page and SignUp Page */
 main .form-container form {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
 }
 main .form-container label {
     padding-top: 1rem;
@@ -420,25 +341,15 @@ main .form-container .slim {
     margin: 0 auto;
 }
 main .form-container .inputs {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0 auto;
 }
 main .form-container .input-pairs {
     width: 48%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
 }
 /* Address in Index Page:contact-section and Contact Page */
 main .card-container .address p {
@@ -535,19 +446,10 @@ main .useful-links a:hover {
 footer {
     color: white;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
 }
 footer #icon-container {
