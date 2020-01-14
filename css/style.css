@@ -85,6 +85,7 @@ li.drop-trigger:hover .drop-menu {
                 transform: scaleX(1);
     }
 }
+
 /* ============== */
 /* === Header === */
 /* ============== */
@@ -525,6 +526,18 @@ main .useful-links a {
 main .useful-links a:hover {
     border: none;
 }
+
+/* Anchor adjustment */
+/* Classes for offsetting the html anchor to adjust for fixed header */
+.for-anchor {
+    position: relative;
+}
+.adjust-anchor {
+    position: absolute;
+    top: -4.1rem;
+}
+
+
 
 /* ============== */
 /* === Footer === */
