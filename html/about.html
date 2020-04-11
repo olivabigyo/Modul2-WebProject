@@ -12,7 +12,7 @@
     <!-- Font Style Sheet -->
     <link rel="stylesheet" href="../css/fonts.css">
     <!-- My Stylesheet -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-beforeprefixed.css">
     <!-- Sylesheet of Colors -->
     <link rel="stylesheet" href="../css/colors.css">
     <!-- Fontawesome -->
@@ -24,24 +24,37 @@
     <!-- Logo or Company name and Navigation bar -->
     <nav class="n-yellow">
       <ul>
-        <li><a href="../index.html">Little Fox & Friends</a></li>
+        <li class="hide-small"><a href="../index.html">Little Fox & Friends</a></li>
+        <li class="hide-big drop-trigger"><i class="fas fa-home"></i></li>
       </ul>
       <ul>
-        <li class="drop-trigger"><a href="about.html">About</a>
+        <li class="hide-small drop-trigger"><a href="about.html">About</a>
           <div class="drop-menu">
             <a href="about.html">Our Mission</a>
             <a href="team.html">Team</a>
             <a href="courses.html">Courses</a>
           </div>
         </li>
-        <li class="drop-trigger"><a href="contact.html">Contact</a>
+        <li class="hide-small drop-trigger"><a href="contact.html">Contact</a>
           <div class="drop-menu">
             <a href="contact.html">Contact Us</a>
             <a href="contact.html#location">Location</a>
             <a href="sign-up.html">Sign Up</a>
           </div>
         </li>
-        <li><a href="blog.html">Blog</a></li>
+        <li class="hide-small" ><a href="blog.html">Blog</a></li>
+        <li class="hide-big drop-trigger-small">
+          <i class="fas fa-bars"></i>
+          <div class="drop-menu-small">
+            <a href="about.html">Our Mission</a>
+            <a href="team.html">Team</a>
+            <a href="courses.html">Courses</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="contact.html#location">Location</a>
+            <a href="sign-up.html">Sign Up</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </li>
       </ul>
     </nav>
 

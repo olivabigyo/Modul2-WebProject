@@ -12,7 +12,7 @@
     <!-- Font Style Sheet -->
     <link rel="stylesheet" href="css/fonts.css">
     <!-- My Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-beforeprefixed.css">
     <!-- Sylesheet of Colors -->
     <link rel="stylesheet" href="css/colors.css">
     <!-- Fontawesome -->
@@ -24,24 +24,37 @@
     <!-- Logo and Company name left and Navigation bar right (sit on top fixed) -->
     <nav class="n-red">
       <ul>
-        <li><a href="index.html">Little Fox & Friends</a></li>
+        <li class="hide-small"><a href="index.html">Little Fox & Friends</a></li>
+        <li class="hide-big drop-trigger"><i class="fas fa-home"></i></li>
       </ul>
       <ul>
-        <li class="drop-trigger"><a href="html/about.html">About</a>
+        <li class="hide-small drop-trigger"><a href="html/about.html">About</a>
           <div class="drop-menu">
             <a href="html/about.html">Our Mission</a>
             <a href="html/team.html">Team</a>
             <a href="html/courses.html">Courses</a>
           </div>
         </li>
-        <li class="drop-trigger"><a href="html/contact.html">Contact</a>
+        <li class="hide-small drop-trigger"><a href="html/contact.html">Contact</a>
           <div class="drop-menu">
             <a href="html/contact.html">Contact Us</a>
             <a href="html/contact.html#location">Location</a>
             <a href="html/sign-up.html">Sign Up</a>
           </div>
         </li>
-        <li><a href="html/blog.html">Blog</a></li>
+        <li class="hide-small"><a href="html/blog.html">Blog</a></li>
+        <li class="hide-big drop-trigger-small">
+          <i class="fas fa-bars"></i>
+          <div class="drop-menu-small">
+            <a href="html/about.html">Our Mission</a>
+            <a href="html/team.html">Team</a>
+            <a href="html/courses.html">Courses</a>
+            <a href="html/contact.html">Contact Us</a>
+            <a href="html/contact.html#location">Location</a>
+            <a href="html/sign-up.html">Sign Up</a>
+            <a href="html/blog.html">Blog</a>
+          </div>
+        </li>
       </ul>
     </nav>
 
@@ -188,7 +201,7 @@
       <!-- light background -->
       <section class="plain">
         <!-- Container for 1024px wide screen  -->
-        <div class="section-content">
+        <div class="section-content contact-section">
           <h2>Contact Us</h2>
           <h3>VISIT OR DROP US A LINE</h3>
           <div class="card-container">

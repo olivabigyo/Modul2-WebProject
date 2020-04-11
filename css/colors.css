@@ -20,16 +20,16 @@ nav.n-green {
 nav.n-blue {
     background-color: #4878A8;
 }
-nav.n-red .drop-menu {
+nav.n-red .drop-menu, nav.n-red .drop-menu-small {
     background-color: #902122;
 }
-nav.n-yellow .drop-menu {
+nav.n-yellow .drop-menu, nav.n-yellow .drop-menu-small  {
     background-color: #F4C057;
 }
-nav.n-green .drop-menu {
+nav.n-green .drop-menu, nav.n-green .drop-menu-small {
     background-color: #2D7E77;
 }
-nav.n-blue .drop-menu {
+nav.n-blue .drop-menu, nav.n-blue .drop-menu-small {
     background-color: #4878A8;
 }
 /* This is yet in style.css too */
