@@ -14,9 +14,9 @@ body {
 body {
     display: grid;
     grid-template-columns: 1fr 160px;
-    grid-template-rows: 600px auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
-    'header header' 
+    'head head' 
     'main .'
     'footer footer';
 }
@@ -27,16 +27,8 @@ main > section {
     '. content';
 }
 
-
-
-/* .home {
-    grid-area: home;
-}
-nav {
-    grid-area: nav;
-} */
 .wrapper {
-    grid-area: header;
+    grid-area: head;
 }
 main {
     grid-area: main;
@@ -48,6 +40,32 @@ footer {
     grid-area: content;
 }
 
+/* ========================== */
+/* === Header Positioning === */
+/* ========================== */
+
+.wrapper {
+    position: relative;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;    
+}
+
+.home {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
 
 /* ================== */
 /* === Navigation === */
@@ -55,19 +73,9 @@ footer {
 
 /* Nav colors in colors.css */
 
-.wrapper {
-    position: relative;
-}
-nav.n-red {
-    /* background-color: #902122; */
-}
 
-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    
-}
+
+
 nav ul#menu-tag {
     width: 500px;
     height: 80px;
@@ -82,12 +90,10 @@ nav ul#nav-tag {
     transform-origin: 0 0;
     /* border-bottom: 1px solid white; */
 }
-
-.home {
-    position: fixed;
-    left: 0;
-    top: 0;
+nav #burger-tag {
+    display: none;
 }
+
 .home {
     justify-items: center;
     width: 250px;
@@ -109,14 +115,12 @@ nav ul#nav-tag {
 .home li i {
     font-size: 2rem;
 }
+.home .hide-big {
+    display: none;
+}
+
 nav {
-    /* height: 600px; */
-    opacity: 90%;
-    /* width: 100%; */
-    /* display: flex; */
-    /* justify-content: space-between; */
     align-items: center;
-    /* padding: 1.3rem; */
 }
 
 nav ul {
@@ -131,9 +135,6 @@ nav ul a {
     padding: 1rem 3rem;
 }
 
-nav ul {
-    /* margin: 0.2rem; */
-}
 nav ul a:hover, .home ul a:hover {
     background: white;
     color: black;
@@ -178,6 +179,7 @@ li.drop-trigger-small:hover .drop-menu-small {
 /* === Header === */
 /* ============== */
 
+
 #head-home-page {
     background: url(../images/meadow-tree.jpg) no-repeat center center;
     background-size: cover;
@@ -207,12 +209,14 @@ li.drop-trigger-small:hover .drop-menu-small {
     background-size: cover;
 }
 .hero-img {
-    height: 600px;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+    transition: opacity 1s;
 }
 header h1 {
     font-size: 2.5rem;
@@ -222,6 +226,9 @@ header h1 {
 /* ==================== */
 
 /* Colors in colors.css */
+main .main-top-padding {
+    height: 110vh;
+}
 
 main .coloured {
     width: 100%;
@@ -633,20 +640,13 @@ footer a {
 /* === Media Queries === */
 /* ===================== */
 
-
-@media screen and (min-width: 660px) {
-    nav #burger-tag {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 1198px) {
     body {
         display: grid;
         grid-template-columns: 1fr 80px;
-        grid-template-rows: 600px auto auto;
+        grid-template-rows: auto auto auto;
         grid-template-areas: 
-        'header header' 
+        'head head' 
         'main .'
         'footer footer';
     }
@@ -657,7 +657,7 @@ footer a {
         display: grid;
         grid-template-columns: 150px 1fr;
         grid-template-areas: 
-        '. content .';
+        '. content';
     }
     .home {
         background-color: white;
@@ -669,16 +669,14 @@ footer a {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 
-        'content .';
-    }
-}
-@media screen and (min-width: 960px) {
-    .hide-big {
-        display: none;
+        'content';
     }
 }
 
 @media screen and (max-width: 960px) {
+    .home .hide-big {
+        display: block;
+    }
     .hide-small {
         display: none;
     }
@@ -686,6 +684,7 @@ footer a {
         width: 80px;
         height: 80px;
     }
+}
 
 @media screen and (max-width: 960px) {
     main .team-section .card-container {
@@ -755,9 +754,9 @@ footer a {
     body {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 600px auto auto;
+        grid-template-rows: auto auto auto;
         grid-template-areas: 
-        'header' 
+        'head' 
         'main'
         'footer';
     }
@@ -792,10 +791,3 @@ footer a {
         'content';
     }
 }
-
-
-
-
-
-
-
