@@ -131,7 +131,7 @@ nav ul {
 
 nav ul a {
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 1rem 3rem;
 }
 
@@ -212,22 +212,36 @@ li.drop-trigger-small:hover .drop-menu-small {
     height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
     opacity: 1;
     transition: opacity 1s;
 }
-header h1 {
-    font-size: 2.5rem;
-}
+
 /* ==================== */
 /* === Main Section === */
 /* ==================== */
 
 /* Colors in colors.css */
 main .main-top-padding {
-    height: 110vh;
+    height: 100vh;
+}
+main .main-top-padding .section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main .main-top-padding h1 {
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    z-index: 100;
+}
+main .main-top-padding h5 {
+    text-align: center;
+    /* align-self: center; */
+    z-index: 100;
 }
 
 main .coloured {
@@ -681,8 +695,8 @@ footer a {
         display: none;
     }
     .home {
-        width: 80px;
-        height: 80px;
+        width: 65px;
+        height: 65px;
     }
 }
 
@@ -773,8 +787,8 @@ footer a {
     } 
     nav #burger-tag {
         display: block;
-        width: 80px;
-        height: 80px;
+        width: 65px;
+        height: 65px;
         background-color: white;
     }
     #burger-tag {
