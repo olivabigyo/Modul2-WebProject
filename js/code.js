@@ -3,9 +3,10 @@
 window.addEventListener('scroll', myfunction);
 
 const menu = document.querySelector('nav #menu-tag li a');
-const nav = document.querySelector('nav #nav-tag li a')
+const nav = document.querySelector('nav #nav-tag');
+const navis = document.querySelectorAll('nav #nav-tag li a');
 const head = document.querySelector('header');
-console.log(menu);
+// console.log(menu);
 const mycontent = document.querySelector('main');
 const fade_start = 0;
 const fade_end = 700;
@@ -21,16 +22,20 @@ function myfunction() {
     head.style.opacity = 1 - opacity;
     last_opacity = opacity;
     if (opacity == 1) {
+        head.style.display = 'none';
+    } else {
+        head.style.display = 'block';
+    };
+    
+    if (opacity > 0.6) {
         menu.style.color = 'black';
         menu.parentElement.parentElement.style.borderBottom = '1px solid black';
-        nav.style.color = 'black';
-        nav.parentElement.parentElement.style.borderBottom = '1px solid black';
-        head.style.display = 'none';
+        for (let navi of navis) {navi.style.color = 'black';}
+        nav.style.borderBottom = 'none';   
     } else {
         menu.style.color = 'white';
         menu.parentElement.parentElement.style.borderBottom = '1px solid white';
-        nav.style.color = 'white';
-        nav.parentElement.parentElement.style.borderBottom = '1px solid white';
-        head.style.display = 'block';
+        for (let navi of navis) {navi.style.color = 'white';}
+        nav.style.borderBottom = '1px solid white';
     };
 }

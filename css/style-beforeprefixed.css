@@ -87,9 +87,9 @@ nav ul#menu-tag {
     border-bottom: 1px solid white;
     font-size: 3rem;
 }
-nav ul#menu-tag li a {
+/* nav ul#menu-tag li a {
     transition: color 2s;
-}
+} */
 nav ul#nav-tag {
     width: 600px;
     height: 80px;
@@ -208,7 +208,7 @@ li.drop-trigger-small:hover .drop-menu-small {
     background-size: cover;
 }
 #head-contact-page {
-    background: url(../images/yellow--flowers-meadow.jpg) no-repeat center center;
+    background: url(../images/yellow--flowers-meadow1.jpg) no-repeat center center;
     background-size: cover;
 }
 #head-sign-up-page {
@@ -216,7 +216,7 @@ li.drop-trigger-small:hover .drop-menu-small {
     background-size: cover;
 }
 #head-blog-page {
-    background: url(../images/blog-phone-tea.jpg) no-repeat center center;
+    background: url(../images/blog-tea1.jpg) no-repeat center center;
     background-size: cover;
 }
 .hero-img {
@@ -682,13 +682,14 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    z-index: 1500;
 }
 footer #icon-container {
     margin-bottom: 1rem;
 }
 footer a {
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 0.3rem;
 }
 
