@@ -7,6 +7,9 @@ body {
 }
 
 /* === Navigation Colors=== */
+.home h2 {
+    color: #C56566;
+}
 
 /* nav.n-red {
     background-color: #902122;
@@ -41,12 +44,15 @@ nav ul a:hover {
 
 /* === Header === */
 
-main h1 {
-    color: #C56566;
+main h1, header h1 {
+    /* color: #C56566; */
+    color: white;
 }
 
 /* === Main Section === */
-
+main .plain {
+    background-color: #FBF3E4;
+}
 main .red {
     background-color: #C56566;
 }

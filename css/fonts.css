@@ -2,8 +2,14 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
 }
-main h1 {
+nav #menu-tag {
+    font-family: 'Bebas Neue', cursive;
+}
+.home h2{
     font-family: 'Pacifico', cursive;
+}
+main h1, header h1 {
+    font-family: 'Bebas Neue', cursive;
 }
 main h2 {
     font-family: 'Pacifico', cursive;
