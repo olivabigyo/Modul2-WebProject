@@ -8,7 +8,7 @@ body {
 
 /* === Navigation Colors=== */
 
-nav.n-red {
+/* nav.n-red {
     background-color: #902122;
 }
 nav.n-yellow {
@@ -19,7 +19,7 @@ nav.n-green {
 }
 nav.n-blue {
     background-color: #4878A8;
-}
+} */
 nav.n-red .drop-menu, nav.n-red .drop-menu-small {
     background-color: #902122;
 }

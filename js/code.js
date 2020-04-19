@@ -6,7 +6,7 @@ const menu = document.querySelector('nav #menu-tag li a');
 console.log(menu);
 const mypicture = document.querySelector('.hero-img');
 const fade_start = 0;
-const fade_end = 400;
+const fade_end = 700;
 let last_opacity = 1;
 
 function myfunction() {

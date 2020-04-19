@@ -20,57 +20,71 @@
   </head>
 
   <body>
-    <!-- Navigation -->
-    <!-- Logo or Company name and Navigation bar -->
-    <nav class="n-blue">
-      <ul>
-        <li class="hide-small"><a href="../index.html">Little Fox & Friends</a></li>
-        <li class="hide-big drop-trigger"><i class="fas fa-home"></i></li>
-      </ul>
-      <ul>
-        <li class="hide-small drop-trigger"><a href="about.html">About</a>
-          <div class="drop-menu">
-            <a href="about.html">Our Mission</a>
-            <a href="team.html">Team</a>
-            <a href="courses.html">Courses</a>
-          </div>
-        </li>
-        <li class="hide-small drop-trigger"><a href="contact.html">Contact</a>
-          <div class="drop-menu">
-            <a href="contact.html">Contact Us</a>
-            <a href="contact.html#location">Location</a>
-            <a href="sign-up.html">Sign Up</a>
-          </div>
-        </li>
-        <li class="hide-small" ><a href="blog.html">Blog</a></li>
-        <li class="hide-big drop-trigger-small">
-          <i class="fas fa-bars"></i>
-          <div class="drop-menu-small">
-            <a href="about.html">Our Mission</a>
-            <a href="team.html">Team</a>
-            <a href="courses.html">Courses</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="contact.html#location">Location</a>
-            <a href="sign-up.html">Sign Up</a>
-            <a href="blog.html">Blog</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Header -->
-    <header>
-      <!-- Container for big background image and headline -->
-      <div class="hero-img" id="head-courses-page">
-
+    <div class="wrapper">
+      
+    <!-- Left fixed: Webpage Title Home -->
+      <div class="home">
+        <ul>
+          <li class="hide-small"><a href="../index.html">Little Fox & Friends</a></li>
+          <li class="hide-small">Meditation with children</li>
+          <li class="hide-big drop-trigger"><a href="../index.html"><i class="fas fa-home"></i></a></li>
+        </ul>
       </div>
-    </header>
+    
+      <!-- Header fixed: Hero image -->
+      <header>
+        <div class="hero-img" id="head-courses-page"></div>
+      </header>
+    
+      <!-- Right fixed: Navigation -->
+      <nav class="n-yellow">
+        <ul id="menu-tag"><li><a href="#">MENU</a></li></ul>
+        <ul id="nav-tag">
+          <li class="hide-small drop-trigger"><a href="about.html">About</a>
+            <div class="drop-menu">
+              <a href="about.html">Our Mission</a>
+              <a href="team.html">Team</a>
+              <a href="courses.html">Courses</a>
+            </div>
+          </li>
+          <li class="hide-small drop-trigger"><a href="contact.html">Contact</a>
+            <div class="drop-menu">
+              <a href="contact.html">Contact Us</a>
+              <a href="contact.html#location">Location</a>
+              <a href="sign-up.html">Sign Up</a>
+            </div>
+          </li>
+          <li class="hide-small" ><a href="blog.html">Blog</a></li>
+        </ul>
+        <ul id="burger-tag">
+          <li class="drop-trigger-small">
+            <i class="fas fa-bars"></i>
+            <div class="drop-menu-small">
+              <a href="about.html">Our Mission</a>
+              <a href="team.html">Team</a>
+              <a href="courses.html">Courses</a>
+              <a href="contact.html">Contact Us</a>
+              <a href="sign-up.html">Sign Up</a>
+              <a href="blog.html">Blog</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
     <!-- Main Sections -->
     <main>
+
+      <!-- header overlay -->
+      <section class="main-top-padding">
+        <div class="section-content">
+          <h1>Little Fox and Friends</h1>
+          <h5>Meditation with children</h5>
+        </div>
+      </section>
+
       <!-- light background-->
       <section class="plain">
-        <!-- Container for 1024px wide screen  -->
         <div class="section-content">
           <h2>Our Courses</h2>
           <h3>PROGRAM BENEFITS</h3>
@@ -87,9 +101,9 @@
           <p>Ha a gyerekek már kiskorukban hozzászoknak az összpontosító meditációs gyakorlatokhoz, ez jó szolgálatot tesz majd nekik a vizsgadrukk leküzdésére, a szívfájdalmak orvoslására és a testi változások kezelésére. Amennyiben gyermekünk eleinte nem szívesen csatlakozik hozzánk, ne erőltessük, csak mutassuk meg neki a módszereket, irányítsuk rá a figyelmet, előbb-utóbb ő fogja kérni majd a folytatást.</p>
         </div>
       </section>
+
       <!-- light background-->
       <section class="plain">
-        <!-- Container for 1024px wide screen  -->
         <div class="section-content A-section">
           <div class="card-container">
             <div class="card">
@@ -103,9 +117,9 @@
           </div>
         </div>
       </section>
+
       <!-- coloured background-->
       <section class="blue coloured">
-        <!-- Container for 1024px wide screen  -->
         <div class="section-content A-section">
           <div class="card-container">
             <div class="card">
@@ -119,9 +133,9 @@
           </div>
         </div>
       </section>
+
       <!-- light background-->
       <section class="plain">
-        <!-- Container for 1024px wide screen  -->
         <div class="section-content A-section">
           <div class="card-container">
             <div class="card">
@@ -150,5 +164,7 @@
       &copy; Created by Olivabigyo 2019
     </footer>
 
+    <!-- Script -->
+    <script src="../js/code.js"></script>
   </body>
 </html>
