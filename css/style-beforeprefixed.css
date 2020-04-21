@@ -61,6 +61,9 @@ nav {
     right: 0;  
     z-index: 1000;  
 }
+/* nav ul {
+    z-index: 1000;
+} */
 
 .home {
     position: fixed;
@@ -147,42 +150,16 @@ nav ul a {
     padding: 1rem 3rem;
 }
 
-nav ul a:hover {
+nav ul#nav-tag a:hover {
     background: white;
     color: black;
 }
-.drop-menu {
-    position: absolute;
-    margin-top: 0.9rem;
-    flex-direction: column;
+
+nav ul#menu-tag a:hover {
+    font-size: 3.2rem;
+}
+nav ul#menu-tag li.hidden {
     display: none;
-}
-.drop-menu a {
-    width: calc(100% - 0.4em);
-}
-li.drop-trigger:hover .drop-menu {
-    display: flex;
-    animation: scale 0.2s;
-}
-
-.drop-menu-small {
-    position: absolute;
-    right: 0;
-    flex-direction: column;
-    display: none;
-  }
-
-li.drop-trigger-small:hover .drop-menu-small {
-      display: flex;
-  }
-
-@keyframes scale {
-    0% {
-        transform: scaleX(0);
-    }
-    100% {
-        transform: scaleX(1);
-    }
 }
 
 /* ============ */
@@ -202,7 +179,7 @@ li.drop-trigger-small:hover .drop-menu-small {
     top: 0;
     left: 0;
     z-index: 500;
-    display: none;
+    display: grid;
     grid-template-columns: 200px 1fr 160px;
     grid-template-rows: 90px 1fr 90px;
     grid-template-areas: 
@@ -223,11 +200,16 @@ li.drop-trigger-small:hover .drop-menu-small {
 .menu.blue {
     background-color: #4878A8;
 }
-.menu.show {
-    display: grid;
-    animation: becsusz 1s;
+.menu.show-in {
+    animation: showIn 0.5s;
 }
-@keyframes becsusz {
+.menu.show-out {
+    animation: showOut 0.5s;
+}
+.menu.hidden {
+    display: none;
+}
+@keyframes showIn {
     from {
         transform: translateX(100%);
     }
@@ -235,10 +217,18 @@ li.drop-trigger-small:hover .drop-menu-small {
         transform: translateX(0);
     }
 }
+@keyframes showOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
 .menu ul li {
     position: relative;
 }
-.menu ul li .x {
+.menu ul li .white-band {
     background-color: white;
     position: absolute;
     width: 100%;
@@ -264,10 +254,7 @@ li.drop-trigger-small:hover .drop-menu-small {
     display: flex;
     align-content: center;
 }
-.menu ul li:hover {
-    /* background-color: white; */
-}
-.menu ul li:hover .x {
+.menu ul li:hover .white-band {
     transform: scaleX(1);
 }
 .menu.red ul li:hover a {
@@ -786,7 +773,13 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    z-index: 1500;
+    z-index: 400;
+}
+footer h2 {
+    font-size: 1.5rem;
+}
+footer h4 {
+    font-size: 0.6rem;
 }
 footer #icon-container {
     margin-bottom: 1rem;
@@ -835,6 +828,16 @@ footer a {
         grid-template-columns: 1fr;
         grid-template-areas: 
         'content';
+    }
+}
+@media screen and (max-width: 1024px) {
+    .menu {
+        grid-template-columns: 65px 1fr 80px;
+        grid-template-rows: 65px 1fr 90px;
+        grid-template-areas: 
+    '. . .'
+    '. navis .'
+    '. . .';
     }
 }
 
