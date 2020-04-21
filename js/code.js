@@ -13,10 +13,11 @@ const fade_end = 700;
 let last_opacity = 0;
 
 function myfunction() {
-    menu.style.color = 'black';
+    
     const scrollHeight = window.scrollY;
     const opacity = Math.min(1, Math.max(0, 1 - ((fade_end - scrollHeight) / (fade_end - fade_start))));
     if (opacity == last_opacity) return;
+    // menu.style.color = 'black';
     console.log(scrollHeight, opacity);
     mycontent.style.opacity = opacity;
     head.style.opacity = 1 - opacity;
