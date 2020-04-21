@@ -40,3 +40,8 @@ function myfunction() {
         nav.style.borderBottom = '1px solid white';
     };
 }
+
+document.querySelector('#menu-tag').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('.menu').classList.toggle('show');
+})
