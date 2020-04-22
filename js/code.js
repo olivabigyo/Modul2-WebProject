@@ -30,12 +30,12 @@ function myfunction() {
     
     if (opacity > 0.6) {
         menu.style.color = 'black';
-        menu.parentElement.parentElement.style.borderBottom = '1px solid black';
+        // menu.parentElement.parentElement.style.borderBottom = '1px solid black';
         for (let navi of navis) {navi.style.color = 'black';}
         nav.style.borderBottom = 'none';   
     } else {
         menu.style.color = 'white';
-        menu.parentElement.parentElement.style.borderBottom = '1px solid white';
+        // menu.parentElement.parentElement.style.borderBottom = '1px solid white';
         for (let navi of navis) {navi.style.color = 'white';}
         nav.style.borderBottom = '1px solid white';
     };
