@@ -239,6 +239,13 @@ nav ul#menu-tag li.hidden {
     transform-origin: left;
     transition: transform ease-in 0.3s;
 }
+.menu ul li .white-band {
+    text-decoration: none;
+    font-size: 3rem;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+}
 .menu ul li a {
     z-index: 530;
 }
