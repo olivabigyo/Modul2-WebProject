@@ -1,12 +1,9 @@
 /* === My Own Style=== */
 
-/* This is  yet in colors.css too */
 body {
     color: #707070;
     background-color: #FBF3E4;
 }
-
-
 
 
 /* ======================================================= */
@@ -22,8 +19,8 @@ body {
     grid-template-columns: 200px 1fr 160px;
     grid-template-rows: auto auto auto;
     grid-template-areas: 
-    'head head head' 
-    '. main .'
+    'head    head   head' 
+    '  .     main    .  '
     'footer footer footer';
 }
 .wrapper {
@@ -69,6 +66,7 @@ nav {
 /* === Navigation === */
 /* ================== */
 
+/* ---------------- */
 /*  1. Home Button  */
 /* ---------------- */
 
@@ -100,8 +98,9 @@ a.home  {
     display: none;
 }
 
-/*  2. Side Navigation: Menu Button  */
-/* --------------------------------- */
+/* ---------------------------------------- */
+/*  2. Side Navigation + Menu/Close Button  */
+/* ---------------------------------------- */
 
 nav ul#menu-tag {
     width: 600px;
@@ -150,8 +149,9 @@ nav ul#menu-tag li.hidden {
     display: none;
 }
 
-/*  3. Menu - whole sized navigation  */
-/* ---------------------------------- */
+/* ---------------------------- */
+/*  3. Menu opened: Navigation  */
+/* ---------------------------- */
 
 .menu {
     font-family: 'Bebas Neue', cursive;
@@ -173,7 +173,7 @@ nav ul#menu-tag li.hidden {
     '.   .   .'
     '. navis .'
     '.   .   .';
-    opacity: 0.9;
+    opacity: 0.95;
 }
 .menu.red {
         background-color: #902122; 
@@ -271,9 +271,9 @@ nav ul#menu-tag li.hidden {
     align-self: center;
 }
 
-/* ============== */
-/* === Header === */
-/* ============== */
+/* ===================================== */
+/* === Header : Title and hero image === */
+/* ===================================== */
 
 
 #head-home-page {
@@ -582,9 +582,6 @@ main .address {
     padding-right: 1rem;
     padding-bottom: 1rem;
 }
-main .form-container {
-    width: 100%;
-}
 main .form-container form {
     display: flex;
     flex-direction: column;
@@ -652,6 +649,12 @@ main .form-container .input-pairs {
     display: flex;
     flex-direction: column;
 }
+main .form-container .input-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
 /* Address in Index Page:contact-section and Contact Page */
 main .card-container .address p {
     padding: 0.5rem;
@@ -663,34 +666,30 @@ main .card-container .address h4 {
     padding: 1rem 0;
 }
 
-/* === All Pages: A-section === */
-/* ---------------------------- */
+/* === All Pages: Dual-section === */
+/* ------------------------------- */
 
-/* The A-Section means, it splits the screen, usually an image and a card with text content
-I use this in every page */
+/* The Dual-section means, it splits the screen, usually an image and a card with text content */
 
-main .A-section {
-    margin-top: 2rem;
-}
-main .A-section .card-container {
+main .dual-section .card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
 }
 
-main .A-section .card {
+main .dual-section .card {
     width: 70%;
 }
-main .A-section .card img {
+main .dual-section .card img {
     width: 100%;
     border-radius: 135px;
 }
 
-main .A-section .card h3 {
+main .dual-section .card h3 {
     font-size: 1.5rem;
 }
 /* Only Team page: team member profilphotos */
-main .A-section .profil img {
+main .dual-section .profil img {
     width: 220px;
     border-radius: 50%;
 }
@@ -723,6 +722,7 @@ main .learnmore .card-container a:hover .card-listen {
 main .learnmore .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
     grid-gap: 20px;
 }
 
@@ -735,11 +735,11 @@ main .learnmore .card-container .card div {
     text-align: center;
 }
 main .learnmore .card div h3 {
-    padding: 1rem;
+    padding: 0.3rem;
     margin: 0;
 }
 main .learnmore .card div p {
-    padding: 1rem;
+    padding: 0.3rem;
     color: #FBF3E4;
 }
 main .useful-links a {
@@ -875,8 +875,8 @@ footer.n-blue {
         grid-template-columns: 140px 1fr 80px;
         grid-template-rows: auto auto auto;
         grid-template-areas: 
-        'head head head' 
-        '. main .'
+        ' head   head   head' 
+        '   .    main     . '
         'footer footer footer';
     }
     .menu {
@@ -905,8 +905,8 @@ footer.n-blue {
         grid-template-columns: 65px 1fr 80px;
         grid-template-rows: auto auto auto;
         grid-template-areas: 
-        'head head head' 
-        '. main .'
+        ' head   head   head' 
+        '  .     main     . '
         'footer footer footer';
     }
     .menu {
@@ -954,22 +954,41 @@ footer.n-blue {
     }
     main .form-container .inputs {
         grid-template-columns: 1fr;
-        grid-column-gap:  20px;
+    }
+    main .form-container textarea {
+        width: 300px;
+    }
+    main .form-container label {
+        width: 300px;
     }
     main .learnmore .card-container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 20px;
+        grid-gap: 0;
     } 
+    main .learnmore .card-container .card {
+        height: 100px;
+    }
 }
 
 @media screen and (max-width: 800px) {
     main .blog > .card-container {
         grid-template-columns: 1fr;
     }
-    main .A-section .card-container {
+    main .dual-section .card-container {
         grid-template-columns: 1fr;
         grid-gap: 20px;
+    }
+    main .dual-section .card-container .card img {
+        border-radius: 20px 20px 0 0;
+        height: 250px;
+        object-fit: cover;
+        object-position: center;
+
+    }
+    main iframe {
+        width: 400px;
+        height: 300px;
     }
 }
 /* =========================================== */
@@ -988,7 +1007,7 @@ footer.n-blue {
     }
     .menu {
         grid-template-columns: 55px 1fr 55px;
-        grid-template-rows: 55px 1fr 55px;
+        grid-template-rows: 55px 1fr 65px; 
     }
     .home {
         /* width: 55px;
@@ -1025,6 +1044,10 @@ footer.n-blue {
     }
     main .team-section .card-container .card img{
         width: 50%;
+    }
+    main iframe {
+        width: 300px;
+        height: 225px;
     }
     .slider-container .slide img {
         width: 315px;
