@@ -53,8 +53,17 @@ document.querySelector('#menu-tag li:last-child').addEventListener('click', func
     e.preventDefault();
     document.querySelector('.menu').classList.toggle('show-in');
     document.querySelector('.menu').classList.toggle('show-out');
-    setTimeout(() => document.querySelector('.menu').classList.toggle('hidden'), 500);
+    setTimeout(() => document.querySelector('.menu').classList.toggle('hidden'), 480);
     
+    document.querySelector('#menu-tag li:first-child').classList.toggle('hidden');
+    document.querySelector('#menu-tag li:last-child').classList.toggle('hidden');
+})
+document.querySelector('#burger-tag').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('.menu').classList.toggle('show-in');
+    document.querySelector('.menu').classList.toggle('show-out');
+    document.querySelector('.menu').classList.toggle('hidden');
+    // this two is also needed for synchronizing:
     document.querySelector('#menu-tag li:first-child').classList.toggle('hidden');
     document.querySelector('#menu-tag li:last-child').classList.toggle('hidden');
 })
