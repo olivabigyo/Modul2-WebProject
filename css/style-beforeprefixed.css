@@ -434,14 +434,17 @@ main .section-content li {
     margin: 0 auto;
 }
 /* Cards */
-main .section-content .card-container {
+/* main .section-content .card-container {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
     margin: 2em auto;
 }
+main .section-content.coloured .card-container {
+    flex-direction: row-reverse;
+} */
 
 main .section-content .card-container .card {
     display: flex;
@@ -451,6 +454,7 @@ main .section-content .card-container .card {
 }
 main .section-content .card-container .left {
     align-items: flex-start;
+    padding: 1rem;
 }
 main .section-content .card-container .up {
     justify-content: flex-start;
@@ -492,6 +496,14 @@ main .team-section .card a:hover img {
 /* ----------------------------------- */
 /* images with hover effekt */
 
+main .section-content.gallery-section .card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2em auto;
+}
 main .gallery-section .card-container {
     padding: 10px;
     width: 80%;
@@ -542,7 +554,13 @@ main .blog .line-through {
 /* -------------------------------------- */
 
 /* three medium card with links */
-
+main .memb-section .card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2em auto;
+}
 main .memb-section .card-container .card {
     width: 25%;
 }
@@ -672,19 +690,21 @@ main .card-container .address h4 {
 /* The Dual-section means, it splits the screen, usually an image and a card with text content */
 
 main .dual-section .card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
-
+main .dual-section.coloured .card-container {
+    flex-direction: row-reverse;
+}
 main .dual-section .card {
-    width: 70%;
+    width: 35%;
 }
 main .dual-section .card img {
     width: 100%;
     border-radius: 135px;
 }
-
 main .dual-section .card h3 {
     font-size: 1.5rem;
 }
@@ -976,15 +996,19 @@ footer.n-blue {
         grid-template-columns: 1fr;
     }
     main .dual-section .card-container {
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
+        flex-direction: column;
+    }
+    main .dual-section.coloured .card-container {
+        flex-direction: column;
+    }
+    main .dual-section .card {
+        width: 80%;
     }
     main .dual-section .card-container .card img {
         border-radius: 20px 20px 0 0;
         height: 250px;
         object-fit: cover;
         object-position: center;
-
     }
     main iframe {
         width: 400px;
