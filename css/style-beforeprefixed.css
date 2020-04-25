@@ -423,6 +423,11 @@ main .coloured a:hover {
     border: 2px solid black;
     color: black;
 }
+main .memb-section .card div a:hover {
+    border: 2px solid #80A7CE;
+    /* background-color: #80A7CE;; */
+    opacity: 0.9;
+}
 /* Text content */
 main .section-content > p {
     width: 80%;
@@ -569,6 +574,9 @@ main .memb-section .card-container .card div {
     text-align: center;
     background-color: #FBF3E4 ;
 }
+main .memb-section .panel {
+    display: block;
+}
 main .memb-section .card div h3 {
     padding: 1rem;
     margin: 0;
@@ -580,7 +588,7 @@ main .memb-section .card div p {
     color: #707070;
     border-bottom: 1px solid #707070 ;
 }
-main .memb-section .card div:last-of-type {
+main .memb-section .panel div:last-of-type {
     padding: 1.8em;
 }
 main .memb-section .card div a {
@@ -712,6 +720,7 @@ main .dual-section .card h3 {
 main .dual-section .profil img {
     width: 220px;
     border-radius: 50%;
+    margin-bottom: 0.5rem;
 }
 /* Only About page: squere cards with internal link */
 main .learnmore .card-container a {
@@ -965,6 +974,13 @@ footer.n-blue {
         width: 270px;
         margin-bottom: 1em;
     }
+    main .memb-section .headline {
+        cursor: pointer;
+        user-select: none;
+    }
+    main .memb-section .panel {
+        display: none;
+    }
     main .contact-section .card-container{
         display: grid;
         grid-template-columns: 1fr;
@@ -1056,6 +1072,9 @@ footer.n-blue {
     }
     .hero-img h1 {
         font-size: 7rem;
+    }
+    .head-sign-up h1 {
+        font-size: 6rem;
     }
     main {
         border: none;
