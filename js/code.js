@@ -64,16 +64,18 @@ function scrolleffekt() {
 }
 
 function toggleMenu(e) {
-    // console.log(is_nav_hidden());
     e.preventDefault();
-    if (is_nav_hidden()) {
-        // show
+    // console.log(is_nav_hidden());
+     // show
+    if (is_nav_hidden()) { 
         nav.classList.toggle('hidden'); 
-    } else {
-        // wait for the slide-out animation then hide
+    } 
+    // wait for the slide-out animation then hide
+    else {           
         setTimeout(() => nav.classList.toggle('hidden'), 480);
     }
-    // change buttons
+    // change buttons     
+    // maybeToDo: i could have one button and manipulate the text on it
     menu_btn.classList.toggle('hidden');
     close_btn.classList.toggle('hidden');
     // in and out animations
