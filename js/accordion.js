@@ -32,4 +32,13 @@ $(document).ready(function() {
         }
     });
 
+    $(window).resize(function() {
+        if (window.innerWidth > 960) {
+            $('.panel').css('display', 'block');
+        }
+        else {
+            $('.panel').css('display', 'none');
+        }
+    });
+
 })

@@ -1,69 +1,82 @@
+// This is vanilla JS
 
+// 1. Variables
 
-window.addEventListener('scroll', myfunction);
-
-const menu = document.querySelector('nav #menu-tag li a');
-const nav = document.querySelector('nav #nav-tag');
-const navis = document.querySelectorAll('nav #nav-tag li a');
+const menu_a = document.querySelector('.mini-nav #menu-tag li:first-child a');
+const menu_btn = document.querySelector('.mini-nav #menu-tag li:first-child');
+const close_btn = document.querySelector('.mini-nav #menu-tag li:last-child');
+const burger_btn = document.querySelector('.mini-nav #burger-tag');
+const mininav = document.querySelector('.mini-nav #nav-tag');
+const navis = document.querySelectorAll('.mini-nav #nav-tag li a');
+const nav = document.querySelector('nav');
 const head = document.querySelector('header');
-// console.log(menu);
-const mycontent = document.querySelector('main');
+const content = document.querySelector('main');
 const fade_start = 0;
 const fade_end = 700;
 let last_opacity = 0;
+const is_nav_hidden = () => nav.classList.contains('hidden');
 
-function myfunction() {
-    
+// Tests
+// console.log(menu_a;
+// console.log(navis);
+// console.log(is_nav_hidden());
+
+// 2. Event listeners
+
+window.addEventListener('scroll', scrolleffekt);
+menu_btn.addEventListener('click', toggleMenu);
+close_btn.addEventListener('click', toggleMenu);
+burger_btn.addEventListener('click', toggleMenu);
+
+// 3. Functions
+
+function scrolleffekt() {
+    // for the first 700px scrolling from top calculate an opacity between 0-1, after that, it is 1
     const scrollHeight = window.scrollY;
     const opacity = Math.min(1, Math.max(0, 1 - ((fade_end - scrollHeight) / (fade_end - fade_start))));
+    // console.log(scrollHeight, opacity);
+
+    // have to do nothing after the first 700px scrolling from top
     if (opacity == last_opacity) return;
-    // menu.style.color = 'black';
-    console.log(scrollHeight, opacity);
-    mycontent.style.opacity = opacity;
+    
+    // change the opacity of header image and content at the first 700px scrolling
+    content.style.opacity = opacity;
     head.style.opacity = 1 - opacity;
+    // record the changes
     last_opacity = opacity;
+
+    // the fixed header image needed only by the first 700px scrolling, when opacity changes between 0-1
     if (opacity == 1) {
         head.style.display = 'none';
     } else {
         head.style.display = 'block';
     };
-    
+    // style changes for better visibility
     if (opacity > 0.6) {
-        menu.style.color = 'black';
-        // menu.parentElement.parentElement.style.borderBottom = '1px solid black';
+        menu_a.style.color = 'black';
         for (let navi of navis) {navi.style.color = 'black';}
-        nav.style.borderBottom = 'none';   
+        mininav.style.borderBottom = 'none';   
     } else {
-        menu.style.color = 'white';
-        // menu.parentElement.parentElement.style.borderBottom = '1px solid white';
+        menu_a.style.color = 'white';
         for (let navi of navis) {navi.style.color = 'white';}
-        nav.style.borderBottom = '1px solid white';
+        mininav.style.borderBottom = '1px solid white';
     };
 }
 
-document.querySelector('#menu-tag li:first-child').addEventListener('click', function (e) {
+function toggleMenu(e) {
+    // console.log(is_nav_hidden());
     e.preventDefault();
-    document.querySelector('.menu').classList.toggle('show-in');
-    document.querySelector('.menu').classList.toggle('show-out');
-    document.querySelector('.menu').classList.toggle('hidden');
-    document.querySelector('#menu-tag li:first-child').classList.toggle('hidden');
-    document.querySelector('#menu-tag li:last-child').classList.toggle('hidden');
-})
-document.querySelector('#menu-tag li:last-child').addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector('.menu').classList.toggle('show-in');
-    document.querySelector('.menu').classList.toggle('show-out');
-    setTimeout(() => document.querySelector('.menu').classList.toggle('hidden'), 480);
-    
-    document.querySelector('#menu-tag li:first-child').classList.toggle('hidden');
-    document.querySelector('#menu-tag li:last-child').classList.toggle('hidden');
-})
-document.querySelector('#burger-tag').addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector('.menu').classList.toggle('show-in');
-    document.querySelector('.menu').classList.toggle('show-out');
-    document.querySelector('.menu').classList.toggle('hidden');
-    // this two is also needed for synchronizing:
-    document.querySelector('#menu-tag li:first-child').classList.toggle('hidden');
-    document.querySelector('#menu-tag li:last-child').classList.toggle('hidden');
-})
+    if (is_nav_hidden()) {
+        // show
+        nav.classList.toggle('hidden'); 
+    } else {
+        // wait for the slide-out animation then hide
+        setTimeout(() => nav.classList.toggle('hidden'), 480);
+    }
+    // change buttons
+    menu_btn.classList.toggle('hidden');
+    close_btn.classList.toggle('hidden');
+    // in and out animations
+    nav.classList.toggle('slide-in');
+    nav.classList.toggle('slide-out');
+}
