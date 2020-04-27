@@ -3,8 +3,8 @@
 // 1. Variables
 
 let activeSlideNr = 0;
-const prev_btn = document.querySelector('a.prev');
-const next_btn = document.querySelector('a.next');
+const prev_btn = document.querySelector('.prev');
+const next_btn = document.querySelector('.next');
 // const autoplay = document.querySelector('a.autoplay');
 
 displaySlide(activeSlideNr);
@@ -37,9 +37,11 @@ function stepNext(e) {
 
 function displaySlide (n) {
     let myslides = document.querySelectorAll('.slide');
+    let dots = document.querySelectorAll('.dot');
     // console.log(myslides);
     for (let i = 0; i < myslides.length; i++) {
         myslides[i].style.display = 'none';
+        dots[i].classList.remove('activedot');
     }
     activeSlideNr = n;
     if (n == myslides.length) {
@@ -49,5 +51,6 @@ function displaySlide (n) {
         activeSlideNr = myslides.length -1;
     }
     myslides[activeSlideNr].style.display = 'block';
+    dots[activeSlideNr].classList.add('activedot');
     console.log(activeSlideNr);
 }

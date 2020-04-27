@@ -102,11 +102,14 @@ a.home  {
 /*  2. Side Navigation + Menu/Close Button  */
 /* ---------------------------------------- */
 
+.mini-nav {
+    transform: rotate(90deg) translate(0px, -600px);
+    transform-origin: 0 0;
+}
+
 .mini-nav ul#menu-tag {
     width: 600px;
     height: 80px;
-    transform: rotate(90deg) translate(0px, -600px);
-    transform-origin: 0 0;
     border-bottom: 1px solid white;
     font-size: 3rem;
 }
@@ -114,8 +117,6 @@ a.home  {
 .mini-nav ul#nav-tag {
     width: 600px;
     height: 80px;
-    transform: rotate(90deg) translate(0px, -520px);
-    transform-origin: 0 0;
     border-bottom: 1px solid white;
 }
 .mini-nav #burger-tag {
@@ -813,6 +814,7 @@ main .useful-links a:hover {
 .slider-container .slide img {
     width: 350px;
     height: 540px;
+    border: 5px solid #4878A8;
     object-fit: cover;
 }
 
@@ -822,7 +824,7 @@ main .useful-links a:hover {
     position: absolute;
     top: 50%;
     font-size: 2rem;
-    padding: 0.5rem;
+    padding: 0.4rem;
     color: white;
     text-decoration: none;
     margin-top: -1.5rem;
@@ -843,7 +845,7 @@ main .useful-links a:hover {
 main .coloured .slider-container span:hover {
     background-color: #4878A8;
     color: white;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .slider-container .pagi {
@@ -861,6 +863,9 @@ main .coloured .slider-container span:hover {
 }
       
 .slider-container .dot:hover {
+    background-color: #4878A8;
+}
+.slider-container .dot.activedot {
     background-color: #4878A8;
 }
 
@@ -1075,6 +1080,9 @@ footer.n-blue {
         height: 55px; */
         display: none;
     }
+    .mini-nav {
+        transform: none;
+    }
     .mini-nav #menu-tag {
         display: none;
     } 
@@ -1118,6 +1126,6 @@ footer.n-blue {
         height: 485px;
     }
     .slider-container {
-        width: 370px;
+        width: 365px;
     }
 }
