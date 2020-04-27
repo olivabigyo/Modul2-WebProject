@@ -354,7 +354,7 @@ main .blue {
 }
 
 /* Content */
-main .section-content {
+main section {
     width: 100%;
     max-width: 1098px;
     margin-left: auto;
@@ -400,7 +400,7 @@ main .coloured label {
     color: #FBF3E4;
 }
 /* Link buttons */
-main .section-content a {
+main section a {
     padding: 1rem;
     margin: 1rem;
     text-decoration: none;
@@ -427,17 +427,17 @@ main .memb-section .card div a:hover {
     opacity: 0.9;
 }
 /* Text content */
-main .section-content > p {
+main section > p {
     width: 80%;
     margin: 1em auto;
     text-align: justify;
 }
-main .section-content li {
+main section li {
     width: 75%;
     margin: 0 auto;
 }
 /* Cards */
-/* main .section-content .card-container {
+/* main section .card-container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -445,21 +445,21 @@ main .section-content li {
     justify-content: space-around;
     margin: 2em auto;
 }
-main .section-content.coloured .card-container {
+main .coloured .card-container {
     flex-direction: row-reverse;
 } */
 
-main .section-content .card-container .card {
+main section .card-container .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-main .section-content .card-container .left {
+main section .card-container .left {
     align-items: flex-start;
     padding: 1rem;
 }
-main .section-content .card-container .up {
+main section .card-container .up {
     justify-content: flex-start;
 }
 
@@ -499,7 +499,7 @@ main .team-section .card a:hover img {
 /* ----------------------------------- */
 /* images with hover effekt */
 
-main .section-content.gallery-section .card-container {
+main .gallery-section .card-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -555,6 +555,7 @@ main .blog .line-through {
 main .blog .headline {
     cursor: pointer;
     user-select: none;
+    width: 100%;
 }
 
 main .blog .panel {
@@ -1087,6 +1088,12 @@ footer.n-blue {
         grid-template-columns: 55px 1fr 55px;
         grid-template-rows: 55px 1fr 65px; 
     }
+    nav ul li {
+        padding-left: 1rem;
+    }
+    nav ul li .white-band {
+        padding-left: 1rem;
+    }
     .home {
         /* width: 55px;
         height: 55px; */
@@ -1112,10 +1119,10 @@ footer.n-blue {
         color: black;
     }
     .hero-img h1 {
-        font-size: 7rem;
+        font-size: 5rem;
     }
-    .head-sign-up h1 {
-        font-size: 6rem;
+    #head-membership-page h1 {
+        font-size: 4rem;
     }
     main {
         border: none;

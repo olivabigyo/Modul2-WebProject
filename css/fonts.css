@@ -9,10 +9,15 @@ body {
 
 .mini-nav #menu-tag {
     font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.2rem;
 }
-
+nav {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.2rem;
+}
 header h1 {
     font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.2rem;
 }
 
 main h2 {
