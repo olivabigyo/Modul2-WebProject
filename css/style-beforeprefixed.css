@@ -500,7 +500,6 @@ main .team-section .card a:hover img {
 /* images with hover effekt */
 
 main .section-content.gallery-section .card-container {
-    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -508,7 +507,7 @@ main .section-content.gallery-section .card-container {
     margin: 2em auto;
 }
 main .gallery-section .card-container {
-    padding: 10px;
+    padding: 2rem;
     width: 80%;
 }
 main .gallery-section .card-container .card {
@@ -551,6 +550,15 @@ main .blog .card img:hover {
 }
 main .blog .line-through {
     text-decoration: line-through;
+}
+
+main .blog .headline {
+    cursor: pointer;
+    user-select: none;
+}
+
+main .blog .panel {
+    display: none;
 }
 
 /* === Index Page: Membership Section === */
@@ -1034,6 +1042,10 @@ footer.n-blue {
 }
 
 @media screen and (max-width: 800px) {
+    main .gallery-section .card-container {
+        padding: 0;
+    }
+    
     main .blog > .card-container {
         grid-template-columns: 1fr;
     }

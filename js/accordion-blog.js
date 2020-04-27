@@ -4,10 +4,7 @@ $(document).ready(function() {
 
     
     // click event on a head
-    $('.headline').on('click', function(){
-        // only @mediaQuery (max-width:960px)
-        // console.log(window.innerWidth);
-        if (window.innerWidth < 960) {     
+    $('.headline').on('click', function(){   
             // test if the clicked head active is (it was opened)
             if($(this).hasClass('active')) {
                 // we close it
@@ -30,16 +27,6 @@ $(document).ready(function() {
                 $(this).siblings('.panel').slideDown(500);
                 // alternative:   $(this).next().slideDown(500);
             }
-        }
-    });
-
-    $(window).resize(function() {
-        if (window.innerWidth > 960) {
-            $('.panel').css('display', 'block');
-        }
-        else {
-            $('.panel').css('display', 'none');
-        }
     });
 
 })
