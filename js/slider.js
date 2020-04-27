@@ -2,12 +2,12 @@
 
 // 1. Variables
 
-let activeslideNr = 0;
+let activeSlideNr = 0;
 const prev_btn = document.querySelector('a.prev');
 const next_btn = document.querySelector('a.next');
 // const autoplay = document.querySelector('a.autoplay');
 
-displaySlide(activeslideNr);
+displaySlide(activeSlideNr);
 
 // 2. Event listeners
 
@@ -19,19 +19,19 @@ next_btn.addEventListener('click', stepNext)
 
 function stepPrev(e) { 
     e.preventDefault();
-    activeslideNr--;
-    displaySlide(activeslideNr);   
+    activeSlideNr--;
+    displaySlide(activeSlideNr);   
     console.log('left');
 }
 function stepNext(e) {
     e.preventDefault();
-    activeslideNr++;
-    displaySlide(activeslideNr);   
+    activeSlideNr++;
+    displaySlide(activeSlideNr);   
     console.log('right');
 }
 // function autodisplay() {
-//     activeslideNr++;
-//     displaySlide(activeslideNr);
+//     activeSlideNr++;
+//     displaySlide(activeSlideNr);
 //     setTimeout(autodisplay, 4000); // Change image every 2 seconds
 // }
 
@@ -41,13 +41,13 @@ function displaySlide (n) {
     for (let i = 0; i < myslides.length; i++) {
         myslides[i].style.display = 'none';
     }
-    activeslideNr = n;
+    activeSlideNr = n;
     if (n == myslides.length) {
-        activeslideNr = 0;
+        activeSlideNr = 0;
     }
     if (n < 0) {
-        activeslideNr = myslides.length -1;
+        activeSlideNr = myslides.length -1;
     }
-    myslides[activeslideNr].style.display = 'block';
-    console.log(activeslideNr);
+    myslides[activeSlideNr].style.display = 'block';
+    console.log(activeSlideNr);
 }

@@ -137,10 +137,10 @@ a.home  {
     padding: 1rem 3rem;
 }
 
-.mini-nav ul#nav-tag a:hover {
+/* .mini-nav ul#nav-tag a:hover {
     background: white;
     color: black;
-}
+} */
 
 .mini-nav ul#menu-tag a:hover {
     font-size: 3.2rem;
@@ -745,12 +745,25 @@ main .learnmore .card-container a:hover .card-read {
 main .learnmore .card-container a:hover .card-listen {
     background-color: #2D7E77;
 }
+main .learnmore .card-container a.active .card-link {
+    background-color: #902122;
+    border: 3px solid black;
+}
+main .learnmore .card-container a.active .card-read {
+    background-color: #F4C057;
+    border: 3px solid black;
+}
+main .learnmore .card-container a.active .card-listen {
+    background-color: #2D7E77;
+    border: 3px solid black;
+}
 /* Styling the squere cards*/
 main .learnmore .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     grid-gap: 20px;
+    margin-top: 2rem;
 }
 
 main .learnmore .card-container .card {
