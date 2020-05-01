@@ -2,7 +2,7 @@
 
 
 // Add event listener to button
-document.querySelector('#subm-index-page').addEventListener('click', validateForm);
+document.querySelector('.submit-button').addEventListener('click', validateForm);
 
 function validateForm (event) {
      // prevent reloading the page
