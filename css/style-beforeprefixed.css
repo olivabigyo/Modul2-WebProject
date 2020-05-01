@@ -314,10 +314,16 @@ nav ul li a {
 }
 .hero-img h1 {
     font-size: 9rem;
-    padding: 0.5rem;
     margin: 0 160px;
     text-align: center;
     color: white; 
+}
+#head-home-page h1 {
+    font-size: 5rem;
+}
+#head-home-page h2 {
+    font-size: 1.5rem;
+    color: black;
 }
 
 /* ================================== */
@@ -525,14 +531,19 @@ main .gallery-section .card-container .card img:hover {
 /* === Blog Page with similar images style === */
 /* images with hover effekt */
 
-main .blog > .card-container {
+main .blog  .panel {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    /* display: flex; */
     align-items: center;
     justify-items: center;
 }
-main .blog .card {
-    width: 80%;
+main .blog .panel .card {
+    /* width: 80%; */
+    display: flex!important;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
 }
 main .blog .small {
     width: 50%;
@@ -623,8 +634,20 @@ main .form-container form {
 main .form-container label {
     padding-top: 1rem;
 }
+main .form-container label.news {
+    padding-top: 0.2rem;
+}
+
 main .form-container input {
     padding: 0.5rem;
+    border: none;
+}
+main .form-container textarea {
+    border: none;
+}
+main .form-container span {
+    color: red;
+    font-size: 0.8rem;
 }
 main .form-container form .submit-button {
     margin: 1rem auto;
@@ -650,19 +673,19 @@ main .form-container form #subm-index-page:hover {
 main .form-container form #subm-sign-up-form {
     color:  #FBF3E4;
     background-color: #4878A8;
-    border: 2px solid #4878A8;
 }
 main .form-container form #subm-sign-up-form:hover {
-    border: 2px solid black;
+    opacity: 0.8;
+    color: white;
 }
 /* Submit button color on Sign-up Page sign-in form*/
 main .form-container form #subm-sign-in-form {
     color:  #FBF3E4;
     background-color: #4878A8;
-    border: 2px solid #4878A8;
 }
 main .form-container form #subm-sign-in-form:hover {
-    border: 2px solid black;
+    opacity: 0.8;
+    color: white;
 }
 /* Sign-in and Sign-up form on Sign-up Page */
 main .form-container .wide input {
@@ -1027,10 +1050,13 @@ footer.n-blue {
         grid-template-columns: 1fr;
     }
     main .form-container textarea {
-        width: 300px;
+        width: 365px;
     }
     main .form-container label {
-        width: 300px;
+        width: 365px;
+    }
+    main .form-container span {
+        width: 365px;
     }
     main .learnmore .card-container {
         display: grid;
@@ -1121,6 +1147,12 @@ footer.n-blue {
     .hero-img h1 {
         font-size: 5rem;
     }
+    #head-home-page h1 {
+        font-size: 3rem;
+    }
+    #head-home-page h2 {
+        font-size: 1rem;
+    }
     #head-membership-page h1 {
         font-size: 4rem;
     }
@@ -1135,6 +1167,15 @@ footer.n-blue {
     }
     main .team-section .card-container .card img{
         width: 50%;
+    }
+    main .form-container textarea {
+        width: 300px;
+    }
+    main .form-container label {
+        width: 300px;
+    }
+    main .form-container span {
+        width: 300px;
     }
     main iframe {
         width: 300px;

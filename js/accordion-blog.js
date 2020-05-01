@@ -25,6 +25,7 @@ $(document).ready(function() {
                 $('.panel').slideUp(500);
                 // 4. open the panel for the clicked head
                 $(this).siblings('.panel').slideDown(500);
+                $(this).siblings('.panel').css('display', 'grid');
                 // alternative:   $(this).next().slideDown(500);
             }
     });
