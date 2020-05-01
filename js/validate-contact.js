@@ -83,6 +83,13 @@ function validateForm (event) {
     } else {
         // Send form to backend
         console.log('Sending form data');
+
+        // Clear the input fields
+        document.querySelector('#name').value = '';
+        document.querySelector('#email').value = '';
+        document.querySelector('#message').value = '';
+        document.querySelector('#checkboxAGB').checked = false;
+        document.querySelector('#checkboxNews').checked = false;
     }
 }
 
@@ -120,15 +127,3 @@ function displayErrors(validationErrors) {
     }
 }
 
-// document.querySelector('textarea').addEventListener('input', event => {
-//     let hossz = document.querySelector('textarea').value.length
-//     const counter = document.querySelector('#counter')
-//     counter.innerHTML = hossz
-//     if (hossz < 29) {
-//         counter.style.color = 'red'
-//     }
-//      else {
-//         counter.style.color = 'lime'
-//     }
-// })
- 

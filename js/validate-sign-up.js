@@ -35,37 +35,37 @@ function validateSignUp (event) {
     // First Name
     if (!data.firstName) {
         console.error('No First Name');
-        validationErrors.name = '* Please fill this field';
+        validationErrors.firstName = '* Please fill this field';
     } else {
-        console.info('First Name present: '+ data.name);
+        console.info('First Name present: '+ data.firstName);
     }
     // Last Name
     if (!data.lastName) {
         console.error('No Last Name');
-        validationErrors.name = '* Please fill this field';
+        validationErrors.lastName = '* Please fill this field';
     } else {
-        console.info('Last Name present: '+ data.name);
+        console.info('Last Name present: '+ data.lastName);
     }
     // Child First Name
     if (!data.childFirstName) {
         console.error('No Child First Name');
-        validationErrors.name = "* Please fill this field";
+        validationErrors.childFirstName = "* Please fill this field";
     } else {
-        console.info("Child's First Name present: "+ data.name);
+        console.info("Child's First Name present: "+ data.childFirstName);
     }
     // Child Last Name
     if (!data.childLastName) {
         console.error("No Child's Last Name");
-        validationErrors.name = "* Please fill this field";
+        validationErrors.childLastName = "* Please fill this field";
     } else {
-        console.info("Child's Last Name present: "+ data.name);
+        console.info("Child's Last Name present: "+ data.childLastName);
     }
     // Child Birth Date
     if (!data.childBirthDate) {
         console.error('No Child Birth Date');
-        validationErrors.name = '* Please fill this field';
+        validationErrors.childBirthDate = '* Please fill this field';
     } else {
-        console.info('Name present: '+ data.name);
+        console.info('Birth Date present: '+ data.childBirthDate);
 }
     // Email
     if (!data.email) {
@@ -79,7 +79,7 @@ function validateSignUp (event) {
     let emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (!emailRegExp.test(data.email)) {
         // Email is not a match
-        validationErrors.email = '* Invalid Email Address';
+        validationErrors.email = '* Please give us a valid email address';
     } else {
         console.info('Email is valid');
     }
@@ -96,7 +96,7 @@ function validateSignUp (event) {
     let phoneRegExp = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
     if (!phoneRegExp.test(data.phone)) {
         // Phone is not a match
-        validationErrors.email = '* Please give us a phone number';
+        validationErrors.phone = '* Please give us a phone number';
     } else {
         console.info('Phone is valid');
     }
@@ -133,6 +133,16 @@ function validateSignUp (event) {
     } else {
         // Send form to backend
         console.log('Sending form data');
+        // Clear the input fields
+        document.querySelector('#firstname').value = '';
+        document.querySelector('#lastname').value = '';
+        document.querySelector('#ch-firstname').value = '';
+        document.querySelector('#ch-lastname').value = '';
+        document.querySelector('#ch-birth').value = '';
+        document.querySelector('#email').value = '';
+        document.querySelector('#phone').value = '';
+        document.querySelector('#checkboxAGB').checked = false;
+        document.querySelector('#checkboxNews').checked = false;
     }
 }
 
@@ -153,11 +163,11 @@ function displayErrors(validationErrors) {
 
     if (validationErrors.childFirstName) {
         const errorContainer = document.createElement('span');
-        errorContainer.innerHTML = validationErrors.childFirstNname;
+        errorContainer.innerHTML = validationErrors.childFirstName;
         document.querySelector('#ch-firstname').after(errorContainer);
     }
 
-    if (validationErrors.childLasstName) {
+    if (validationErrors.childLastName) {
         const errorContainer = document.createElement('span');
         errorContainer.innerHTML = validationErrors.childLastName;
         document.querySelector('#ch-lastname').after(errorContainer);
