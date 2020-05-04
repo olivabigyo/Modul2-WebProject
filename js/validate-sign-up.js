@@ -143,6 +143,8 @@ function validateSignUp (event) {
         document.querySelector('#phone').value = '';
         document.querySelector('#checkboxAGB').checked = false;
         document.querySelector('#checkboxNews').checked = false;
+        // inform user
+        alert('Thanks');
     }
 }
 

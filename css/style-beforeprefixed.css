@@ -1,4 +1,4 @@
-/* === My Own Style=== */
+/* === My Own Style === */
 
 body {
     color: #707070;
@@ -103,19 +103,19 @@ a.home  {
 /* ---------------------------------------- */
 
 .mini-nav {
-    transform: rotate(90deg) translate(0px, -600px);
+    transform: rotate(90deg) translate(0px, -550px);
     transform-origin: 0 0;
 }
 
 .mini-nav ul#menu-tag {
-    width: 600px;
+    width: 550px;
     height: 80px;
     border-bottom: 1px solid white;
     font-size: 3rem;
 }
 
 .mini-nav ul#nav-tag {
-    width: 600px;
+    width: 550px;
     height: 80px;
     border-bottom: 1px solid white;
 }
@@ -137,11 +137,6 @@ a.home  {
     color: white;
     padding: 1rem 3rem;
 }
-
-/* .mini-nav ul#nav-tag a:hover {
-    background: white;
-    color: black;
-} */
 
 .mini-nav ul#menu-tag a:hover {
     font-size: 3.2rem;
@@ -326,9 +321,9 @@ nav ul li a {
     color: black;
 }
 
-/* ================================== */
-/* ========== MAIN CONTENT ========== */
-/* ================================== */
+/* ====================================================== */
+/* ==================== MAIN CONTENT ==================== */
+/* ====================================================== */
 
 main {
     opacity: 0;
@@ -410,6 +405,7 @@ main section a {
     padding: 1rem;
     margin: 1rem;
     text-decoration: none;
+    border-radius: 4px;
 }
 main .plain a {
     border: 2px solid #C56566;
@@ -615,9 +611,9 @@ main .memb-section .card div a {
     background-color: #4878A8;
 }
 
-/* === Contact Section === */
-/* ----------------------- */
-/* Contact form on Index Page, Contact Page and SignUp Page */
+/* === Index Page + Contact Page: Contact Section === */
+/* -------------------------------------------------- */
+/* Contact form on Index + Contact + Membership Page */
 
 main .contact-section .card-container{
     display: grid;
@@ -669,7 +665,7 @@ main .form-container form #subm-index-page {
 main .form-container form #subm-index-page:hover {
     background-color: #902122;
 }
-/* Submit button color on Sign-up Page sign-up form*/
+/* Submit button color on Membership Page sign-up form*/
 main .form-container form #subm-sign-up-form {
     color:  #FBF3E4;
     background-color: #4878A8;
@@ -678,7 +674,7 @@ main .form-container form #subm-sign-up-form:hover {
     opacity: 0.8;
     color: white;
 }
-/* Submit button color on Sign-up Page sign-in form*/
+/* Submit button color on Membership Page sign-in form*/
 main .form-container form #subm-sign-in-form {
     color:  #FBF3E4;
     background-color: #4878A8;
@@ -687,7 +683,7 @@ main .form-container form #subm-sign-in-form:hover {
     opacity: 0.8;
     color: white;
 }
-/* Sign-in and Sign-up form on Sign-up Page */
+/* Sign-in and Sign-up form on Membership Page */
 main .form-container .wide input {
     min-width: 300px;
 }
@@ -712,7 +708,7 @@ main .form-container .input-area {
     flex-direction: column;
     margin: 0 auto;
 }
-/* Address in Index Page:contact-section and Contact Page */
+/* Address in Contact-section and Index + Contact Page */
 main .card-container .address p {
     padding: 0.5rem;
 }
@@ -723,10 +719,11 @@ main .card-container .address h4 {
     padding: 1rem 0;
 }
 
-/* === All Pages: Dual-section === */
-/* ------------------------------- */
+/* === Dual-section === */
+/* -------------------- */
 
-/* The Dual-section means, it splits the screen, usually an image and a card with text content */
+/* The Dual-section means, it splits the screen, */
+/* usually an image and a card with text content */
 
 main .dual-section .card-container {
     display: flex;
@@ -753,7 +750,11 @@ main .dual-section .profil img {
     border-radius: 50%;
     margin-bottom: 0.5rem;
 }
-/* Only About page: squere cards with internal link */
+/* ==================================== */
+/* ============ About Page ============ */
+/* ==================================== */
+
+/* Only About page: squere cards as tab heads */
 main .learnmore .card-container a {
     border: none;
     padding: 0;
@@ -823,9 +824,9 @@ main .useful-links a:hover {
     border: none;
 }
 
-/* =============== */
-/* === Gallery === */
-/* =============== */
+/* ==================================================== */
+/* =================== Gallery Page =================== */
+/* ==================================================== */
 
 .slider-container {
     width: 500px;
@@ -902,9 +903,9 @@ main .coloured .slider-container span:hover {
 }
 
 
-/* ============== */
-/* === Footer === */
-/* ============== */
+/* ================================================ */
+/* ==================== Footer ==================== */
+/* ================================================ */
 
 footer {
     width: 100%;
@@ -946,14 +947,14 @@ footer.n-blue {
 }
 
 
-/* ============================================= */
-/* =============== Media Queries =============== */
-/* ============================================= */
+/* =============================================== */
+/* ================ Media Queries ================ */
+/* =============================================== */
 
 
-/* ============================================ */
-/* =============== Desktop View =============== */
-/* ============================================ */
+/* ============================================== */
+/* ================ Desktop View ================ */
+/* ============================================== */
 
 @media screen and (max-width: 1198px) {
     body {
@@ -981,9 +982,9 @@ footer.n-blue {
    
 }
 
-/* =========================================== */
-/* =============== Tablet View =============== */
-/* =========================================== */
+/* ============================================= */
+/* ================ Tablet View ================ */
+/* ============================================= */
 
 @media screen and (max-width: 1024px) {
     body {
@@ -1091,14 +1092,14 @@ footer.n-blue {
         object-fit: cover;
         object-position: center;
     }
-    main iframe {
+    main iframe {       /* Maps on Contact Page */
         width: 400px;
         height: 300px;
     }
 }
-/* =========================================== */
-/* =============== Mobile View =============== */
-/* =========================================== */
+/* =============================================== */
+/* ================= Mobile View ================= */
+/* =============================================== */
 
 @media screen and (max-width: 660px) {
     body {
@@ -1177,7 +1178,7 @@ footer.n-blue {
     main .form-container span {
         width: 300px;
     }
-    main iframe {
+    main iframe {       /* Maps on Contact Page */
         width: 300px;
         height: 225px;
     }

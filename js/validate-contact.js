@@ -90,6 +90,8 @@ function validateForm (event) {
         document.querySelector('#message').value = '';
         document.querySelector('#checkboxAGB').checked = false;
         document.querySelector('#checkboxNews').checked = false;
+        // inform user
+        alert('Thanks');
     }
 }
 
