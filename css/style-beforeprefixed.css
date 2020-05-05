@@ -849,13 +849,15 @@ main .useful-links a:hover {
 /* =================== Gallery Page =================== */
 /* ==================================================== */
 
+/* ==== and testimonials section on index page ==== */
+
 .slider-container {
     margin: 0 auto;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 .slider-container {
     width: 500px;
@@ -899,14 +901,12 @@ main .useful-links a:hover {
 main .coloured .slider-container span:hover {
     background-color: #4878A8;
     color: white;
-    /* border: 1px solid white; */
 }
 
-.slider-container .pagi {
+.pagi {
     margin: 1rem;
 }
-.slider-container .pagi .dot {
-    cursor: pointer;
+.pagi .dot {
     height: 15px;
     width: 15px;
     margin: 0 2px;
@@ -916,10 +916,7 @@ main .coloured .slider-container span:hover {
     transition: background-color 0.6s ease;
 }
       
-/* .slider-container .dot:hover {
-    background-color: #4878A8;
-} */
-.slider-container .dot.activedot {
+.pagi .dot.activedot {
     background-color: #4878A8;
 }
 
@@ -929,14 +926,14 @@ main .coloured .slider-container span:hover {
 
 .testim-section .slider-container {
     width: 700px;
-    height: 300px;
+    height: 200px;
 }
 .testim-section .slider-container p {
     width: 80%;
     margin: 0 auto;
     text-align: justify;
 }
-.testim-section .slider-container .dot.activedot {
+.testim-section .dot.activedot {
     background-color: rgba(197, 101, 103, 0.795);
 }
 .testim-section .slider-container .prev, .testim-section .slider-container .next {
@@ -1243,5 +1240,11 @@ footer.n-blue {
     }
     .slider-container {
         width: 365px;
+    }
+    .testim-section .slider-container {
+        height: 280px;
+    }
+    .testim-section .slider-container .prev, .testim-section .slider-container .next {
+        color: white;
     }
 }
