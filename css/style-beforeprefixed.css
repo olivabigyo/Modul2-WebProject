@@ -851,6 +851,47 @@ main .useful-links a:hover {
 
 /* ==== and testimonials section on index page ==== */
 
+.border {
+    overflow: hidden;
+    width: 350px;
+    height: 540px;
+    border: 3px solid black;
+    margin: auto;
+    align-self: center;
+}
+.slides {
+    display: inline-flex;
+    position: relative;
+}
+.slides img {
+    width: 350px;
+    height: 540px;
+}
+
+span.prevA, span.nextA {
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    font-size: 2rem;
+    padding: 0.5rem;
+    color:black;
+    text-decoration: none;
+}
+span.prevA {
+    border-radius: 0 3px 3px 0;
+    left: 0;
+}
+span.prevA:hover {
+    background-color: white;
+}
+span.nextA {
+    border-radius: 3px 0 0 3px;
+    right: 0;
+}
+span.nextA:hover {
+    background-color: white;
+}
+/*  *************************************************** */
 .slider-container {
     margin: 0 auto;
     position: relative;
