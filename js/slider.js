@@ -8,6 +8,7 @@ const next_btn = document.querySelector('.next');
 // const autoplay = document.querySelector('a.autoplay');
 
 displaySlide(activeSlideNr);
+autodisplay();
 
 // 2. Event listeners
 
@@ -29,11 +30,11 @@ function stepNext(e) {
     displaySlide(activeSlideNr);   
     console.log('right');
 }
-// function autodisplay() {
-//     activeSlideNr++;
-//     displaySlide(activeSlideNr);
-//     setTimeout(autodisplay, 4000); // Change image every 2 seconds
-// }
+function autodisplay() {
+    activeSlideNr++;
+    displaySlide(activeSlideNr);
+    setTimeout(autodisplay, 8000); // Change image every 4 seconds
+}
 
 function displaySlide (n) {
     let myslides = document.querySelectorAll('.slide');

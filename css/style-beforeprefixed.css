@@ -499,9 +499,30 @@ main .team-section .card a:hover img {
 
 /* === Index Page: Gallery Section === */
 /* ----------------------------------- */
-/* images with hover effekt */
 
 main .gallery-section .card-container {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: row;
+    grid-gap: 5px;
+    margin: 2rem auto;
+}
+main .gallery-section .card-container #main-img {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 4;
+}
+main .gallery-section .card-container img {
+    width: 100%;
+    justify-self: strech;
+}
+
+
+
+/* ----------------------------------------- */
+
+/* main .gallery-section .card-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -522,7 +543,7 @@ main .gallery-section .card-container .card img {
 }
 main .gallery-section .card-container .card img:hover {
     transform: scale(1.15);
-}
+} */
 
 /* === Blog Page with similar images style === */
 /* images with hover effekt */
@@ -829,15 +850,16 @@ main .useful-links a:hover {
 /* ==================================================== */
 
 .slider-container {
-    width: 500px;
-    /* max-width: 800px; */
-    height: 600px;
     margin: 0 auto;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.slider-container {
+    width: 500px;
+    height: 600px;
 }
 
 .slider-container .slide {
@@ -855,12 +877,11 @@ main .useful-links a:hover {
     cursor: pointer;
     user-select: none;
     position: absolute;
-    top: 50%;
+    top: 40%;
     font-size: 2rem;
     padding: 0.4rem;
     color: white;
     text-decoration: none;
-    margin-top: -1.5rem;
 }
 
 .slider-container .prev {
@@ -895,13 +916,39 @@ main .coloured .slider-container span:hover {
     transition: background-color 0.6s ease;
 }
       
-.slider-container .dot:hover {
+/* .slider-container .dot:hover {
     background-color: #4878A8;
-}
+} */
 .slider-container .dot.activedot {
     background-color: #4878A8;
 }
 
+/* ================================================== */
+/* ============ Index Page: Testimonials ============ */
+/* ================================================== */
+
+.testim-section .slider-container {
+    width: 700px;
+    height: 300px;
+}
+.testim-section .slider-container p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+}
+.testim-section .slider-container .dot.activedot {
+    background-color: rgba(197, 101, 103, 0.795);
+}
+.testim-section .slider-container .prev, .testim-section .slider-container .next {
+    color: #C56566;
+}
+.testim-section .slide {
+    animation: fade 1.5s;
+}
+@keyframes fade {
+    from    {opacity: 0.4}
+    to      {opacity: 1}
+}
 
 /* ================================================ */
 /* ==================== Footer ==================== */
@@ -1020,6 +1067,12 @@ footer.n-blue {
         grid-template-columns: repeat(2,1fr);
         grid-gap: 20px;
     }
+    main .gallery-section .card-container {
+        width: 80%;
+    }
+    main .testim-section .slider-container {
+        width: 90%;
+    }
     main .memb-section .card-container {
         width: 100%;
         display: flex;
@@ -1071,9 +1124,8 @@ footer.n-blue {
 
 @media screen and (max-width: 800px) {
     main .gallery-section .card-container {
-        padding: 0;
+        width: 90%;
     }
-    
     main .blog > .card-container {
         grid-template-columns: 1fr;
     }
@@ -1168,6 +1220,9 @@ footer.n-blue {
     }
     main .team-section .card-container .card img{
         width: 50%;
+    }
+    main .gallery-section .card-container {
+        width: 90%;
     }
     main .form-container textarea {
         width: 300px;
