@@ -851,11 +851,16 @@ main .useful-links a:hover {
 
 /* ==== and testimonials section on index page ==== */
 
+
+
+/* ---- ez itt eloszor az also slider ---- */ 
+/* a tologatosrra animalt kikapcsolhato autoplay */ 
+
 .border {
     overflow: hidden;
     width: 350px;
     height: 540px;
-    border: 3px solid black;
+    border: 6px solid #4878A8;
     margin: auto;
     align-self: center;
 }
@@ -868,30 +873,45 @@ main .useful-links a:hover {
     height: 540px;
 }
 
-span.prevA, span.nextA {
+span.prevBtn, span.nextBtn {
     cursor: pointer;
     user-select: none;
     position: absolute;
     font-size: 2rem;
     padding: 0.5rem;
-    color:black;
+    color:white;
     text-decoration: none;
 }
-span.prevA {
-    border-radius: 0 3px 3px 0;
+span.prevBtn {
+    border-radius: 3px 0 0 3px;
     left: 0;
 }
-span.prevA:hover {
+span.prevBtn:hover {
     background-color: white;
 }
-span.nextA {
-    border-radius: 3px 0 0 3px;
+span.nextBtn {
+    border-radius: 0 3px 3px 0;
     right: 0;
 }
-span.nextA:hover {
+span.nextBtn:hover {
     background-color: white;
 }
+#play {
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 0.5rem;
+    /* background-color: #4878A8; */
+}
+#autoplay {
+    display: none;
+}
+#play #autoplay:checked {
+    background-color: #4878A8;;
+}
 /*  *************************************************** */
+/* --- innentol a felso slider ES a testimonials --- */ 
+/* a hide and show animacio nelkul es nem kikapcsolhato autoplayel  */
 .slider-container {
     margin: 0 auto;
     position: relative;
@@ -912,7 +932,7 @@ span.nextA:hover {
 .slider-container .slide img {
     width: 350px;
     height: 540px;
-    border: 5px solid #4878A8;
+    border: 6px solid #4878A8;
     object-fit: cover;
 }
 

@@ -1,3 +1,5 @@
+// This is jQuery
+
 $(document).ready(function() {
     // Let's code! 
        
@@ -11,10 +13,10 @@ $(document).ready(function() {
         // and when we move one to the left or right we can see an img
         $('.slides').children('img').last().prependTo('.slides');
     
-        $(document).on('click', '.nextA, .prevA', function(e) {
-            // console.log($(this).hasClass('next'));
+        $(document).on('click', '.nextBtn, .prevBtn', function(e) {
+            // console.log($(this).hasClass('nextBtn'));
             // Next button clicked
-            if($(this).hasClass('nextA')) {  // this <= '.next' button
+            if($(this).hasClass('nextBtn')) {  // this <= '.nextBtn' button
                 if(!$('.slides').is(':animated')) {  // validation if animation takes place at the moment
                     $('.slides').animate(    // syntax: .animate({css properties as object}, time in ms, callbackfunction);
                         { right: '+350px'}, 1000, function() {
@@ -49,8 +51,8 @@ $(document).ready(function() {
             // console.log($(this).is(':checked'));
             if($(this).is(':checked')) {
                 autoplay = setInterval(function() {
-                $('.nextA').click();
-              }, 1000);
+                    $('.nextBtn').click();
+                }, 2000);
             } 
             else {
                 clearInterval(autoplay);
