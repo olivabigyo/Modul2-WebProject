@@ -17,7 +17,7 @@ let last_opacity = 0;
 const is_nav_hidden = () => nav.classList.contains('hidden');
 
 // Tests
-// console.log(menu_a;
+// console.log(menu_a);
 // console.log(navis);
 // console.log(is_nav_hidden());
 

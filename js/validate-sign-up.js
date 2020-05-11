@@ -35,42 +35,42 @@ function validateSignUp (event) {
     // First Name
     if (!data.firstName) {
         console.error('No First Name');
-        validationErrors.firstName = '* Please fill this field';
+        validationErrors.firstName = '* Please fill in this field';
     } else {
         console.info('First Name present: '+ data.firstName);
     }
     // Last Name
     if (!data.lastName) {
         console.error('No Last Name');
-        validationErrors.lastName = '* Please fill this field';
+        validationErrors.lastName = '* Please fill in this field';
     } else {
         console.info('Last Name present: '+ data.lastName);
     }
     // Child First Name
     if (!data.childFirstName) {
         console.error('No Child First Name');
-        validationErrors.childFirstName = "* Please fill this field";
+        validationErrors.childFirstName = "* Please fill in this field";
     } else {
         console.info("Child's First Name present: "+ data.childFirstName);
     }
     // Child Last Name
     if (!data.childLastName) {
         console.error("No Child's Last Name");
-        validationErrors.childLastName = "* Please fill this field";
+        validationErrors.childLastName = "* Please fill in this field";
     } else {
         console.info("Child's Last Name present: "+ data.childLastName);
     }
     // Child Birth Date
     if (!data.childBirthDate) {
         console.error('No Child Birth Date');
-        validationErrors.childBirthDate = '* Please fill this field';
+        validationErrors.childBirthDate = '* Please fill in this field';
     } else {
         console.info('Birth Date present: '+ data.childBirthDate);
 }
     // Email
     if (!data.email) {
         console.error('No Email');
-        validationErrors.email = '* Please fill this field';
+        validationErrors.email = '* Please fill in this field';
     } else {
         console.info('Email present: '+ data.email);
     }
@@ -79,7 +79,7 @@ function validateSignUp (event) {
     let emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (!emailRegExp.test(data.email)) {
         // Email is not a match
-        validationErrors.email = '* Please give us a valid email address';
+        validationErrors.email = '* Please enter a valid email address';
     } else {
         console.info('Email is valid');
     }
@@ -96,7 +96,7 @@ function validateSignUp (event) {
     let phoneRegExp = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
     if (!phoneRegExp.test(data.phone)) {
         // Phone is not a match
-        validationErrors.phone = '* Please give us a phone number';
+        validationErrors.phone = '* Please enter a phone number';
     } else {
         console.info('Phone is valid');
     }
