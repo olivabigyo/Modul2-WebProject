@@ -762,6 +762,10 @@ main .form-container span {
     color: red;
     font-size: 0.8rem;
 }
+main .form-container small#forgot {
+    margin-top: 1rem;
+    cursor: pointer;
+}
 main .form-container form .submit-button {
     margin: 1rem auto;
     border: none;

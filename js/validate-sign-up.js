@@ -144,7 +144,7 @@ function validateSignUp (event) {
         document.querySelector('#checkboxAGB').checked = false;
         document.querySelector('#checkboxNews').checked = false;
         // inform user
-        alert('Thanks');
+        alert('Thanks! \nCheck Your mailbox');
     }
 }
 
