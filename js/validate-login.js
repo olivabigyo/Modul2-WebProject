@@ -69,7 +69,7 @@ function validateSignIn (event) {
             document.querySelector('#emailLogin').value = '';
             document.querySelector('#pwd').value = '';
             // inform user
-            alert('Good guess! Maybe next time.');
+            alert('Nice try! Maybe next time.');
         }
     }
 }
