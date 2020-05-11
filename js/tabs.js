@@ -3,7 +3,7 @@ $(document).ready(function() {
     
     // 1. Variables
     
-    const tabheads = $('main .learnmore a');
+    const tabheads = $('main .tabheads a');
     const tabcontents = $('main .tab');
     
     console.log(tabheads, tabcontents);

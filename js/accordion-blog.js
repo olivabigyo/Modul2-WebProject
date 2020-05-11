@@ -14,7 +14,8 @@ $(document).ready(function() {
             //          2.3 Change + mark to - for the clicked head
 
             //         I skip these... I don't want to close the opened panel, 
-            //         because it changes the scrollposition 
+            //         because the closing changes the scrollposition
+            //         which is weird on desktop
             //          n/n Remove from all head the active class
             //          n/n Collapse all panels
             //          n/n Change marks to + on all heads

@@ -332,6 +332,9 @@ main {
     border-right: 1px solid white;
     width: 100%;
 }
+main#login {
+    min-height: 90vh;
+}
 
 main .main-top-padding {
     height: 100vh;
@@ -407,6 +410,12 @@ main section a {
     text-decoration: none;
     border-radius: 4px;
 }
+main section a.inline {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
 main .plain a {
     border: 2px solid #C56566;
     color: #C56566;
@@ -422,6 +431,9 @@ main .plain a:hover {
 main .coloured a:hover {
     border: 2px solid black;
     color: black;
+}
+main .plain a.inline:hover, main .colured a.inline:hover {
+    border: none;
 }
 main .memb-section .card div a:hover {
     border: 2px solid #80A7CE;
@@ -624,6 +636,56 @@ main .blog h2 {
 main .blog h3 {
     margin-bottom: 0;
 }
+/* ************************************************* */
+/* Login Page */
+main .login {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+main .login .welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+}
+main .options .card-container .card-course {
+    background-color: #C56566;
+}
+main .options .card-container .card-workshop {
+    background-color: #F0CD85;
+}
+main .options .card-container .card-timetable {
+    background-color: #80A7CE;
+}
+main .options .card-container a:hover .card-course {
+    background-color: #902122;
+}
+main .options .card-container a:hover .card-workshop {
+    background-color: #F4C057;
+}
+main .options .card-container a:hover .card-timetable {
+    background-color: #4878A8;
+}
+main .options .card-container a.active .card-course {
+    background-color: #902122;
+    border: 3px solid #F4C057;
+}
+main .options .card-container a.active .card-workshop {
+    background-color: #F4C057;
+    border: 3px solid #C56566;
+}
+main .options .card-container a.active .card-timetable {
+    background-color: #4878A8;
+    border: 3px solid #F4C057;
+}
+
+
+
+
+/* ************************************************* */
+
+
 
 /* === Index Page: Membership Section === */
 /* -------------------------------------- */
@@ -810,44 +872,44 @@ main .dual-section .profil img {
 /* ==================================== */
 
 /* Only About page: squere cards as tab heads */
-main .learnmore .card-container a {
+main .tabheads .card-container a {
     border: none;
     padding: 0;
     margin: 0;
 }
 /* Coloring the squere cards */
-main .learnmore .card-container .card-link {
+main .tabheads .card-container .card-link {
     background-color: #C56566;
 }
-main .learnmore .card-container .card-read {
+main .tabheads .card-container .card-read {
     background-color: #F0CD85;
 }
-main .learnmore .card-container .card-listen {
+main .tabheads .card-container .card-listen {
     background-color: #5DA69F;
 }
-main .learnmore .card-container a:hover .card-link {
+main .tabheads .card-container a:hover .card-link {
     background-color: #902122;
 }
-main .learnmore .card-container a:hover .card-read {
+main .tabheads .card-container a:hover .card-read {
     background-color: #F4C057;
 }
-main .learnmore .card-container a:hover .card-listen {
+main .tabheads .card-container a:hover .card-listen {
     background-color: #2D7E77;
 }
-main .learnmore .card-container a.active .card-link {
+main .tabheads .card-container a.active .card-link {
     background-color: #902122;
     border: 3px solid #F4C057;
 }
-main .learnmore .card-container a.active .card-read {
+main .tabheads .card-container a.active .card-read {
     background-color: #F4C057;
     border: 3px solid #C56566;
 }
-main .learnmore .card-container a.active .card-listen {
+main .tabheads .card-container a.active .card-listen {
     background-color: #2D7E77;
     border: 3px solid #F4C057;
 }
 /* Styling the squere cards*/
-main .learnmore .card-container {
+main .tabheads .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
@@ -855,19 +917,19 @@ main .learnmore .card-container {
     margin-top: 2rem;
 }
 
-main .learnmore .card-container .card {
+main .tabheads .card-container .card {
     width: 250px;
     height: 250px;
 }
-main .learnmore .card-container .card div {
+main .tabheads .card-container .card div {
     width: 100%;
     text-align: center;
 }
-main .learnmore .card div h3 {
+main .tabheads .card div h3 {
     padding: 0.3rem;
     margin: 0;
 }
-main .learnmore .card div p {
+main .tabheads .card div p {
     padding: 0.3rem;
     color: #FBF3E4;
 }
@@ -890,6 +952,9 @@ main .useful-links a:hover {
 /* ---- ez itt eloszor az also slider ---- */ 
 /* a tologatosrra animalt kikapcsolhato autoplay */ 
 
+section.thin {
+    padding: 0.5rem;
+}
 .border {
     overflow: hidden;
     width: 350px;
@@ -1203,12 +1268,12 @@ footer.n-blue {
     main .form-container span {
         width: 365px;
     }
-    main .learnmore .card-container {
+    main .tabheads .card-container {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 0;
     } 
-    main .learnmore .card-container .card {
+    main .tabheads .card-container .card {
         height: 100px;
     }
 }

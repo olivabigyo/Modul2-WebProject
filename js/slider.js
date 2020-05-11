@@ -1,4 +1,6 @@
 // This is vanilla JS
+// Automatic slider for the testimonials texts on the Index Page 
+// and for the first slideshow on the Gallery Page
 
 // 1. Variables
 

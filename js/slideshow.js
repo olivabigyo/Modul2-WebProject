@@ -1,4 +1,5 @@
 // This is jQuery
+// Second Slideshow on the Gallery Page
 
 $(document).ready(function() {
     // Let's code! 
@@ -13,7 +14,7 @@ $(document).ready(function() {
         // and when we move one to the left or right we can see an img
         $('.slides').children('img').last().prependTo('.slides');
     
-        $(document).on('click', '.nextBtn, .prevBtn', function(e) {
+        $(document).on('click', '.nextBtn, .prevBtn', function() {
             // console.log($(this).hasClass('nextBtn'));
             // Next button clicked
             if($(this).hasClass('nextBtn')) {  // this <= '.nextBtn' button
@@ -31,7 +32,6 @@ $(document).ready(function() {
             }
             // Prev button clicked
             else {
-                e.preventDefault();
                 if(!$('.slides').is(':animated')) {  // validation if animation takes place at the moment
                     $('.slides').animate(  // syntax: .animate({css properties as object}, time in ms, callbackfunction);
                         { right: '-350px'}, 1000, function() {
