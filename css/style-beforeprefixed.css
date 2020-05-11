@@ -590,9 +590,28 @@ main .blog .headline {
     user-select: none;
     width: 100%;
     display: flex;
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+main .blog .headline .post-titel {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-left: 1rem;
+}
+main .blog .headline span {
+    font-family: 'Bebas Neue';
+    font-size: 3rem;
+    padding: 0 1rem;
+    /* margin-right: 0.5rem; */
+}
+main .blog .headline span {
+    color: #C56566;
+}
+main .blog.coloured .headline span {
+    color: #FBF3E4;
 }
 
 main .blog .panel {
