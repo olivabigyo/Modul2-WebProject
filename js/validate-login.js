@@ -2,7 +2,7 @@
 
 // Add event listener to small
 document.querySelector('#forgot').addEventListener('click', () => {
-    alert('I understand. \nMaybe try these: \nzelda@hyrule, Bok0bl1n \nprof.kukui@alola, Kapur1k1, \nr.munroe@xkcd, correcthorsebatterystaple ');
+    alert('It happens, I understand. \nMaybe try these: \nzelda@hyrule, Bok0bl1n \nprof.kukui@alola, Kapur1k1, \nr.munroe@xkcd, correcthorsebatterystaple ');
 
 });
 // Add event listener to button
@@ -58,13 +58,19 @@ function validateSignIn (event) {
         // Display error messages
         displayErrors(validationErrorsLogin, dataLogin);
     } else {
-        // Send form to backend
-        console.log('Sending form data');
-        // Clear the input fields
-        document.querySelector('#emailLogin').value = '';
-        document.querySelector('#pwd').value = '';
-        // inform user
-        alert('Good guess!');
+        if ((dataLogin.email == 'zelda@hyrule' && dataLogin.pwd == 'Bok0bl1n') ||
+            (dataLogin.email == 'prof.kukui@alola' && dataLogin.pwd == 'Kapur1k1') || 
+            (dataLogin.email == 'r.munroe@xkcd' && dataLogin.pwd == 'correcthorsebatterystaple')) {
+            // Send form to backend
+            console.log('Sending form data');
+            location = 'logged.html';
+        } else {
+            // Clear the input fields
+            document.querySelector('#emailLogin').value = '';
+            document.querySelector('#pwd').value = '';
+            // inform user
+            alert('Good guess! Maybe next time.');
+        }
     }
 }
 
