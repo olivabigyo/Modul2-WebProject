@@ -1,3 +1,5 @@
+'use strict';
+
 // This is jQuery
 $(document).ready(function () {
     // Let's code!
@@ -17,7 +19,7 @@ $(document).ready(function () {
     //          2.4 Add the active class to the clicked head
     //          2.5 Open the panel for the clicked head 
     //          2.6 Change + mark to - for the clicked head
-    
+
     //         I skip these... I don't want to close the opened panel, 
     //         because the closing changes the scrollposition
     //         which is weird on desktop
@@ -64,25 +66,25 @@ $(document).ready(function () {
 
     // We need this while slideUp animation happens
     function keepElementInPosition(element) {
-        console.log('keeping');
+        // console.log('keeping');
         A.element = element;
         A.fromScreenTop = element.offsetTop - document.documentElement.scrollTop;
-        console.log(A);
-        // For Users with Autocliker Gaming Mouse:
-        // It is important to cancel the setInterval before we start a new one, 
-        // no other chance if we set a new one and the other is stuck
-        clearInterval(A.interval);
-        // it will be a "continouos" put it back to position 
-        A.interval = setInterval(putItBack, 16);
+        // console.log(A);
+        A.areWeDoneYet = false;
+        keepPuttingItBack();
     }
 
     // We will call it after the slideUp animation
     function cancelKeepElementInPosition() {
-        console.log('canceling');
-        clearInterval(A.interval);
-    } 
+        // console.log('canceling');
+        A.areWeDoneYet = true;
+    }
 
-    function putItBack() {
+    function keepPuttingItBack() {
         document.documentElement.scrollTop = A.element.offsetTop - A.fromScreenTop;
+        if (!A.areWeDoneYet) {
+            // It is like setTimeout(keepPuttingBack, 16); but smoother.... :)
+            requestAnimationFrame(keepPuttingItBack);
+        }
     }
 });
