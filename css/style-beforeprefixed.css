@@ -1026,17 +1026,12 @@ span.nextBtn:hover {
     border: 1px solid white;
     border-radius: 3px;
     padding: 0.5rem;
-    /* background-color: #4878A8; */
 }
 
 #autoplay {
     display: none;
 }
 
-#play #autoplay:checked {
-    background-color: #4878A8;
-    ;
-}
 
 /* ********    Slider      ********* *
  * ********   Group Sun    ********* *

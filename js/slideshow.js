@@ -5,22 +5,46 @@
 $(document).ready(function () {
     // Let's code!
 
-    // Prepare the slides
+     // 0 Ready: Onload function that waits for the site to be loaded
+            // 1 Define Variables
+            // 2 Preparing the slides
+            // 3 Events and Functions 
+            //      3.1 Move Left or Right
+            //          Prevent default behaviour 
+            //          Validate if animation takes place
+            //          Animation: 
+            //              Animate the slide-band to "slide"
+            //              Append the first / Prepend the last slide
+            //              Fit the slideband
+            //      3.2 Autoplay
+            //              Toggle: click on the next button in intervals
+            //                      clear that and do nothing
+
+    // 1. Variables
+    const slides = $('.slides');
+    const play = $('#play');
+
+    // 2. Prepare the slides
+
     // The slides-band is shifted by one in the container
-    $('.slides').css({
+    slides.css({
         marginLeft: -350  // now we see the second img in the container
     });
     // take the last slide and prepend it to the row of slides
     // we see the first img in the container again
     // and when we move one to the left or right we can see an img
-    $('.slides').children('img').last().prependTo('.slides');
+    slides.children('img').last().prependTo('.slides');
 
-    $(document).on('click', '.nextBtn, .prevBtn', function () {
+    // 3.1 Event Listeners on Next and Prev buttons
+
+    $(document).on('click', '.nextBtn, .prevBtn', function (event) {
+        event.preventDefault();
         // console.log($(this).hasClass('nextBtn'));
         // Next button clicked
         if ($(this).hasClass('nextBtn')) {  // this <= '.nextBtn' button
-            if (!$('.slides').is(':animated')) {  // no animation is taking place at the moment
-                $('.slides').animate(    // syntax: .animate({css properties as object}, time in ms, callbackfunction);
+            // console.log('next');
+            if (!slides.is(':animated')) {  // no animation is taking place at the moment
+                slides.animate(    // syntax: .animate({css properties as object}, time in ms, callbackfunction);
                     { right: '+350px' }, 1000, function () {
                         // The callback function takes the first img and appends it to the slides as the last child
                         $(this).children('img').first().appendTo('.slides');      // this <= '.slides' div because we are in the callback function
@@ -33,8 +57,9 @@ $(document).ready(function () {
         }
         // Prev button clicked
         else {
-            if (!$('.slides').is(':animated')) {  // no animation is taking place at the moment
-                $('.slides').animate(  // syntax: .animate({css properties as object}, time in ms, callbackfunction);
+            // console.log('prev');
+            if (!slides.is(':animated')) {  // no animation is taking place at the moment
+                slides.animate(  // syntax: .animate({css properties as object}, time in ms, callbackfunction);
                     { right: '-350px' }, 1000, function () {
                         // The callback function takes the last img and prepends it to the slides as first child
                         $(this).children('img').last().prependTo('.slides');
@@ -55,9 +80,12 @@ $(document).ready(function () {
             autoplay = setInterval(function () {
                 $('.nextBtn').click();
             }, 2000);
+            play.css('background-color','#4878A8');
+
         }
         else {
             clearInterval(autoplay);
+            play.css('background-color','#80A7CE');
         }
     });
 
