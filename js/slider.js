@@ -1,6 +1,6 @@
 'use strict';
 // This is vanilla JS
-// Automatic slider for the testimonials texts on the Index Page 
+// Automatic slider for the testimonial texts on the Index Page
 // and for the first slideshow on the Gallery Page
 
 // 1. Variables
@@ -15,8 +15,8 @@ autodisplay();
 
 // 2. Event listeners
 
-prev_btn.addEventListener('click', stepPrev)
-next_btn.addEventListener('click', stepNext)
+prev_btn.addEventListener('click', stepPrev);
+next_btn.addEventListener('click', stepNext);
 // autoplay.addEventListener('click', autodisplay)
 
 // 3. Functions
@@ -25,13 +25,13 @@ function stepPrev(e) {
     e.preventDefault();
     activeSlideNr--;
     displaySlide(activeSlideNr);
-    console.log('left');
+    // console.log('left');
 }
 function stepNext(e) {
     e.preventDefault();
     activeSlideNr++;
     displaySlide(activeSlideNr);
-    console.log('right');
+    // console.log('right');
 }
 function autodisplay() {
     activeSlideNr++;
@@ -56,5 +56,5 @@ function displaySlide(n) {
     }
     myslides[activeSlideNr].style.display = 'block';
     dots[activeSlideNr].classList.add('activedot');
-    console.log(activeSlideNr);
+    // console.log(activeSlideNr);
 }
