@@ -1,3 +1,4 @@
+'use strict';
 // This is vanilla JS
 // Automatic slider for the testimonials texts on the Index Page 
 // and for the first slideshow on the Gallery Page
@@ -20,16 +21,16 @@ next_btn.addEventListener('click', stepNext)
 
 // 3. Functions
 
-function stepPrev(e) { 
+function stepPrev(e) {
     e.preventDefault();
     activeSlideNr--;
-    displaySlide(activeSlideNr);   
+    displaySlide(activeSlideNr);
     console.log('left');
 }
 function stepNext(e) {
     e.preventDefault();
     activeSlideNr++;
-    displaySlide(activeSlideNr);   
+    displaySlide(activeSlideNr);
     console.log('right');
 }
 function autodisplay() {
@@ -38,7 +39,7 @@ function autodisplay() {
     setTimeout(autodisplay, 8000); // Change image every 4 seconds
 }
 
-function displaySlide (n) {
+function displaySlide(n) {
     let myslides = document.querySelectorAll('.slide');
     let dots = document.querySelectorAll('.dot');
     // console.log(myslides);
@@ -51,7 +52,7 @@ function displaySlide (n) {
         activeSlideNr = 0;
     }
     if (n < 0) {
-        activeSlideNr = myslides.length -1;
+        activeSlideNr = myslides.length - 1;
     }
     myslides[activeSlideNr].style.display = 'block';
     dots[activeSlideNr].classList.add('activedot');

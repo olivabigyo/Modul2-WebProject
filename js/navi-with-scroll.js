@@ -1,3 +1,4 @@
+'use strict';
 // This is vanilla JS
 
 // 1. Variables
@@ -38,7 +39,7 @@ function scrolleffekt() {
 
     // have to do nothing after the first 700px scrolling from top
     if (opacity == last_opacity) return;
-    
+
     // change the opacity of header image and content at the first 700px scrolling
     content.style.opacity = opacity;
     head.style.opacity = 1 - opacity;
@@ -54,11 +55,11 @@ function scrolleffekt() {
     // style changes for better visibility
     if (opacity > 0.6) {
         menu_a.style.color = 'black';
-        for (let navi of navis) {navi.style.color = 'black';}
-        mininav.style.borderBottom = 'none';   
+        for (let navi of navis) { navi.style.color = 'black'; }
+        mininav.style.borderBottom = 'none';
     } else {
         menu_a.style.color = 'white';
-        for (let navi of navis) {navi.style.color = 'white';}
+        for (let navi of navis) { navi.style.color = 'white'; }
         mininav.style.borderBottom = '1px solid white';
     };
 }
@@ -66,12 +67,12 @@ function scrolleffekt() {
 function toggleMenu(e) {
     e.preventDefault();
     // console.log(is_nav_hidden());
-     // show
-    if (is_nav_hidden()) { 
-        nav.classList.toggle('hidden'); 
-    } 
+    // show
+    if (is_nav_hidden()) {
+        nav.classList.toggle('hidden');
+    }
     // wait for the slide-out animation then hide
-    else {           
+    else {
         setTimeout(() => nav.classList.toggle('hidden'), 480);
     }
     // change buttons     

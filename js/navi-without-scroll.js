@@ -1,3 +1,4 @@
+'use strict';
 // This is vanilla JS
 
 // 1. Variables
@@ -21,29 +22,29 @@ const is_nav_hidden = () => nav.classList.contains('hidden');
 
 // 2. Preparing
 
-    head.style.display = 'none';    
-    menu_a.style.color = 'black';
-    for (let navi of navis) {navi.style.color = 'black';}
-    mininav.style.borderBottom = 'none';
-    content.style.opacity = 1;
+head.style.display = 'none';
+menu_a.style.color = 'black';
+for (let navi of navis) { navi.style.color = 'black'; }
+mininav.style.borderBottom = 'none';
+content.style.opacity = 1;
 
 // 3. Event listeners
 
-    menu_btn.addEventListener('click', toggleMenu);
-    close_btn.addEventListener('click', toggleMenu);
-    burger_btn.addEventListener('click', toggleMenu);
+menu_btn.addEventListener('click', toggleMenu);
+close_btn.addEventListener('click', toggleMenu);
+burger_btn.addEventListener('click', toggleMenu);
 
 // 3. Functions
 
 function toggleMenu(e) {
     e.preventDefault();
     // console.log(is_nav_hidden());
-     // show
-    if (is_nav_hidden()) { 
-        nav.classList.toggle('hidden'); 
-    } 
+    // show
+    if (is_nav_hidden()) {
+        nav.classList.toggle('hidden');
+    }
     // wait for the slide-out animation then hide
-    else {           
+    else {
         setTimeout(() => nav.classList.toggle('hidden'), 480);
     }
     // change buttons     

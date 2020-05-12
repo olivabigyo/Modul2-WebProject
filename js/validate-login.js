@@ -1,23 +1,23 @@
+'use strict';
 // This is vailla JS
 
 // Add event listener to small
 document.querySelector('#forgot').addEventListener('click', () => {
-    alert('It happens, I understand. \nMaybe try these: \nzelda@hyrule, Bok0bl1n \nprof.kukui@alola, Kapur1k1, \nr.munroe@xkcd, correcthorsebatterystaple ');
-
+    alert('It happens, I understand.\nMaybe try one of these: \nzelda@hyrule.gov, Bok0bl1n \nprof.kukui@alola.edu, Kapur1k1, \nr.munroe@xkcd.com, correcthorsebatterystaple ');
 });
 // Add event listener to button
 document.querySelector('#subm-sign-in-form').addEventListener('click', validateSignIn);
 
-function validateSignIn (event) {
-     // prevent reloading the page
+function validateSignIn(event) {
+    // prevent reloading the page
     event.preventDefault();
 
     // clear the former error messages
-    if(document.querySelector('span')){
+    if (document.querySelector('span')) {
         document.querySelectorAll('form span').forEach(element => {
-          element.remove();
+            element.remove();
         });
-      }
+    }
     // create object for input data and error messages
     let dataLogin = {};
     let validationErrorsLogin = {};
@@ -33,14 +33,14 @@ function validateSignIn (event) {
         console.error('No Email');
         validationErrorsLogin.email = '* Please fill in this field';
     } else {
-        console.info('Email present: '+ dataLogin.email);
+        console.info('Email present: ' + dataLogin.email);
     }
     // Password
     if (!dataLogin.pwd) {
         console.error('No Password');
         validationErrorsLogin.pwd = '* Please fill in this field';
     } else {
-        console.info('Password present: '+ dataLogin.pwd);
+        console.info('Password present: ' + dataLogin.pwd);
     }
 
 
@@ -54,13 +54,13 @@ function validateSignIn (event) {
     }
 
     // If there are errors
-    if(Object.keys(validationErrorsLogin).length > 0) {
+    if (Object.keys(validationErrorsLogin).length > 0) {
         // Display error messages
-        displayErrors(validationErrorsLogin, dataLogin);
+        displayErrorsLogin(validationErrorsLogin, dataLogin);
     } else {
-        if ((dataLogin.email == 'zelda@hyrule' && dataLogin.pwd == 'Bok0bl1n') ||
-            (dataLogin.email == 'prof.kukui@alola' && dataLogin.pwd == 'Kapur1k1') || 
-            (dataLogin.email == 'r.munroe@xkcd' && dataLogin.pwd == 'correcthorsebatterystaple')) {
+        if ((dataLogin.email == 'zelda@hyrule.gov' && dataLogin.pwd == 'Bok0bl1n') ||
+            (dataLogin.email == 'prof.kukui@alola.edu' && dataLogin.pwd == 'Kapur1k1') ||
+            (dataLogin.email == 'r.munroe@xkcd.com' && dataLogin.pwd == 'correcthorsebatterystaple')) {
             // Send form to backend
             console.log('Sending form data');
             location = 'logged.html';
@@ -75,8 +75,7 @@ function validateSignIn (event) {
 }
 
 // Function that will show errors in the page
-function displayErrors(validationErrorsLogin) {
-
+function displayErrorsLogin(validationErrorsLogin) {
     if (validationErrorsLogin.email) {
         const errorContainer = document.createElement('span');
         errorContainer.innerHTML = validationErrorsLogin.email;
@@ -87,7 +86,4 @@ function displayErrors(validationErrorsLogin) {
         errorContainer.innerHTML = validationErrorsLogin.pwd;
         document.querySelector('#pwd').after(errorContainer);
     }
-
 }
-
- 

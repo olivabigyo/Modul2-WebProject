@@ -1,19 +1,20 @@
+'use strict';
 // This is vailla JS
 
 
 // Add event listener to button
 document.querySelector('.submit-button').addEventListener('click', validateForm);
 
-function validateForm (event) {
-     // prevent reloading the page
+function validateForm(event) {
+    // prevent reloading the page
     event.preventDefault();
 
     // clear the former error messages
-    if(document.querySelector('span')){
+    if (document.querySelector('span')) {
         document.querySelectorAll('form span').forEach(element => {
-          element.remove();
+            element.remove();
         });
-      }
+    }
     // create object for input data and error messages
     let data = {};
     let validationErrors = {};
@@ -31,7 +32,7 @@ function validateForm (event) {
         console.error('No Name');
         validationErrors.name = '* No name provided';
     } else {
-        console.info('Name present: '+ data.name);
+        console.info('Name present: ' + data.name);
     }
 
     // Email
@@ -39,7 +40,7 @@ function validateForm (event) {
         console.error('No Email');
         validationErrors.email = '* No email provided';
     } else {
-        console.info('Email present: '+ data.email);
+        console.info('Email present: ' + data.email);
     }
     // Test if email is an email
 
@@ -56,7 +57,7 @@ function validateForm (event) {
         console.error('No message');
         validationErrors.message = '* No message';
     } else {
-        console.info('Message present: '+ data.message);
+        console.info('Message present: ' + data.message);
         // Test if message min 8 char
         if (data.message.length < 8) {
             console.error('Not enough text');
@@ -77,7 +78,7 @@ function validateForm (event) {
 
 
     // If there are errors
-    if(Object.keys(validationErrors).length > 0) {
+    if (Object.keys(validationErrors).length > 0) {
         // Display error messages
         displayErrors(validationErrors, data);
     } else {
@@ -128,4 +129,3 @@ function displayErrors(validationErrors) {
         document.querySelector('label.agb').after(errorContainer);
     }
 }
-

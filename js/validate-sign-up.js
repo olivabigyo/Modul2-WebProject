@@ -1,3 +1,4 @@
+'use strict';
 // This is vailla JS
 
 
@@ -5,16 +6,16 @@
 // document.querySelector('#subm-sign-in-form').addEventListener('click', validateSignIn);
 document.querySelector('#subm-sign-up-form').addEventListener('click', validateSignUp);
 
-function validateSignUp (event) {
-     // prevent reloading the page
+function validateSignUp(event) {
+    // prevent reloading the page
     event.preventDefault();
 
     // clear the former error messages
-    if(document.querySelector('span')){
+    if (document.querySelector('span')) {
         document.querySelectorAll('form span').forEach(element => {
-          element.remove();
+            element.remove();
         });
-      }
+    }
     // create object for input data and error messages
     let data = {};
     let validationErrors = {};
@@ -37,42 +38,42 @@ function validateSignUp (event) {
         console.error('No First Name');
         validationErrors.firstName = '* Please fill in this field';
     } else {
-        console.info('First Name present: '+ data.firstName);
+        console.info('First Name present: ' + data.firstName);
     }
     // Last Name
     if (!data.lastName) {
         console.error('No Last Name');
         validationErrors.lastName = '* Please fill in this field';
     } else {
-        console.info('Last Name present: '+ data.lastName);
+        console.info('Last Name present: ' + data.lastName);
     }
     // Child First Name
     if (!data.childFirstName) {
         console.error('No Child First Name');
         validationErrors.childFirstName = "* Please fill in this field";
     } else {
-        console.info("Child's First Name present: "+ data.childFirstName);
+        console.info("Child's First Name present: " + data.childFirstName);
     }
     // Child Last Name
     if (!data.childLastName) {
         console.error("No Child's Last Name");
         validationErrors.childLastName = "* Please fill in this field";
     } else {
-        console.info("Child's Last Name present: "+ data.childLastName);
+        console.info("Child's Last Name present: " + data.childLastName);
     }
     // Child Birth Date
     if (!data.childBirthDate) {
         console.error('No Child Birth Date');
         validationErrors.childBirthDate = '* Please fill in this field';
     } else {
-        console.info('Birth Date present: '+ data.childBirthDate);
-}
+        console.info('Birth Date present: ' + data.childBirthDate);
+    }
     // Email
     if (!data.email) {
         console.error('No Email');
         validationErrors.email = '* Please fill in this field';
     } else {
-        console.info('Email present: '+ data.email);
+        console.info('Email present: ' + data.email);
     }
 
     // Test if email is an email
@@ -89,7 +90,7 @@ function validateSignUp (event) {
         console.error('No Phone');
         // validationErrors.email = '* Please fill this field';
     } else {
-        console.info('Phone number present: '+ data.phone);
+        console.info('Phone number present: ' + data.phone);
     }
 
     // Test if phone is a phone number
@@ -124,10 +125,8 @@ function validateSignUp (event) {
         console.info('Terms and conditions checked');
     }
 
-
-
     // If there are errors
-    if(Object.keys(validationErrors).length > 0) {
+    if (Object.keys(validationErrors).length > 0) {
         // Display error messages
         displayErrors(validationErrors, data);
     } else {
@@ -150,7 +149,6 @@ function validateSignUp (event) {
 
 // Function that will show errors in the page
 function displayErrors(validationErrors) {
-
     if (validationErrors.firstName) {
         const errorContainer = document.createElement('span');
         errorContainer.innerHTML = validationErrors.firstName;
@@ -211,5 +209,3 @@ function displayErrors(validationErrors) {
         document.querySelector('label.agb').after(errorContainer);
     }
 }
-
- 

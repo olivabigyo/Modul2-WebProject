@@ -3,7 +3,7 @@ body {
     line-height: 1.5;
 }
 
-.home h2{
+.home h2 {
     font-family: 'Pacifico', cursive;
 }
 
@@ -21,9 +21,11 @@ header h1 {
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 0.2rem;
 }
+
 #head-home-page h1 {
     font-family: 'Pacifico', cursive;
 }
+
 main h2 {
     font-family: 'Pacifico', cursive;
 }

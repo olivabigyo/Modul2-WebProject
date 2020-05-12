@@ -1,15 +1,16 @@
+'use strict';
 // This is jQuery
-$(document).ready(function() {
+$(document).ready(function () {
     // Let's code!
 
-    
+
     // click event on a head
-    $('.headline').on('click', function(){
+    $('.headline').on('click', function () {
         // only @mediaQuery (max-width:960px)
         // console.log(window.innerWidth);
-        if (window.innerWidth < 960) {     
+        if (window.innerWidth < 960) {
             // test if the clicked head active is (it was opened)
-            if($(this).hasClass('active')) {
+            if ($(this).hasClass('active')) {
                 // we close it
                 // 1. remove the actie class
                 $(this).removeClass('active');
@@ -33,7 +34,7 @@ $(document).ready(function() {
         }
     });
 
-    $(window).resize(function() {
+    $(window).resize(function () {
         if (window.innerWidth > 960) {
             $('.panel').css('display', 'block');
         }
@@ -42,4 +43,4 @@ $(document).ready(function() {
         }
     });
 
-})
+});

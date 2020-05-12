@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -21,10 +22,6 @@
     display: none;
 }
 
-/* .slide.active {
-    display: block;
-} */
-
 .slide img {
     width: 350px;
     height: 540px;
@@ -42,17 +39,21 @@ a.prev, a.next {
     text-decoration: none;
     margin-top: -1.5rem;
 }
+
 a.prev {
     border-radius: 0 3px 3px 0;
     left: 0;
 }
+
 a.next {
     border-radius: 3px 0 0 3px;
     right: 0;
 }
+
 a:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
 a.autoplay {
     cursor: pointer;
     user-select: none;
