@@ -1,4 +1,9 @@
 'use strict';
+// The first try was a plain accordion, 
+// but with the different text sizes 
+// there was weird scrolling, when a bigger post slided Up
+// so I keep my clicked element in th screen in fix position 
+// while the panels collapsing
 
 // This is jQuery
 $(document).ready(function () {
@@ -13,21 +18,15 @@ $(document).ready(function () {
     //      2 clicked on closed tab (else)
     //          2.1 Remove from all head the active class
     //          2.2 Collapse all panels
-    //              2.2+ keeping the head in position while collapsing
+    //              2.2+ keeping the clicked head in position while the other collapsing
     //              2.2++ cancel keeping (which continuous "put it back" is)
     //          2.3 Change marks to + on all heads
     //          2.4 Add the active class to the clicked head
     //          2.5 Open the panel for the clicked head 
     //          2.6 Change + mark to - for the clicked head
+    // 03 Functions
 
-    //         I skip these... I don't want to close the opened panel, 
-    //         because the closing changes the scrollposition
-    //         which is weird on desktop
-    //          n/n Remove from all head the active class
-    //          n/n 
-    //          n/n 
-
-    // click event on a head
+    // 1. click event on a head
     $('.headline').on('click', function () {
         // test if the clicked head active is (it was opened and we close it)
         if ($(this).hasClass('active')) {
@@ -60,14 +59,21 @@ $(document).ready(function () {
     });
 
 
-    // functions
-    // Storage for KeepElementInPosition function
+    // 2.Functions
+
+    // Storage Object for KeepElementInPosition function
     const A = {};
 
     // We need this while slideUp animation happens
     function keepElementInPosition(element) {
         // console.log('keeping');
         A.element = element;
+        // let D = document.documentElement.scrollTop; // current scrollstate of the body
+        // let E = element.offsetTop; // y-coordinate from body top
+        // let F = E - D;
+        // F is the screenposition of the element from the screen top, 
+        // we want to keep this position 
+        // while slideUp/slideDown animation happens
         A.fromScreenTop = element.offsetTop - document.documentElement.scrollTop;
         // console.log(A);
         A.areWeDoneYet = false;
@@ -76,12 +82,16 @@ $(document).ready(function () {
 
     // We will call it after the slideUp animation
     function cancelKeepElementInPosition() {
-        // console.log('canceling');
+        // console.log('cancelled');
         A.areWeDoneYet = true;
     }
 
     function keepPuttingItBack() {
+        // the y-coordinate from body top is changing while SlideUp animated (E')
+        // we want to keep F, so we change D
+        // let D' = E' - F
         document.documentElement.scrollTop = A.element.offsetTop - A.fromScreenTop;
+        // let's make an almost infinite loop :)
         if (!A.areWeDoneYet) {
             // It is like setTimeout(keepPuttingBack, 16); but smoother.... :)
             requestAnimationFrame(keepPuttingItBack);
