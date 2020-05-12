@@ -3,10 +3,17 @@
 
 // Add event listener to small
 document.querySelector('#forgot').addEventListener('click', () => {
-    alert('It happens, I understand.\nMaybe try one of these: \nzelda@hyrule.gov, Bok0bl1n \nprof.kukui@alola.edu, Kapur1k1, \nr.munroe@xkcd.com, correcthorsebatterystaple ');
+    alert('It happens, I understand.\nMaybe try one of these: \nzelda@hyrule.gov, Bok0bl1n \nprof.kukui@alola.edu, Kapur1k1 \nr.munroe@xkcd.com, correcthorsebatterystaple ');
 });
 // Add event listener to button
 document.querySelector('#subm-sign-in-form').addEventListener('click', validateSignIn);
+// It is not a submit button, but I want to submit with 'Enter' key
+document.getElementById('pwd').addEventListener('keydown', function (event) {
+    //console.log(event.keyCode);
+    if (event.keyCode == 13) {
+        document.getElementById('subm-sign-in-form').click();
+    }
+});
 
 function validateSignIn(event) {
     // prevent reloading the page
