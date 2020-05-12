@@ -1236,8 +1236,8 @@ main .blog img {
     transition: transform 0.4s;
 }
 
-main .blog .card img:hover {
-    transform: scale(1.5);
+main .blog .blogpost-imgs img:hover {
+    transform: scale(2.5);
 }
 
 main .blog .line-through {
