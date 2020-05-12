@@ -12,7 +12,7 @@ $(document).ready(function () {
     //          2.1 Remove from all head the active class
     //          2.2 Add the active class to the clicked head
     //          2.3 Collapse all panels
-    //          2.4 Open the panel for the clicked head 
+    //          2.4 Open the panel for the clicked head
     // 03 Functions
 
     // click event on a head
@@ -31,7 +31,7 @@ $(document).ready(function () {
             // or not (it was closed)
             else {
                 // we open it
-                // 2.1 remove from all head the active class
+                // 2.1 remove the active class from all heads
                 $('.headline').removeClass('active');
                 // 2.2. add the active class to the clicked head
                 $(this).addClass('active');
