@@ -13,7 +13,7 @@ $(document).ready(function () {
     //          2.2 Add the active class to the clicked head
     //          2.3 Collapse all panels
     //          2.4 Open the panel for the clicked head
-    // 03 Functions
+    // 02 Functions
 
     // click event on a head
     $('.headline').on('click', function () {

@@ -47,8 +47,8 @@ function toggleMenu(e) {
     else {
         setTimeout(() => nav.classList.toggle('hidden'), 480);
     }
-    // change buttons     
-    // maybeToDo: i could have one button and manipulate the text on it
+    // change buttons
+    // maybeToDo: I could have one button and manipulate the text on it
     menu_btn.classList.toggle('hidden');
     close_btn.classList.toggle('hidden');
     // in and out animations

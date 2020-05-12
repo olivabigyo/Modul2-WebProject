@@ -37,7 +37,7 @@ function scrolleffekt() {
     const opacity = Math.min(1, Math.max(0, 1 - ((fade_end - scrollHeight) / (fade_end - fade_start))));
     // console.log(scrollHeight, opacity);
 
-    // have to do nothing after the first 700px scrolling from top
+    // nothing to do if the opacity didn't change
     if (opacity == last_opacity) return;
 
     // change the opacity of header image and content at the first 700px scrolling
@@ -75,8 +75,8 @@ function toggleMenu(e) {
     else {
         setTimeout(() => nav.classList.toggle('hidden'), 480);
     }
-    // change buttons     
-    // maybeToDo: i could have one button and manipulate the text on it
+    // change buttons 
+    // maybeToDo: I could have one button and manipulate the text on it
     menu_btn.classList.toggle('hidden');
     close_btn.classList.toggle('hidden');
     // in and out animations

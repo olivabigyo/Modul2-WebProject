@@ -1,5 +1,5 @@
 'use strict';
-// This is vailla JS
+// This is vanilla JS
 
 
 // Add event listener to button
@@ -9,13 +9,13 @@ function validateForm(event) {
     // prevent reloading the page
     event.preventDefault();
 
-    // clear the former error messages
+    // Clear the former error messages
     if (document.querySelector('span')) {
         document.querySelectorAll('form span').forEach(element => {
             element.remove();
         });
     }
-    // create object for input data and error messages
+    // Storage object for input data and error messages
     let data = {};
     let validationErrors = {};
 
@@ -42,8 +42,8 @@ function validateForm(event) {
     } else {
         console.info('Email present: ' + data.email);
     }
-    // Test if email is an email
 
+    // Test if email is an email
     let emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (!emailRegExp.test(data.email)) {
         // Email is not a match
@@ -96,7 +96,7 @@ function validateForm(event) {
     }
 }
 
-// Function that will show errors in the page
+// Function that will show the collected errors in the page
 function displayErrors(validationErrors) {
 
     if (validationErrors.name) {

@@ -5,23 +5,22 @@ body {
     background-color: #FBF3E4;
 }
 
-/* ======================================================= */
+/* ======================================================= *
+ * ============    Desktop View Big Screen    ============ *
+ * ======================================================= */
 
-/* =============== Desktop View Big Screen =============== */
-
-/* ======================================================= */
-
-/* =================== */
-
-/* === Grid system === */
-
-/* =================== */
+/* =============================== *
+ * =====     Grid system     ===== *
+ * =============================== */
 
 body {
     display: grid;
     grid-template-columns: 200px 1fr 160px;
     grid-template-rows: auto auto auto;
-    grid-template-areas: 'head    head   head' '  .     main    .  ' 'footer footer footer';
+    grid-template-areas:
+    'head    head   head' 
+    '  .     main    .  ' 
+    'footer footer footer';
 }
 
 .wrapper {
@@ -36,11 +35,9 @@ footer {
     grid-area: footer;
 }
 
-/* ========================== */
-
-/* === Header Positioning === */
-
-/* ========================== */
+/* ============================== *
+ * ===   Header Positioning   === *
+ * ============================== */
 
 .wrapper {
     position: relative;
@@ -66,17 +63,13 @@ header {
     z-index: 1000;
 }
 
-/* ============================== */
+/* ============================== *
+ * ====      Navigation      ==== *
+ * ============================== */
 
-/* ========= Navigation ========= */
-
-/* ============================== */
-
-/* ---------------- */
-
-/*  1. Home Button  */
-
-/* ---------------- */
+/* ----------------- *
+ *  1. Home Button   *
+ * ----------------- */
 
 .home {
     width: 200px;
@@ -110,11 +103,9 @@ a.home {
     display: none;
 }
 
-/* ---------------------------------------- */
-
-/*  2. Side Navigation + Menu/Close Button  */
-
-/* ---------------------------------------- */
+/* ------------------------------------------ *
+ *  2. Side Navigation + Menu / Close Button  *
+ * ------------------------------------------ */
 
 .mini-nav {
     transform: rotate(90deg) translate(0px, -550px);
@@ -162,11 +153,9 @@ a.home {
     display: none;
 }
 
-/* ---------------------------- */
-
-/*  3. Menu opened: Navigation  */
-
-/* ---------------------------- */
+/* ------------------------ *
+ *  3. Dropdown Navigation  *
+ * ------------------------ */
 
 nav {
     font-family: 'Bebas Neue', cursive;
@@ -183,7 +172,10 @@ nav {
     display: grid;
     grid-template-columns: 200px 1fr 160px;
     grid-template-rows: 90px 1fr 90px;
-    grid-template-areas: '.   .   .' '. navs .' '.   .   .';
+    grid-template-areas: 
+    '.   .   .' 
+    '. navs  .' 
+    '.   .   .';
     opacity: 0.95;
 }
 
@@ -233,8 +225,19 @@ nav.hidden {
     }
 }
 
+nav ul {
+    grid-area: navs;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+}
+
 nav ul li {
     position: relative;
+    border: 1px solid white;
+    list-style: none;
+    padding-left: 2rem;
+    display: flex;
+    align-content: center;
 }
 
 nav ul li .white-band {
@@ -257,26 +260,16 @@ nav ul li .white-band {
     align-items: center;
 }
 
-nav ul li a {
-    z-index: 530;
-}
-
-nav ul {
-    grid-area: navs;
-    display: grid;
-    grid-template-rows: repeat(7, 1fr);
-}
-
-nav ul li {
-    border: 1px solid white;
-    list-style: none;
-    padding-left: 2rem;
-    display: flex;
-    align-content: center;
-}
-
 nav ul li:hover .white-band {
     transform: scaleX(1);
+}
+
+nav ul li a {
+    z-index: 530;
+    text-decoration: none;
+    font-size: 3rem;
+    color: white;
+    align-self: center;
 }
 
 nav.red ul li:hover a {
@@ -295,18 +288,9 @@ nav.blue ul li:hover a {
     color: #4878A8;
 }
 
-nav ul li a {
-    text-decoration: none;
-    font-size: 3rem;
-    color: white;
-    align-self: center;
-}
-
-/* ===================================== */
-
-/* === Header : Title and hero image === */
-
-/* ===================================== */
+/* ===================================== *
+ * === Header : Title and hero image === *
+ * ===================================== */
 
 #head-home-page {
     background: url(../images/meadow-tree.jpg) no-repeat center center;
@@ -370,11 +354,9 @@ nav ul li a {
     color: black;
 }
 
-/* ====================================================== */
-
-/* ==================== MAIN CONTENT ==================== */
-
-/* ====================================================== */
+/* ====================================================== *
+ * ==================== MAIN CONTENT ==================== *
+ * ====================================================== */
 
 main {
     opacity: 0;
@@ -414,7 +396,7 @@ main .blue {
     background-color: #80A7CE;
 }
 
-/* Content */
+/* == Content == */
 
 main section {
     width: 100%;
@@ -428,7 +410,7 @@ main section {
     align-items: center;
 }
 
-/* Heading */
+/* == Heading == */
 
 h2 {
     text-align: center;
@@ -456,7 +438,6 @@ main .coloured h2 {
 }
 
 /* except in yellow */
-
 main .yellow h2 {
     color: #C56566;
 }
@@ -472,8 +453,9 @@ main .coloured p {
 main .coloured label {
     color: #FBF3E4;
 }
-
-/* Link buttons */
+/* ------------------------ *
+ * ----- Link buttons ----- *
+ * ------------------------ */
 
 main section a {
     padding: 1rem;
@@ -519,9 +501,11 @@ main .memb-section .card div a:hover {
     opacity: 0.9;
 }
 
-/* Text content */
+/* ------------------------ *
+ * ----- Text content ----- *
+ * ------------------------ */
 
-main section>p {
+main section > p {
     width: 80%;
     margin: 1em auto;
     text-align: justify;
@@ -531,20 +515,9 @@ main section li {
     width: 75%;
     margin: 0 auto;
 }
-
-/* Cards */
-
-/* main section .card-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 2em auto;
-}
-main .coloured .card-container {
-    flex-direction: row-reverse;
-} */
+/* ---------------------------- *
+ * ----- Cards everywhere ----- *
+ * ---------------------------- */
 
 main section .card-container .card {
     display: flex;
@@ -562,9 +535,11 @@ main section .card-container .up {
     justify-content: flex-start;
 }
 
-/* === Index Page: Team Section === */
+/* ***************************************************** */
 
-/* -------------------------------- */
+/* ------------------------------------ */
+/* ===== Index Page: Team Section ===== */
+/* ------------------------------------ */
 
 /* four small card for team member photos with links */
 
@@ -599,9 +574,9 @@ main .team-section .card a:hover img {
     opacity: 60%;
 }
 
-/* === Index Page: Gallery Section === */
-
-/* ----------------------------------- */
+/* --------------------------------------- */
+/* ===== Index Page: Gallery Section ===== */
+/* --------------------------------------- */
 
 main .gallery-section .card-container {
     width: 70%;
@@ -623,188 +598,9 @@ main .gallery-section .card-container img {
     justify-self: strech;
 }
 
-/* ----------------------------------------- */
-
-/* main .gallery-section .card-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 2em auto;
-}
-main .gallery-section .card-container {
-    padding: 2rem;
-    width: 80%;
-}
-main .gallery-section .card-container .card {
-    width: 33%;
-}
-main .gallery-section .card-container .card img {
-    width: 100%;
-    padding: 5px;
-    transition: transform 0.2s;
-}
-main .gallery-section .card-container .card img:hover {
-    transform: scale(1.15);
-} */
-
-/* === Blog Page with similar images style === */
-
-/* images with hover effekt */
-
-main .blog .panel>.card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: start;
-}
-
-main .blog .panel .blogpost-text {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 1rem;
-}
-
-main .blog .panel .blogpost-imgs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 90%;
-}
-
-main .blog .small {
-    width: 45%;
-}
-
-main .blog .wide {
-    width: 90%;
-}
-
-main .blog img {
-    width: 100%;
-    padding: 5px;
-    transition: transform 0.4s;
-}
-
-main .blog .card img:hover {
-    transform: scale(1.5);
-}
-
-main .blog .line-through {
-    text-decoration: line-through;
-}
-
-main .blog .headline {
-    cursor: pointer;
-    user-select: none;
-    width: 100%;
-    display: flex;
-    /* flex-direction: column; */
-    /* align-items: flex-start; */
-    justify-content: space-between;
-    padding: 0 1rem;
-}
-
-main .blog .headline .post-titel {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 1rem;
-}
-
-main .blog .headline span {
-    font-family: 'Bebas Neue';
-    font-size: 3rem;
-    padding: 0 1rem;
-    /* margin-right: 0.5rem; */
-}
-
-main .blog .headline span {
-    color: #C56566;
-}
-
-main .blog.coloured .headline span {
-    color: #FBF3E4;
-}
-
-main .blog .panel {
-    display: none;
-    margin-top: 2rem;
-}
-
-main .blog h2 {
-    font-family: 'Bebas Neue';
-}
-
-main .blog h3 {
-    margin-bottom: 0;
-}
-
-/* ************************************************* */
-
-/* Login Page */
-
-main .login {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-main .login .welcome {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 1rem;
-}
-
-main .options .card-container .card-course {
-    background-color: #C56566;
-}
-
-main .options .card-container .card-workshop {
-    background-color: #F0CD85;
-}
-
-main .options .card-container .card-timetable {
-    background-color: #80A7CE;
-}
-
-main .options .card-container a:hover .card-course {
-    background-color: #902122;
-}
-
-main .options .card-container a:hover .card-workshop {
-    background-color: #F4C057;
-}
-
-main .options .card-container a:hover .card-timetable {
-    background-color: #4878A8;
-}
-
-main .options .card-container a.active .card-course {
-    background-color: #902122;
-    border: 3px solid #F4C057;
-}
-
-main .options .card-container a.active .card-workshop {
-    background-color: #F4C057;
-    border: 3px solid #C56566;
-}
-
-main .options .card-container a.active .card-timetable {
-    background-color: #4878A8;
-    border: 3px solid #F4C057;
-}
-
-/* ************************************************* */
-
-/* === Index Page: Membership Section === */
-
 /* -------------------------------------- */
-
-/* three medium card with links */
+/* === Index Page: Membership Section === */
+/* -------------------------------------- */
 
 main .memb-section .card-container {
     width: 100%;
@@ -850,20 +646,23 @@ main .memb-section .card div a {
     background-color: #4878A8;
 }
 
-/* === Index Page + Contact Page: Contact Section === */
+/* --------------------------------------- *
+ * ===   Index Page: Contact Section   === *
+ * --------------------------------------- */
 
-/* -------------------------------------------------- */
+/* =============================== *
+ * =====   + Contact Page    ===== *
+ * =============================== */
 
-/* Contact form on Index + Contact + Membership Page */
+/* =============================== *
+ * =====  + Membership Page  ===== *
+ * =============================== */
+
+/* Contact forms */
 
 main .contact-section .card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
-
-main .address {
-    padding-right: 1rem;
-    padding-bottom: 1rem;
 }
 
 main .form-container form {
@@ -980,7 +779,13 @@ main .form-container .input-area {
     margin: 0 auto;
 }
 
-/* Address in Contact-section and Index + Contact Page */
+/* Address in Contact-section: Index + Contact Page */
+
+
+main .address {
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
 
 main .card-container .address p {
     padding: 0.5rem;
@@ -994,13 +799,14 @@ main .card-container .address h4 {
     padding: 1rem 0;
 }
 
-/* === Dual-section === */
+/* --------------------------------------- *
+ * ===           Dual Section          === *
+ * --------------------------------------- */
 
-/* -------------------- */
-
-/* The Dual-section means, it splits the screen, */
-
-/* usually an image and a card with text content */
+ 
+/* ===   About Page: Tabs              === *
+ * ===   Team Page: Profiles           === *
+ * ===   Contact Page: Opening hours   === */
 
 main .dual-section .card-container {
     display: flex;
@@ -1026,7 +832,11 @@ main .dual-section .card h3 {
     font-size: 1.5rem;
 }
 
-/* Only Team page: team member profilphotos */
+
+/* ============================== *
+ * =====      Team Page     ===== *
+ * ============================== */
+/* team member profilphotos */
 
 main .dual-section .profil img {
     width: 220px;
@@ -1034,59 +844,20 @@ main .dual-section .profil img {
     margin-bottom: 0.5rem;
 }
 
-/* ==================================== */
+/* ============================== *
+ * =====   About Page Tabs  ===== * 
+ * ============================== *
+ *                +               *
+ * ============================== *
+ * === 'Logged in' Page Tabs  === * 
+ * ============================== */
 
-/* ============ About Page ============ */
-
-/* ==================================== */
-
-/* Only About page: squere cards as tab heads */
+/* squere cards as tab heads */
 
 main .tabheads .card-container a {
     border: none;
     padding: 0;
     margin: 0;
-}
-
-/* Coloring the squere cards */
-
-main .tabheads .card-container .card-link {
-    background-color: #C56566;
-}
-
-main .tabheads .card-container .card-read {
-    background-color: #F0CD85;
-}
-
-main .tabheads .card-container .card-listen {
-    background-color: #5DA69F;
-}
-
-main .tabheads .card-container a:hover .card-link {
-    background-color: #902122;
-}
-
-main .tabheads .card-container a:hover .card-read {
-    background-color: #F4C057;
-}
-
-main .tabheads .card-container a:hover .card-listen {
-    background-color: #2D7E77;
-}
-
-main .tabheads .card-container a.active .card-link {
-    background-color: #902122;
-    border: 3px solid #F4C057;
-}
-
-main .tabheads .card-container a.active .card-read {
-    background-color: #F4C057;
-    border: 3px solid #C56566;
-}
-
-main .tabheads .card-container a.active .card-listen {
-    background-color: #2D7E77;
-    border: 3px solid #F4C057;
 }
 
 /* Styling the squere cards*/
@@ -1128,21 +899,80 @@ main .useful-links a:hover {
     border: none;
 }
 
-/* ==================================================== */
 
-/* =================== Gallery Page =================== */
+/* ===     Coloring the squere cards   === *
+ * ===     About Page and              === *
+ * ===     'Logged in' Page            === */
 
-/* ==================================================== */
+main .tabheads .card-container .card-link,
+main .tabheads .card-container .card-course {
+    background-color: #C56566;
+}
 
-/* ==== and testimonials section on index page ==== */
+main .tabheads .card-container .card-read,
+main .tabheads .card-container .card-workshop {
+    background-color: #F0CD85;
+}
 
-/* ---- ez itt eloszor az also slider ---- */
+main .tabheads .card-container .card-listen {
+    background-color: #5DA69F;
+}
 
-/* a tologatosrra animalt kikapcsolhato autoplay */
+main .tabheads .card-container .card-timetable {
+    background-color: #80A7CE;
+}
+
+main .tabheads .card-container a:hover .card-link,
+main .tabheads .card-container a:hover .card-course {
+    background-color: #902122;
+}
+
+main .tabheads .card-container a:hover .card-read,
+main .tabheads .card-container a:hover .card-workshop {
+    background-color: #F4C057;
+}
+
+main .tabheads .card-container a:hover .card-listen {
+    background-color: #2D7E77;
+}
+
+main .tabheads .card-container a:hover .card-timetable {
+    background-color: #4878A8;
+}
+
+main .tabheads .card-container a.active .card-link,
+main .tabheads .card-container a.active .card-course {
+    background-color: #902122;
+    border: 3px solid #F4C057;
+}
+
+main .tabheads .card-container a.active .card-read,
+main .tabheads .card-container a.active .card-workshop {
+    background-color: #F4C057;
+    border: 3px solid #C56566;
+}
+
+main .tabheads .card-container a.active .card-listen {
+    background-color: #2D7E77;
+    border: 3px solid #F4C057;
+}
+
+main .tabheads .card-container a.active .card-timetable {
+    background-color: #4878A8;
+    border: 3px solid #F4C057;
+}
+
+/* ================================ *
+ * ======    Gallery Page    ====== *
+ * ================================ */
 
 section.thin {
     padding: 0.5rem;
 }
+
+/* ********    Slideshow    ******** *
+ * ********   Group Moon    ******** *
+ * ********  Gallery Page   ******** */
 
 .border {
     overflow: hidden;
@@ -1208,11 +1038,15 @@ span.nextBtn:hover {
     ;
 }
 
-/*  *************************************************** */
+/* ********    Slider      ********* *
+ * ********   Group Sun    ********* *
+ * ********  Gallery Page  ********* */
 
-/* --- innentol a felso slider ES a testimonials --- */
 
-/* a hide and show animacio nelkul es nem kikapcsolhato autoplayel  */
+/* *********     Slider      ******** *
+ * ********   Testimonials    ******* *
+ * *******    on Index Page   ******* */
+
 
 .slider-container {
     margin: 0 auto;
@@ -1221,11 +1055,19 @@ span.nextBtn:hover {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-}
-
-.slider-container {
     width: 500px;
     height: 600px;
+}
+
+.testim-section .slider-container {
+    width: 700px;
+    height: 200px;
+}
+
+.testim-section .slider-container p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
 }
 
 .slider-container .slide {
@@ -1239,7 +1081,8 @@ span.nextBtn:hover {
     object-fit: cover;
 }
 
-.slider-container .prev, .slider-container .next {
+.slider-container .prev, 
+.slider-container .next {
     cursor: pointer;
     user-select: none;
     position: absolute;
@@ -1260,6 +1103,10 @@ span.nextBtn:hover {
     border-radius: 0 3px 3px 0;
     border: none;
     right: 0;
+}
+.testim-section .slider-container .prev, 
+.testim-section .slider-container .next {
+    color: #C56566;
 }
 
 main .coloured .slider-container span:hover {
@@ -1285,29 +1132,8 @@ main .coloured .slider-container span:hover {
     background-color: #4878A8;
 }
 
-/* ================================================== */
-
-/* ============ Index Page: Testimonials ============ */
-
-/* ================================================== */
-
-.testim-section .slider-container {
-    width: 700px;
-    height: 200px;
-}
-
-.testim-section .slider-container p {
-    width: 80%;
-    margin: 0 auto;
-    text-align: justify;
-}
-
 .testim-section .dot.activedot {
     background-color: rgba(197, 101, 103, 0.795);
-}
-
-.testim-section .slider-container .prev, .testim-section .slider-container .next {
-    color: #C56566;
 }
 
 .testim-section .slide {
@@ -1323,11 +1149,123 @@ main .coloured .slider-container span:hover {
     }
 }
 
-/* ================================================ */
+/* ================================= *
+ * =====  Blog Page Accordion  ===== *
+ * ================================= */
 
-/* ==================== Footer ==================== */
+/* Accordion heads */
 
-/* ================================================ */
+main .blog .headline {
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+main .blog .headline .post-titel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+}
+
+main .blog .headline span {
+    font-family: 'Bebas Neue';
+    font-size: 3rem;
+    padding: 0 1rem;
+}
+
+main .blog .headline span {
+    color: #C56566;
+}
+
+main .blog.coloured .headline span {
+    color: #FBF3E4;
+}
+
+main .blog h2 {
+    font-family: 'Bebas Neue';
+}
+
+main .blog h3 {
+    margin-bottom: 0;
+}
+
+/* Accordion panels */
+
+main .blog .panel {
+    display: none;
+    margin-top: 2rem;
+}
+
+main .blog .panel>.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+}
+
+main .blog .panel .blogpost-text {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+main .blog .panel .blogpost-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+}
+
+main .blog .small {
+    width: 45%;
+}
+
+main .blog .wide {
+    width: 90%;
+}
+
+main .blog img {
+    width: 100%;
+    padding: 5px;
+    transition: transform 0.4s;
+}
+
+main .blog .card img:hover {
+    transform: scale(1.5);
+}
+
+main .blog .line-through {
+    text-decoration: line-through;
+}
+
+/* =============================== *
+ * =====   'Logged in' Page  ===== *
+ * =============================== */
+
+
+ main .login {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .login .welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+}
+
+
+/* ====================================================== *
+ * ====================    Footer    ==================== *
+ * ====================================================== */
 
 footer {
     width: 100%;
@@ -1376,24 +1314,23 @@ footer.n-blue {
     background-color: #4878A8;
 }
 
-/* =============================================== */
+/* =============================================== *
+ * ================ Media Queries ================ *
+ * =============================================== */
 
-/* ================ Media Queries ================ */
-
-/* =============================================== */
-
-/* ============================================== */
-
-/* ================ Desktop View ================ */
-
-/* ============================================== */
+/* ============================================== *
+ * =============    Desktop View    ============= *
+ * ============================================== */
 
 @media screen and (max-width: 1198px) {
     body {
         display: grid;
         grid-template-columns: 140px 1fr 80px;
         grid-template-rows: auto auto auto;
-        grid-template-areas: ' head   head   head' '   .    main     . ' 'footer footer footer';
+        grid-template-areas: 
+        ' head   head   head' 
+        '   .    main     . ' 
+        'footer footer footer';
     }
     nav {
         grid-template-columns: 140px 1fr 80px;
@@ -1410,18 +1347,19 @@ footer.n-blue {
     }
 }
 
-/* ============================================= */
-
-/* ================ Tablet View ================ */
-
-/* ============================================= */
+/* ============================================= *
+ * =============    Tablet View    ============= *
+ * ============================================= */
 
 @media screen and (max-width: 1024px) {
     body {
         display: grid;
         grid-template-columns: 65px 1fr 80px;
         grid-template-rows: auto auto auto;
-        grid-template-areas: ' head   head   head' '  .     main     . ' 'footer footer footer';
+        grid-template-areas: 
+        ' head   head   head' 
+        '  .     main     . ' 
+        'footer footer footer';
     }
     nav {
         grid-template-columns: 65px 1fr 80px;
@@ -1508,9 +1446,7 @@ footer.n-blue {
     main .blog .panel>.card-container {
         grid-template-columns: 1fr;
     }
-    main .dual-section .card-container {
-        flex-direction: column;
-    }
+    main .dual-section .card-container, 
     main .dual-section.coloured .card-container {
         flex-direction: column;
     }
@@ -1530,11 +1466,9 @@ footer.n-blue {
     }
 }
 
-/* =============================================== */
-
-/* ================= Mobile View ================= */
-
-/* =============================================== */
+/* =============================================== *
+ * ==============    Mobile View    ============== *
+ * =============================================== */
 
 @media screen and (max-width: 660px) {
     body {
@@ -1554,8 +1488,6 @@ footer.n-blue {
         padding-left: 1rem;
     }
     .home {
-        /* width: 55px;
-        height: 55px; */
         display: none;
     }
     .mini-nav {
@@ -1627,7 +1559,8 @@ footer.n-blue {
     .testim-section .slider-container {
         height: 280px;
     }
-    .testim-section .slider-container .prev, .testim-section .slider-container .next {
+    .testim-section .slider-container .prev, 
+    .testim-section .slider-container .next {
         color: white;
     }
 }

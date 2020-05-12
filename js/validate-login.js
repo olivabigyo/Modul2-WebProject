@@ -5,6 +5,7 @@
 document.querySelector('#forgot').addEventListener('click', () => {
     alert('It happens, I understand.\nMaybe try one of these: \nzelda@hyrule.gov, Bok0bl1n \nprof.kukui@alola.edu, Kapur1k1 \nr.munroe@xkcd.com, correcthorsebatterystaple ');
 });
+
 // Add event listener to button
 document.querySelector('#subm-sign-in-form').addEventListener('click', validateSignIn);
 // It is not a submit button, but I want to submit with 'Enter' key
@@ -19,13 +20,13 @@ function validateSignIn(event) {
     // prevent reloading the page
     event.preventDefault();
 
-    // clear the former error messages
+    // Clear the former error messages
     if (document.querySelector('span')) {
         document.querySelectorAll('form span').forEach(element => {
             element.remove();
         });
     }
-    // create object for input data and error messages
+    // Storage object for input data and error messages
     let dataLogin = {};
     let validationErrorsLogin = {};
 
