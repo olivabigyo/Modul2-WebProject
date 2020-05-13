@@ -265,7 +265,7 @@ nav ul li:hover .white-band {
 }
 
 nav ul li a {
-    z-index: 530;
+    z-index: 550;
     text-decoration: none;
     font-size: 3rem;
     color: white;
@@ -1197,7 +1197,7 @@ main .blog .panel {
 
 main .blog .panel>.card-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 6fr 4fr;
     align-items: start;
 }
 
@@ -1219,6 +1219,7 @@ main .blog .panel .blogpost-imgs {
 
 main .blog .small {
     width: 45%;
+    z-index: 450;
 }
 
 main .blog .wide {
@@ -1405,6 +1406,12 @@ footer.n-blue {
     main .memb-section .panel {
         display: none;
     }
+    main .blog .panel>.card-container {
+        grid-template-columns: 1fr;
+    }
+    main .blog .blogpost-imgs img:hover {
+        transform: scale(1.5);
+    }
     main .contact-section .card-container {
         display: grid;
         grid-template-columns: 1fr;
@@ -1437,9 +1444,6 @@ footer.n-blue {
 @media screen and (max-width: 800px) {
     main .gallery-section .card-container {
         width: 90%;
-    }
-    main .blog .panel>.card-container {
-        grid-template-columns: 1fr;
     }
     main .dual-section .card-container, 
     main .dual-section.coloured .card-container {
