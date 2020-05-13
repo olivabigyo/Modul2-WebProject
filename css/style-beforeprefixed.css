@@ -1197,7 +1197,7 @@ main .blog .panel {
 
 main .blog .panel>.card-container {
     display: grid;
-    grid-template-columns: 6fr 4fr;
+    grid-template-columns: 7fr 3fr;
     align-items: start;
 }
 
@@ -1233,7 +1233,7 @@ main .blog img {
 }
 
 main .blog .blogpost-imgs img:hover {
-    transform: scale(2.5);
+    transform: scale(2);
 }
 
 main .blog .line-through {
@@ -1410,7 +1410,7 @@ footer.n-blue {
         grid-template-columns: 1fr;
     }
     main .blog .blogpost-imgs img:hover {
-        transform: scale(1.5);
+        transform: scale(1.2);
     }
     main .contact-section .card-container {
         display: grid;
