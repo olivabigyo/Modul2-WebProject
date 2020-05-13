@@ -3,7 +3,7 @@
 
 // Add event listener to small
 document.querySelector('#forgot').addEventListener('click', () => {
-    alert('It happens, I understand.\nMaybe try one of these: \nzelda@hyrule.gov, Bok0bl1n \nprof.kukui@alola.edu, Kapur1k1 \nr.munroe@xkcd.com, correcthorsebatterystaple ');
+    alert('It happens, I understand. Maybe try one of these: \n \nzelda@hyrule.gov, Bok0bl1n \nprof.kukui@alola.edu, Kapur1k1 \nr.munroe@xkcd.com, correcthorsebatterystaple \nmegabase@factorio.com, trainkills3 \npenny@pelican.town JojaIsBad');
 });
 
 // Add event listener to button
@@ -68,7 +68,9 @@ function validateSignIn(event) {
     } else {
         if ((dataLogin.email == 'zelda@hyrule.gov' && dataLogin.pwd == 'Bok0bl1n') ||
             (dataLogin.email == 'prof.kukui@alola.edu' && dataLogin.pwd == 'Kapur1k1') ||
-            (dataLogin.email == 'r.munroe@xkcd.com' && dataLogin.pwd == 'correcthorsebatterystaple')) {
+            (dataLogin.email == 'r.munroe@xkcd.com' && dataLogin.pwd == 'correcthorsebatterystaple') ||
+            (dataLogin.email == 'megabase@factorio.com' && dataLogin.pwd == 'trainkills3') ||
+            (dataLogin.email == 'penny@pelican.town' && dataLogin.pwd == 'JojaIsBad')) {
             // Send form to backend
             console.log('Sending form data');
             location = 'logged.html';
