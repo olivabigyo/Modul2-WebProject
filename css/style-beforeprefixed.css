@@ -595,7 +595,6 @@ main .gallery-section .card-container #main-img {
 
 main .gallery-section .card-container img {
     width: 100%;
-    justify-self: strech;
 }
 
 /* -------------------------------------- */
