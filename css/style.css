@@ -1,573 +1,1610 @@
-/* === My Own Style=== */
-/* This is  yet in colors.css too */
+/* === My Own Style === */
+
 body {
     color: #707070;
     background-color: #FBF3E4;
 }
 
-/* ================== */
-/* === Navigation === */
-/* ================== */
+/* ======================================================= *
+ * ============    Desktop View Big Screen    ============ *
+ * ======================================================= */
 
-/* Nav colors in colors.css */
+/* =============================== *
+ * =====     Grid system     ===== *
+ * =============================== */
 
-nav {
-    color: white;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 1.3rem;
-    position: fixed;
-    opacity: 90%;
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr 160px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    'head    head   head' 
+    '  .     main    .  ' 
+    'footer footer footer';
 }
-nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
+
+.wrapper {
+    grid-area: head;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* ============================== *
+ * ===   Header Positioning   === *
+ * ============================== */
+
+.wrapper {
+    position: relative;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.mini-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* ============================== *
+ * ====      Navigation      ==== *
+ * ============================== */
+
+/* ----------------- *
+ *  1. Home Button   *
+ * ----------------- */
+
+.home {
+    width: 200px;
+    height: 90px;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    list-style: none;
+    padding: 1rem 0;
+    border: 1px solid white;
+    color: black;
+    background-color: white;
+}
+
+a.home {
+    text-decoration: none;
+}
+
+.home h2 {
+    font-size: 1.5rem;
+    color: #C56566;
+}
+
+.home i {
+    font-size: 2rem;
+}
+
+.home .hide-big {
+    display: none;
+}
+
+/* ------------------------------------------ *
+ *  2. Side Navigation + Menu / Close Button  *
+ * ------------------------------------------ */
+
+.mini-nav {
+    transform: rotate(90deg) translate(0px, -550px);
+    transform-origin: 0 0;
+}
+
+.mini-nav ul#menu-tag {
+    width: 550px;
+    height: 80px;
+    border-bottom: 1px solid white;
+    font-size: 3rem;
+}
+
+.mini-nav ul#nav-tag {
+    width: 550px;
+    height: 80px;
+    border-bottom: 1px solid white;
+}
+
+.mini-nav #burger-tag {
+    display: none;
+}
+
+.mini-nav {
+    align-items: center;
+}
+
+.mini-nav ul {
+    display: flex;
+    align-items: center;
     list-style: none;
 }
-nav ul a {
+
+.mini-nav ul a {
     text-decoration: none;
     color: white;
     padding: 1rem 3rem;
-    margin: 0.2rem;
 }
-nav ul a:hover {
-    background: white;
-    color: black;
+
+.mini-nav ul#menu-tag a:hover {
+    font-size: 3.2rem;
 }
-.drop-menu {
-    position: absolute;
-    margin-top: 0.8rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+
+.mini-nav ul#menu-tag li.hidden {
     display: none;
 }
-.drop-menu a {
-    width: calc(100% - 0.4em);
+
+/* ------------------------ *
+ *  3. Dropdown Navigation  *
+ * ------------------------ */
+
+nav {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
 }
-li.drop-trigger:hover .drop-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-animation: scale 0.2s;
-            animation: scale 0.2s;
+
+nav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    display: grid;
+    grid-template-columns: 200px 1fr 160px;
+    grid-template-rows: 90px 1fr 90px;
+    grid-template-areas: 
+    '.   .   .' 
+    '. navs  .' 
+    '.   .   .';
+    opacity: 0.95;
 }
-@-webkit-keyframes scale {
-    0% {
-        -webkit-transform: scaleX(0);
-                transform: scaleX(0);
-    }
-    100% {
-        -webkit-transform: scaleX(1);
-                transform: scaleX(1);
-    }
+
+nav.red {
+    background-color: #902122;
 }
-@keyframes scale {
-    0% {
-        -webkit-transform: scaleX(0);
-                transform: scaleX(0);
+
+nav.green {
+    background-color: #2D7E77;
+}
+
+nav.yellow {
+    background-color: #F4C057;
+}
+
+nav.blue {
+    background-color: #4878A8;
+}
+
+nav.slide-in {
+    -webkit-animation: slideIn 0.5s;
+            animation: slideIn 0.5s;
+}
+
+nav.slide-out {
+    -webkit-animation: slideOut 0.5s;
+            animation: slideOut 0.5s;
+}
+
+nav.hidden {
+    display: none;
+}
+
+@-webkit-keyframes slideIn {
+    from {
+        transform: translateX(100%);
     }
-    100% {
-        -webkit-transform: scaleX(1);
-                transform: scaleX(1);
+    to {
+        transform: translateX(0);
     }
 }
 
-/* ============== */
-/* === Header === */
-/* ============== */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+nav ul {
+    grid-area: navs;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+}
+
+nav ul li {
+    position: relative;
+    border: 1px solid white;
+    list-style: none;
+    padding-left: 2rem;
+    display: flex;
+    align-content: center;
+}
+
+nav ul li .white-band {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 102%;
+    left: 0;
+    top: -1px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform ease-in 0.3s;
+}
+
+nav ul li .white-band {
+    text-decoration: none;
+    font-size: 3rem;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li:hover .white-band {
+    transform: scaleX(1);
+}
+
+nav ul li a {
+    z-index: 550;
+    text-decoration: none;
+    font-size: 3rem;
+    color: white;
+    align-self: center;
+}
+
+nav.red ul li:hover a {
+    color: #902122;
+}
+
+nav.yellow ul li:hover a {
+    color: #F4C057;
+}
+
+nav.green ul li:hover a {
+    color: #2D7E77;
+}
+
+nav.blue ul li:hover a {
+    color: #4878A8;
+}
+
+/* ===================================== *
+ * === Header : Title and hero image === *
+ * ===================================== */
 
 #head-home-page {
     background: url(../images/meadow-tree.jpg) no-repeat center center;
     background-size: cover;
 }
+
 #head-team-page {
     background: url(../images/autumn-leaves.jpg) no-repeat center center;
     background-size: cover;
 }
+
 #head-about-page {
-    background: url(../images/girl-on-swing.jpg) no-repeat center center;
+    background: url(../images/balance-stones.jpg) no-repeat center center;
     background-size: cover;
 }
-#head-courses-page {
-    background: url(../images/child-clay.jpg) no-repeat center center;
+
+#head-gallery-page {
+    background: url(../images/child-clay1.jpg) no-repeat center center;
     background-size: cover;
 }
+
+#head-membership-page {
+    background: url(../images/child-clay1.jpg) no-repeat center center;
+    background-size: cover;
+}
+
 #head-contact-page {
-    background: url(../images/yellow--flowers-meadow.jpg) no-repeat center center;
+    background: url(../images/yellow--flowers-meadow1.jpg) no-repeat center center;
     background-size: cover;
 }
-#head-sign-up-page {
-    background: url(../images/child-clay.jpg) no-repeat center center;
-    background-size: cover;
-}
+
 #head-blog-page {
-    background: url(../images/blog-phone-tee.jpg) no-repeat center center;
+    background: url(../images/blog-tea1.jpg) no-repeat center center;
     background-size: cover;
 }
+
 .hero-img {
-    height: 600px;
+    height: 100%;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    z-index: 0;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-header h1 {
-    font-size: 2.5rem;
+
+.hero-img h1 {
+    font-size: 9rem;
+    margin: 0 160px;
+    text-align: center;
+    color: white;
 }
-/* ==================== */
-/* === Main Section === */
-/* ==================== */
 
-/* Colors in colors.css */
+#head-home-page h1 {
+    font-size: 5rem;
+}
 
-main .coloured {
+#head-home-page h2 {
+    font-size: 1.5rem;
+    color: black;
+}
+
+/* ====================================================== *
+ * ==================== MAIN CONTENT ==================== *
+ * ====================================================== */
+
+main {
+    opacity: 0;
+    transition: opacity 1s;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
     width: 100%;
 }
+
+main#login {
+    min-height: 90vh;
+}
+
+main .main-top-padding {
+    height: 100vh;
+}
+
+/* === Colors of Main Section === */
+
 main .plain {
-    width: 100%;
+    background-color: #FBF3E4;
 }
-/* Content */
-main .section-content {
-    max-width: 1024px;
+
+main .red {
+    background-color: #C56566;
+}
+
+main .yellow {
+    background-color: #F0CD85;
+}
+
+main .green {
+    background-color: #5DA69F;
+}
+
+main .blue {
+    background-color: #80A7CE;
+}
+
+/* == Content == */
+
+main section {
+    width: 100%;
+    max-width: 1098px;
     margin-left: auto;
     margin-right: auto;
     padding: 2rem 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-/* Heading */
+
+/* == Heading == */
+
 h2 {
     text-align: center;
     font-size: 2.2rem;
 }
+
 h3 {
     text-align: center;
     font-size: 1rem;
     margin-bottom: 2rem;
+    color: black;
 }
+
 h4 {
     font-size: 1rem;
+    color: black;
 }
-/* Link buttons */
-main .section-content a {
+
+main h2 {
+    color: #C56566;
+}
+
+main .coloured h2 {
+    color: #FBF3E4;
+}
+
+/* except in yellow */
+main .yellow h2 {
+    color: #C56566;
+}
+
+main .plain p {
+    color: #707070;
+}
+
+main .coloured p {
+    color: #FBF3E4;
+}
+
+main .coloured label {
+    color: #FBF3E4;
+}
+/* ------------------------ *
+ * ----- Link buttons ----- *
+ * ------------------------ */
+
+main section a {
     padding: 1rem;
     margin: 1rem;
     text-decoration: none;
+    border-radius: 4px;
 }
+
+main section a.inline {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
 main .plain a {
     border: 2px solid #C56566;
     color: #C56566;
 }
+
 main .coloured a {
     border: 2px solid #FBF3E4;
     color: #FBF3E4;
 }
+
 main .plain a:hover {
     border: 2px solid black;
     color: black;
 }
+
 main .coloured a:hover {
     border: 2px solid black;
     color: black;
 }
-/* Text content */
-main .section-content > p {
+
+main .plain a.inline:hover, main .colured a.inline:hover {
+    border: none;
+}
+
+main .memb-section .card div a:hover {
+    border: 2px solid #80A7CE;
+    /* background-color: #80A7CE;; */
+    opacity: 0.9;
+}
+
+/* ------------------------ *
+ * ----- Text content ----- *
+ * ------------------------ */
+
+main section > p {
     width: 80%;
     margin: 1em auto;
     text-align: justify;
 }
-main .section-content li {
+
+main section li {
     width: 75%;
     margin: 0 auto;
 }
-/* Cards */
-main .section-content .card-container {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
+/* ---------------------------- *
+ * ----- Cards everywhere ----- *
+ * ---------------------------- */
+
+main section .card-container .card {
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: 2em auto;
-}
-main .section-content .card-container .card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-main .section-content .card-container .left {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-}
-main .section-content .card-container .up {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* === Index Page: Team Section === */
-/* -------------------------------- */
+main section .card-container .left {
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+main section .card-container .up {
+    justify-content: flex-start;
+}
+
+/* ************************************ */
+
+/* ------------------------------------ */
+/* ===== Index Page: Team Section ===== */
+/* ------------------------------------ */
 
 /* four small card for team member photos with links */
-main .team-section .card-container .card {
-    width: 15%;
+
+main .team-section .card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    justify-items: center;
+    align-items: center;
 }
+
+main .team-section .card-container .card {
+    text-align: center;
+}
+
+main .team-section .card-container .card img {
+    width: 170px;
+}
+
 main .team-section a img {
     width: 100%;
-    border: 3px solid #a0a0a0;
     border-radius: 50%;
 }
+
 main .team-section .card a {
     padding: 0;
     margin: 0;
     border: none;
 }
+
 main .team-section .card a:hover img {
     opacity: 60%;
 }
 
-/* === Index Page: Gallery Section === */
-/* ----------------------------------- */
-/* images without border with hover effekt */
+/* --------------------------------------- */
+/* ===== Index Page: Gallery Section ===== */
+/* --------------------------------------- */
 
-main .gallery-section .card-container .card {
-    width: 33%;
-}
-main .gallery-section .card-container .card img {
-    width: 100%;
-    padding: 5px;
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s;
-}
-main .gallery-section .card-container .card img:hover {
-    -webkit-transform: scale(1.15);
-            transform: scale(1.15);
-}
-/* === Blog Page with similar images style === */
-/* images without border with hover effekt */
-
-main .blog .card {
-    width: 45%;
-}
-main .blog .small {
-    width: 50%;
-}
-main .blog .wide {
-    width: 100%;
-}
-main .blog img {
-    width: 100%;
-    padding: 5px;
-    -webkit-transition: -webkit-transform 0.4s;
-    transition: -webkit-transform 0.4s;
-    transition: transform 0.4s;
-    transition: transform 0.4s, -webkit-transform 0.4s;
-}
-main .blog .card img:hover {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-}
-main .blog .line-through {
-    text-decoration: line-through;
+main .gallery-section .card-container {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: row;
+    grid-gap: 5px;
+    margin: 2rem auto;
 }
 
+main .gallery-section .card-container #main-img {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 4;
+}
+
+main .gallery-section .card-container img {
+    width: 100%;
+}
+
+/* -------------------------------------- */
 /* === Index Page: Membership Section === */
 /* -------------------------------------- */
 
-/* three medium card with links */
+main .memb-section .card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2em auto;
+}
+
 main .memb-section .card-container .card {
     width: 25%;
 }
+
 main .memb-section .card-container .card div {
     width: 100%;
     text-align: center;
-    background-color: #FBF3E4 ;
+    background-color: #FBF3E4;
 }
+
+main .memb-section .panel {
+    display: block;
+}
+
 main .memb-section .card div h3 {
     padding: 1rem;
     margin: 0;
     color: #FBF3E4;
     background-color: #4878A8;
 }
+
 main .memb-section .card div p {
     padding: 1rem;
     color: #707070;
-    border-bottom: 1px solid #707070 ;
+    border-bottom: 1px solid #707070;
 }
-main .memb-section .card div:last-of-type {
+
+main .memb-section .panel div:last-of-type {
     padding: 1.8em;
 }
+
 main .memb-section .card div a {
     color: #FBF3E4;
     background-color: #4878A8;
 }
 
-/* === Contact Section === */
-/* ----------------------- */
-/* Contact form on Index Page, Contact Page and SignUp Page */
-main .form-container form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+/* --------------------------------------- *
+ * ===   Index Page: Contact Section   === *
+ * --------------------------------------- */
+
+/* =============================== *
+ * =====   + Contact Page    ===== *
+ * =============================== */
+
+/* =============================== *
+ * =====  + Membership Page  ===== *
+ * =============================== */
+
+/* Contact forms */
+
+main .contact-section .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
+
+main .form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
 main .form-container label {
     padding-top: 1rem;
 }
+
+main .form-container label.news {
+    padding-top: 0.2rem;
+}
+
 main .form-container input {
     padding: 0.5rem;
+    border: none;
 }
+
+main .form-container textarea {
+    border: none;
+}
+
+main .form-container span {
+    color: red;
+    font-size: 0.8rem;
+}
+
+main .form-container small#forgot {
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
 main .form-container form .submit-button {
     margin: 1rem auto;
     border: none;
 }
+
 /* Submit button color on Contact Page */
+
 main .form-container form #subm-contact-page {
-    color:  #FBF3E4;
+    color: #FBF3E4;
     background-color: #5DA69F;
 }
+
 main .form-container form #subm-contact-page:hover {
     background-color: #2D7E77;
 }
+
 /* Submit button color on Index Page */
+
 main .form-container form #subm-index-page {
-    color:  #FBF3E4;
+    color: #FBF3E4;
     background-color: #C56566;
 }
+
 main .form-container form #subm-index-page:hover {
     background-color: #902122;
 }
-/* Submit button color on Sign-up Page sign-up form*/
+
+/* Submit button color on Membership Page sign-up form*/
+
 main .form-container form #subm-sign-up-form {
-    color:  #FBF3E4;
+    color: #FBF3E4;
     background-color: #4878A8;
-    border: 2px solid #4878A8;
 }
+
 main .form-container form #subm-sign-up-form:hover {
-    border: 2px solid black;
+    opacity: 0.8;
+    color: white;
 }
-/* Submit button color on Sign-up Page sign-in form*/
+
+/* Submit button color on Membership Page sign-in form*/
+
 main .form-container form #subm-sign-in-form {
-    color:  #FBF3E4;
+    color: #FBF3E4;
     background-color: #4878A8;
-    border: 2px solid #4878A8;
 }
+
 main .form-container form #subm-sign-in-form:hover {
-    border: 2px solid black;
+    opacity: 0.8;
+    color: white;
 }
-/* Sign-in and Sign-up form on Sign-up Page */
+
+/* Sign-in and Sign-up form on Membership Page */
+
 main .form-container .wide input {
     min-width: 300px;
 }
+
 main .form-container .slim {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
 }
+
 main .form-container .inputs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
     margin: 0 auto;
 }
+
 main .form-container .input-pairs {
-    width: 48%;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    width: 300px;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
 }
-/* Address in Index Page:contact-section and Contact Page */
+
+main .form-container .input-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+/* Address in Contact-section: Index + Contact Page */
+
+
+main .address {
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
 main .card-container .address p {
     padding: 0.5rem;
 }
+
 main .card-container .address i {
     padding: 0.5rem;
 }
+
 main .card-container .address h4 {
     padding: 1rem 0;
 }
 
-/* === All Pages: A-section === */
-/* ---------------------------- */
+/* --------------------------------------- *
+ * ===           Dual Section          === *
+ * --------------------------------------- */
 
-/* The A-Section means, it splits the screen, usually an image with border and a card with text content
-I use this in every page */
+ 
+/* ===   About Page: Tabs              === *
+ * ===   Team Page: Profiles           === *
+ * ===   Contact Page: Opening hours   === */
 
-main .A-section {
-    margin-top: 2rem;
+main .dual-section .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
-main .A-section .card {
-    width: 40%;
+
+main .dual-section.coloured .card-container {
+    flex-direction: row-reverse;
 }
-main .A-section .card img {
+
+main .dual-section .card {
+    width: 35%;
+}
+
+main .dual-section .card img {
     width: 100%;
-    border-radius: 150px;
-    border: 6px solid #a0a0a0;
+    border-radius: 135px;
 }
-main .A-section .card h3 {
+
+main .dual-section .card h3 {
     font-size: 1.5rem;
 }
-/* Only Team page: team member profilphotos */
-main .A-section .profil img {
-    width: 60%;
+
+
+/* ============================== *
+ * =====      Team Page     ===== *
+ * ============================== */
+/* team member profilphotos */
+
+main .dual-section .profil img {
+    width: 220px;
     border-radius: 50%;
+    margin-bottom: 0.5rem;
 }
-/* Only About page: squere cards with internal link */
-main .learnmore .card-container a {
+
+/* ============================== *
+ * =====   About Page Tabs  ===== * 
+ * ============================== *
+ *                +               *
+ * ============================== *
+ * === 'Logged in' Page Tabs  === * 
+ * ============================== */
+
+/* squere cards as tab heads */
+
+main .tabheads .card-container a {
     border: none;
     padding: 0;
     margin: 0;
 }
-/* Coloring the squere cards */
-main .learnmore .card-container .card-link {
-    background-color: #C56566;
-}
-main .learnmore .card-container .card-read {
-    background-color: #F0CD85;
-}
-main .learnmore .card-container .card-listen {
-    background-color: #5DA69F;
-}
-main .learnmore .card-container a:hover .card-link {
-    background-color: #902122;
-}
-main .learnmore .card-container a:hover .card-read {
-    background-color: #F4C057;
-}
-main .learnmore .card-container a:hover .card-listen {
-    background-color: #2D7E77;
-}
+
 /* Styling the squere cards*/
-main .learnmore .card-container .card {
+
+main .tabheads .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 20px;
+    margin-top: 2rem;
+}
+
+main .tabheads .card-container .card {
     width: 250px;
     height: 250px;
 }
-main .learnmore .card-container .card div {
+
+main .tabheads .card-container .card div {
     width: 100%;
     text-align: center;
 }
-main .learnmore .card div h3 {
-    padding: 1rem;
+
+main .tabheads .card div h3 {
+    padding: 0.3rem;
     margin: 0;
 }
-main .learnmore .card div p {
-    padding: 1rem;
+
+main .tabheads .card div p {
+    padding: 0.3rem;
     color: #FBF3E4;
 }
+
 main .useful-links a {
     border: none;
     margin: 0;
 }
+
 main .useful-links a:hover {
     border: none;
 }
 
-/* Anchor adjustment */
-/* Classes for offsetting the html anchor to adjust for fixed header */
-.for-anchor {
+
+/* ===     Coloring the squere cards   === *
+ * ===     About Page and              === *
+ * ===     'Logged in' Page            === */
+
+main .tabheads .card-container .card-link,
+main .tabheads .card-container .card-course {
+    background-color: #C56566;
+}
+
+main .tabheads .card-container .card-read,
+main .tabheads .card-container .card-workshop {
+    background-color: #F0CD85;
+}
+
+main .tabheads .card-container .card-listen {
+    background-color: #5DA69F;
+}
+
+main .tabheads .card-container .card-timetable {
+    background-color: #80A7CE;
+}
+
+main .tabheads .card-container a:hover .card-link,
+main .tabheads .card-container a:hover .card-course {
+    background-color: #902122;
+}
+
+main .tabheads .card-container a:hover .card-read,
+main .tabheads .card-container a:hover .card-workshop {
+    background-color: #F4C057;
+}
+
+main .tabheads .card-container a:hover .card-listen {
+    background-color: #2D7E77;
+}
+
+main .tabheads .card-container a:hover .card-timetable {
+    background-color: #4878A8;
+}
+
+main .tabheads .card-container a.active .card-link,
+main .tabheads .card-container a.active .card-course {
+    background-color: #902122;
+    border: 3px solid #F4C057;
+}
+
+main .tabheads .card-container a.active .card-read,
+main .tabheads .card-container a.active .card-workshop {
+    background-color: #F4C057;
+    border: 3px solid #C56566;
+}
+
+main .tabheads .card-container a.active .card-listen {
+    background-color: #2D7E77;
+    border: 3px solid #F4C057;
+}
+
+main .tabheads .card-container a.active .card-timetable {
+    background-color: #4878A8;
+    border: 3px solid #F4C057;
+}
+
+/* ================================ *
+ * ======    Gallery Page    ====== *
+ * ================================ */
+
+section.thin {
+    padding: 0.5rem;
+}
+
+/* ********    Slideshow    ******** *
+ * ********   Group Moon    ******** *
+ * ********  Gallery Page   ******** */
+
+.border {
+    overflow: hidden;
+    width: 362px;
+    height: 536px;
+    border: 6px solid #4878A8;
+    margin: auto;
+    align-self: center;
+}
+
+.slides {
+    display: inline-flex;
     position: relative;
 }
-.adjust-anchor {
+
+.slides img {
+    width: 350px;
+    height: 524px;
+}
+
+span.prevBtn, span.nextBtn {
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     position: absolute;
-    top: -4.1rem;
+    font-size: 2rem;
+    padding: 0.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+span.prevBtn {
+    border-radius: 3px 0 0 3px;
+    left: 0;
+}
+
+span.prevBtn:hover {
+    background-color: white;
+}
+
+span.nextBtn {
+    border-radius: 0 3px 3px 0;
+    right: 0;
+}
+
+span.nextBtn:hover {
+    background-color: white;
+}
+
+#play {
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 0.5rem;
+}
+
+#autoplay {
+    display: none;
 }
 
 
+/* ********    Slider      ********* *
+ * ********   Group Sun    ********* *
+ * ********  Gallery Page  ********* */
 
-/* ============== */
-/* === Footer === */
-/* ============== */
 
-/* Colors in colors.css */
+/* *********     Slider      ******** *
+ * ********   Testimonials    ******* *
+ * *******    on Index Page   ******* */
 
-footer {
-    color: white;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
+
+.slider-container {
+    margin: 0 auto;
+    position: relative;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 500px;
+    height: 600px;
+}
+
+.testim-section .slider-container {
+    width: 700px;
+    height: 200px;
+}
+
+.testim-section .slider-container p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.slider-container .slide {
+    display: none;
+    -webkit-animation: fade 1s;
+            animation: fade 1s;
+}
+
+.slider-container .slide img {
+    width: 350px;
+    height: 540px;
+    border: 6px solid #4878A8;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.slider-container .prev, 
+.slider-container .next {
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    position: absolute;
+    top: 40%;
+    font-size: 2rem;
+    padding: 0.4rem;
+    color: white;
+    text-decoration: none;
+}
+
+.slider-container .prev {
+    border-radius: 3px 0 0 3px;
+    border: none;
+    left: 0;
+}
+
+.slider-container .next {
+    border-radius: 0 3px 3px 0;
+    border: none;
+    right: 0;
+}
+.testim-section .slider-container .prev, 
+.testim-section .slider-container .next {
+    color: #C56566;
+}
+
+main .coloured .slider-container span:hover {
+    background-color: #4878A8;
+    color: white;
+}
+
+.pagi {
+    margin: 1rem;
+}
+
+.pagi .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.pagi .dot.activedot {
+    background-color: #4878A8;
+}
+
+.testim-section .dot.activedot {
+    background-color: rgba(197, 101, 103, 0.795);
+}
+
+/* .testim-section .slide {
+    animation: fade 1.5s;
+} */
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.5
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.5
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* ================================= *
+ * =====  Blog Page Accordion  ===== *
+ * ================================= */
+
+/* Accordion heads */
+
+main .blog .headline {
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+main .blog .headline .post-titel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+}
+
+main .blog .headline span {
+    font-family: 'Bebas Neue';
+    font-size: 3rem;
+    padding: 0 1rem;
+}
+
+main .blog .headline span {
+    color: #C56566;
+}
+
+main .blog.coloured .headline span {
+    color: #FBF3E4;
+}
+
+main .blog h2 {
+    font-family: 'Bebas Neue';
+}
+
+main .blog h3 {
+    margin-bottom: 0;
+}
+
+/* Accordion panels */
+
+main .blog .panel {
+    display: none;
+    margin-top: 2rem;
+}
+
+main .blog .panel>.card-container {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    align-items: start;
+}
+
+main .blog .panel .blogpost-text {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     padding: 1rem;
 }
+
+main .blog .panel .blogpost-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+}
+
+main .blog .small {
+    width: 45%;
+    z-index: 450;
+}
+
+main .blog .wide {
+    width: 90%;
+}
+
+main .blog img {
+    width: 100%;
+    padding: 5px;
+    transition: transform 0.4s;
+}
+
+main .blog .blogpost-imgs img:hover {
+    transform: scale(2);
+}
+
+main .blog .line-through {
+    text-decoration: line-through;
+}
+
+/* =============================== *
+ * =====   'Logged in' Page  ===== *
+ * =============================== */
+
+
+ main .login {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .login .welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+}
+
+
+/* ====================================================== *
+ * ====================    Footer    ==================== *
+ * ====================================================== */
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    z-index: 400;
+}
+
+footer h2 {
+    font-size: 1.5rem;
+}
+
+footer h4 {
+    font-size: 0.6rem;
+}
+
 footer #icon-container {
     margin-bottom: 1rem;
 }
+
 footer a {
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 0.3rem;
+}
+
+/* Colors of footer */
+
+footer.n-red {
+    background-color: #902122;
+}
+
+footer.n-yellow {
+    background-color: #F4C057;
+}
+
+footer.n-green {
+    background-color: #2D7E77;
+}
+
+footer.n-blue {
+    background-color: #4878A8;
+}
+
+/* =============================================== *
+ * ================ Media Queries ================ *
+ * =============================================== */
+
+/* ============================================== *
+ * =============    Desktop View    ============= *
+ * ============================================== */
+
+@media screen and (max-width: 1198px) {
+    body {
+        display: grid;
+        grid-template-columns: 140px 1fr 80px;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        ' head   head   head' 
+        '   .    main     . ' 
+        'footer footer footer';
+    }
+    nav {
+        grid-template-columns: 140px 1fr 80px;
+    }
+    .home {
+        width: 140px;
+    }
+    .mini-nav ul#menu-tag {
+        border: none;
+        border-bottom: none;
+    }
+    .mini-nav ul#nav-tag {
+        display: none;
+    }
+}
+
+/* ============================================= *
+ * =============    Tablet View    ============= *
+ * ============================================= */
+
+@media screen and (max-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-columns: 65px 1fr 80px;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        ' head   head   head' 
+        '  .     main     . ' 
+        'footer footer footer';
+    }
+    nav {
+        grid-template-columns: 65px 1fr 80px;
+        grid-template-rows: 65px 1fr 90px;
+    }
+    .home {
+        width: 65px;
+        height: 65px;
+    }
+    .home .hide-big {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hide-small {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    main .team-section .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    main .gallery-section .card-container {
+        width: 80%;
+    }
+    main .testim-section .slider-container {
+        width: 90%;
+    }
+    main .memb-section .card-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin: 2em auto;
+    }
+    main .memb-section .card-container .card {
+        width: 270px;
+        margin-bottom: 1em;
+    }
+    main .memb-section .headline {
+        cursor: pointer;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+    }
+    main .memb-section .panel {
+        display: none;
+    }
+    main .blog .panel>.card-container {
+        grid-template-columns: 1fr;
+    }
+    main .blog .blogpost-imgs img:hover {
+        transform: scale(1.2);
+    }
+    main .contact-section .card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    main .contact-section .card-container .address {
+        align-items: center;
+    }
+    main .form-container .inputs {
+        grid-template-columns: 1fr;
+    }
+    main .form-container textarea {
+        width: 365px;
+    }
+    main .form-container label {
+        width: 365px;
+    }
+    main .form-container span {
+        width: 365px;
+    }
+    main .tabheads .card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+    main .tabheads .card-container .card {
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    main .gallery-section .card-container {
+        width: 90%;
+    }
+    main .dual-section .card-container, 
+    main .dual-section.coloured .card-container {
+        flex-direction: column;
+    }
+    main .dual-section .card {
+        width: 80%;
+    }
+    main .dual-section .card-container .card img {
+        border-radius: 20px 20px 0 0;
+        height: 250px;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
+    }
+    main iframe {
+        /* Maps on Contact Page */
+        width: 400px;
+        height: 300px;
+    }
+}
+
+/* =============================================== *
+ * ==============    Mobile View    ============== *
+ * =============================================== */
+
+@media screen and (max-width: 660px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 'head' 'main' 'footer';
+    }
+    nav {
+        grid-template-columns: 55px 1fr 55px;
+        grid-template-rows: 55px 1fr 65px;
+    }
+    nav ul li {
+        padding-left: 1rem;
+    }
+    nav ul li .white-band {
+        padding-left: 1rem;
+    }
+    .home {
+        display: none;
+    }
+    .mini-nav {
+        transform: none;
+    }
+    .mini-nav #menu-tag {
+        display: none;
+    }
+    .mini-nav #burger-tag {
+        width: 55px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+    }
+    #burger-tag a i {
+        font-size: 2rem;
+        color: black;
+    }
+    .hero-img h1 {
+        font-size: 5rem;
+    }
+    #head-home-page h1 {
+        font-size: 3rem;
+    }
+    #head-home-page h2 {
+        font-size: 1rem;
+    }
+    #head-membership-page h1 {
+        font-size: 4rem;
+    }
+    main {
+        border: none;
+    }
+    main .team-section .card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+    main .team-section .card-container .card img {
+        width: 50%;
+    }
+    main .gallery-section .card-container {
+        width: 90%;
+    }
+    main .form-container textarea {
+        width: 300px;
+    }
+    main .form-container label {
+        width: 300px;
+    }
+    main .form-container span {
+        width: 300px;
+    }
+    main iframe {
+        /* Maps on Contact Page */
+        width: 300px;
+        height: 225px;
+    }
+    .slider-container .slide img {
+        width: 315px;
+        height: 485px;
+    }
+    .slider-container {
+        width: 365px;
+    }
+    .testim-section .slider-container {
+        height: 280px;
+    }
+    .testim-section .slider-container .prev, 
+    .testim-section .slider-container .next {
+        color: white;
+    }
 }
