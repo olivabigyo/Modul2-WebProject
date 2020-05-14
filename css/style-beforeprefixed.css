@@ -976,8 +976,8 @@ section.thin {
 
 .border {
     overflow: hidden;
-    width: 350px;
-    height: 540px;
+    width: 362px;
+    height: 536px;
     border: 6px solid #4878A8;
     margin: auto;
     align-self: center;
@@ -990,7 +990,7 @@ section.thin {
 
 .slides img {
     width: 350px;
-    height: 540px;
+    height: 524px;
 }
 
 span.prevBtn, span.nextBtn {
