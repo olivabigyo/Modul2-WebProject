@@ -535,7 +535,7 @@ main section .card-container .up {
     justify-content: flex-start;
 }
 
-/* ***************************************************** */
+/* ************************************ */
 
 /* ------------------------------------ */
 /* ===== Index Page: Team Section ===== */
@@ -1067,6 +1067,7 @@ span.nextBtn:hover {
 
 .slider-container .slide {
     display: none;
+    animation: fade 1s;
 }
 
 .slider-container .slide img {
@@ -1131,13 +1132,13 @@ main .coloured .slider-container span:hover {
     background-color: rgba(197, 101, 103, 0.795);
 }
 
-.testim-section .slide {
+/* .testim-section .slide {
     animation: fade 1.5s;
-}
+} */
 
 @keyframes fade {
     from {
-        opacity: 0.4
+        opacity: 0.5
     }
     to {
         opacity: 1

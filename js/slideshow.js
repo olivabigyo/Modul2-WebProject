@@ -77,9 +77,10 @@ $(document).ready(function () {
     $(document).on('change', '#autoplay', function () {
         // console.log($(this).is(':checked'));
         if ($(this).is(':checked')) {
+            // click every 3s
             autoplay = setInterval(function () {
                 $('.nextBtn').click();
-            }, 2000);
+            }, 3000);
             play.css('background-color','#4878A8');
 
         }

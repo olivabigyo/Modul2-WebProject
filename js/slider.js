@@ -36,7 +36,7 @@ function stepNext(e) {
 function autodisplay() {
     activeSlideNr++;
     displaySlide(activeSlideNr);
-    setTimeout(autodisplay, 8000); // Change image every 4 seconds
+    setTimeout(autodisplay, 4000); // Change image every 4 seconds
 }
 
 function displaySlide(n) {
